@@ -221,7 +221,7 @@ rpcconnect=127.0.0.1</pre><br />
 				
 				// First create the database, then create tables, then write config file
 				if ($bitcoin == NULL || $bitcoin->getinfo() == NULL) {
-					//$message = "Unable to make connection to the bitcoin daemon. Is it running? Are your settings correct?";
+					$message = "Unable to make connection to the bitcoin daemon. Is it running? Are your settings correct?";
 					 
 				} else if($database->create_database($data) == false) {
 					$message = $core->show_message('error',"The database could not be created, please verify your settings.");
@@ -295,12 +295,6 @@ rpcconnect=127.0.0.1</pre><br />
           This is used to create determinstic addresses without needed private keys on the server. This MPK will receive fee's from orders and registrations, and will also be used to create public keys for multi-signature order addresses.
           <input type="text" id="hostname" class="input_text" name="electrum_mpk"  /><br /><br />
 
-<!--          <label for="">Proxy Settings: (optional)</label><br />
-			<select name='proxy_type'>
-				<option value='HTTP'>HTTP</option>
-				<option value='SOCKS5'>SOCKS5</option>
-			</select>
-			<input type="text" id="hostname" value="" class="input_text" name="proxy_host" placeholder='ip:port'/><br /><br />-->
 
 		  <label for='tidy_urls'>Tidy URL's?</label><br />
 		  If you would like to remove index.php from your URL's, select Yes. For this setting to work you must copy htaccess.sample to .htaccess, and make the following change:<br />
