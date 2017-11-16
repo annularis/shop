@@ -11,15 +11,15 @@ sudo su
 # dependency
 apt-get install apache2 mysql-server mysql-client php libapache2-mod-php php-mcrypt php-gnupg php-mysql php-gmp php-curl php-bcmath php-gd git mysqli mcrypt curl gmp gd unzip atool
 
-# install bitwasp src
+# install annularis source (from git)
 cd /var/www/html
-git clone https://github.com/annularis/shop 
+git clone https://github.com/annularis/shop
+chown www-data:www-data -Rv /shop
 cd shop/install
 
 # get composer and install dependency
 wget https://getcomposer.org/composer.phar
 php composer.phar install
-chown user:user -R .
 rm composer.phar
 
 a2enmod rewrite
