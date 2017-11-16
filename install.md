@@ -48,7 +48,7 @@ CREATE USER annularis IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON annularis.* TO annularis@localhost IDENTIFIED BY 'password';
 
 cp htaccess.sample .htaccess
-# comment out 'RewriteBase /annularis'
+# comment out 'RewriteBase /shop'
 vim .htaccess
 
 # access to /install/ and follow instruction there
