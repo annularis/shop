@@ -3,8 +3,8 @@ error_reporting(E_ALL); //Setting this to E_ALL showed that that cause of not re
 
 // Determine filesystem path to the necessary files.
 $basedir = explode("/", dirname(__FILE__));
-//$installdir = implode("/", array_splice($basedir, 0, count($basedir)-1));
-$installdir = "..";
+$installdir = implode("/", array_splice($basedir, 0, count($basedir)-1));
+
 $database_config_file = $installdir.'/application/config/database.php';
 $bitcoin_config_file = $installdir.'/application/config/bitcoin.php';
 $config_config_file = $installdir.'/application/config/config.php';
@@ -15,11 +15,11 @@ if(strlen(@file_get_contents($config_config_file)) > 20 && strlen(@file_get_cont
 	die();
 
 // Modules which must be installed.
-$check['mcrypt_module'] 	= ( ! function_exists('mcrypt_encrypt')) ? FALSE : TRUE;
-$check['gmp_module']		= ( ! function_exists('gmp_init')) ? FALSE : TRUE;
-$check['curl_module']		= ( ! function_exists('curl_init')) ? FALSE : TRUE;
-$check['openssl_module'] 	= ( ! function_exists('openssl_random_pseudo_bytes')) ? FALSE : TRUE;
-$check['gd_module'] 		= ( ! (extension_loaded('gd') && function_exists('gd_info'))) ? FALSE : TRUE;
+//$check['mcrypt_module'] 	= ( ! function_exists('mcrypt_encrypt')) ? FALSE : TRUE;
+//$check['gmp_module']		= ( ! function_exists('gmp_init')) ? FALSE : TRUE;
+//$check['curl_module']		= ( ! function_exists('curl_init')) ? FALSE : TRUE;
+//$check['openssl_module'] 	= ( ! function_exists('openssl_random_pseudo_bytes')) ? FALSE : TRUE;
+//$check['gd_module'] 		= ( ! (extension_loaded('gd') && function_exists('gd_info'))) ? FALSE : TRUE;
 //$check['gpg_module'] 		= ( class_exists('gnupg') && function_exists('gnupg_init')) ? TRUE : FALSE;
 // Files which need to be writable
 $check['storage_directory_writable'] 	= ( ! is_writable($storage_directory)) ? FALSE : TRUE;
@@ -43,7 +43,7 @@ foreach($check as $key => $outcome) {
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-		<title>Install | Annularis</title>
+		<title>Install | BitWasp</title>
 
 		<style type="text/css">
 		  body {
@@ -295,6 +295,12 @@ rpcconnect=127.0.0.1</pre><br />
           This is used to create determinstic addresses without needed private keys on the server. This MPK will receive fee's from orders and registrations, and will also be used to create public keys for multi-signature order addresses.
           <input type="text" id="hostname" class="input_text" name="electrum_mpk"  /><br /><br />
 
+<!--          <label for="">Proxy Settings: (optional)</label><br />
+			<select name='proxy_type'>
+				<option value='HTTP'>HTTP</option>
+				<option value='SOCKS5'>SOCKS5</option>
+			</select>
+			<input type="text" id="hostname" value="" class="input_text" name="proxy_host" placeholder='ip:port'/><br /><br />-->
 
 		  <label for='tidy_urls'>Tidy URL's?</label><br />
 		  If you would like to remove index.php from your URL's, select Yes. For this setting to work you must copy htaccess.sample to .htaccess, and make the following change:<br />

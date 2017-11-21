@@ -1,0 +1,170 @@
+[
+    {
+        "name": "rych/hash_pbkdf2-compat",
+        "version": "v1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/rchouinard/hash_pbkdf2-compat.git",
+            "reference": "cc61512c5284616885449d4b8de231e087823e5c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/rchouinard/hash_pbkdf2-compat/zipball/cc61512c5284616885449d4b8de231e087823e5c",
+            "reference": "cc61512c5284616885449d4b8de231e087823e5c",
+            "shasum": ""
+        },
+        "require": {
+            "ext-hash": "*",
+            "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8"
+        },
+        "time": "2015-11-23T03:34:42+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "files": [
+                "src/hash_pbkdf2_compat.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ryan Chouinard",
+                "email": "rchouinard@gmail.com"
+            }
+        ],
+        "description": "Provides hash_pbkdf2() to PHP versions >=5.3,<5.5.",
+        "keywords": [
+            "compatibility",
+            "hash_pbkdf2",
+            "pbkdf2"
+        ]
+    },
+    {
+        "name": "mdanter/ecc",
+        "version": "0.2.0",
+        "version_normalized": "0.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/phpecc/phpecc.git",
+            "reference": "ca9d127114e087bdeac24ada488631f18ae80d3f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/phpecc/phpecc/zipball/ca9d127114e087bdeac24ada488631f18ae80d3f",
+            "reference": "ca9d127114e087bdeac24ada488631f18ae80d3f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.1",
+            "squizlabs/php_codesniffer": "~1.5"
+        },
+        "suggest": {
+            "ext-bcmath": "Required if GMP is not installed.",
+            "ext-gmp": "Improves drastically ECDSA library performance"
+        },
+        "time": "2014-07-07T12:44:15+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Mdanter\\Ecc\\Tests\\": "tests/unit",
+                "Mdanter\\Ecc\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Matyas Danter",
+                "homepage": "http://matejdanter.com/",
+                "role": "Author"
+            },
+            {
+                "name": "Thibaud Fabre",
+                "email": "thibaud@aztech.io",
+                "homepage": "http://aztech.io",
+                "role": "Maintainer"
+            },
+            {
+                "name": "Drak",
+                "email": "drak@zikula.org",
+                "homepage": "http://zikula.org",
+                "role": "Maintainer"
+            }
+        ],
+        "description": "PHP Elliptic Curve Cryptography library",
+        "homepage": "https://github.com/mdanter/phpecc"
+    },
+    {
+        "name": "bitwasp/bitcoin-lib",
+        "version": "1.0.x-dev",
+        "version_normalized": "1.0.9999999.9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Bit-Wasp/bitcoin-lib-php.git",
+            "reference": "098a53e0f5c496127dec894a31b2d9897045d3b0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Bit-Wasp/bitcoin-lib-php/zipball/098a53e0f5c496127dec894a31b2d9897045d3b0",
+            "reference": "098a53e0f5c496127dec894a31b2d9897045d3b0",
+            "shasum": ""
+        },
+        "require": {
+            "ext-gmp": "*",
+            "ext-mcrypt": "*",
+            "mdanter/ecc": "0.2.0",
+            "php": ">=5.3.3",
+            "rych/hash_pbkdf2-compat": "~1.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~3.7",
+            "squizlabs/php_codesniffer": "~1.5"
+        },
+        "suggest": {
+            "ext-intl": "Required for BIP39 Mnemonic Seeds with UTF-8 passphrases"
+        },
+        "time": "2015-02-17T13:47:01+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "BitWasp\\BitcoinLib\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Unlicense"
+        ],
+        "authors": [
+            {
+                "name": "Thomas Kerin",
+                "email": "thomas.kerin@gmail.com"
+            }
+        ],
+        "description": "Implementation of raw transactions in bitcoin, HD wallets, Electrum wallets, and other fun stuff.",
+        "keywords": [
+            "HD wallet",
+            "bip32",
+            "bitcoin",
+            "btc",
+            "cryptocurrency",
+            "ecc",
+            "electrum",
+            "php",
+            "transactions"
+        ]
+    }
+]
