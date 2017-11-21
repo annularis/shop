@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <!-- JavaScript -->
-    <script src="./assets/js/jquery-1.8.1.min.js"></script>
-    <script src="./assets/js/bootstrap.js"></script>
+    <script src="/assets/js/jquery-1.8.1.min.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
     {$header.header_meta}
 </head>
 <body>
