@@ -352,3 +352,212 @@ DEBUG - 2017-07-11 21:23:52 --> Config file loaded: C:\xampp\htdocs\bit\applicat
 DEBUG - 2017-07-11 21:23:52 --> Smarty Class Initialized
 DEBUG - 2017-07-11 21:23:52 --> BW Form Validation Extras Initialized
 DEBUG - 2017-07-11 21:23:53 --> Total execution time: 0.4442
+DEBUG - 2017-07-11 21:30:37 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 21:30:37 --> No URI present. Default controller set.
+DEBUG - 2017-07-11 21:30:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 21:30:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 21:30:37 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 21:30:37 --> Smarty Class Initialized
+DEBUG - 2017-07-11 21:30:37 --> Total execution time: 0.3773
+DEBUG - 2017-07-11 21:54:44 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 21:54:44 --> No URI present. Default controller set.
+DEBUG - 2017-07-11 21:54:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 21:54:44 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 21:54:44 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 21:54:44 --> Smarty Class Initialized
+DEBUG - 2017-07-11 21:54:44 --> Total execution time: 0.3739
+DEBUG - 2017-07-11 21:59:59 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 21:59:59 --> No URI present. Default controller set.
+DEBUG - 2017-07-11 21:59:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 21:59:59 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:00 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:00 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:00:00 --> Total execution time: 0.3558
+DEBUG - 2017-07-11 22:00:14 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:00:14 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:00:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:14 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:14 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:00:14 --> No URI present. Default controller set.
+DEBUG - 2017-07-11 22:00:14 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:00:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:14 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:14 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:00:14 --> Total execution time: 0.3573
+DEBUG - 2017-07-11 22:00:17 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:00:17 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:00:17 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:17 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:17 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:00:17 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:00:18 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:00:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:00:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:18 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:18 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:00:18 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:00:18 --> Unable to find validation rules
+DEBUG - 2017-07-11 22:00:18 --> Total execution time: 0.3678
+DEBUG - 2017-07-11 22:00:22 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:00:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:00:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:23 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:23 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:00:23 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:00:23 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:00:23 --> No URI present. Default controller set.
+DEBUG - 2017-07-11 22:00:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:00:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:23 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:23 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:00:23 --> Total execution time: 0.4165
+DEBUG - 2017-07-11 22:00:25 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:00:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:00:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:26 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:26 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:00:26 --> Total execution time: 0.4111
+DEBUG - 2017-07-11 22:00:28 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:00:28 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:00:28 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:28 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:28 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:00:28 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:00:29 --> Total execution time: 0.6208
+DEBUG - 2017-07-11 22:00:30 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:00:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:00:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:30 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:30 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:00:30 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:00:30 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2017-07-11 22:00:30 --> Unable to find validation rules
+DEBUG - 2017-07-11 22:00:30 --> Total execution time: 0.5144
+DEBUG - 2017-07-11 22:00:47 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:00:47 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:00:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:47 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:47 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:00:47 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:00:47 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2017-07-11 22:00:48 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:00:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:00:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:48 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:48 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:00:48 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:00:48 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2017-07-11 22:00:48 --> Total execution time: 0.5477
+DEBUG - 2017-07-11 22:00:51 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:00:51 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:00:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:51 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:51 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:00:51 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:00:51 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2017-07-11 22:00:51 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:00:51 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:00:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:51 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:51 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:00:51 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:00:51 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2017-07-11 22:00:51 --> Config file loaded: C:\xampp\htdocs\bit\application\config/image_upload.php
+DEBUG - 2017-07-11 22:00:51 --> Total execution time: 0.4203
+DEBUG - 2017-07-11 22:00:53 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:00:53 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:00:53 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:00:53 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:00:53 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:00:53 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:00:53 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2017-07-11 22:00:53 --> Config file loaded: C:\xampp\htdocs\bit\application\config/image_upload.php
+DEBUG - 2017-07-11 22:00:53 --> You did not select a file to upload.
+DEBUG - 2017-07-11 22:00:53 --> Total execution time: 0.4311
+DEBUG - 2017-07-11 22:01:06 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:01:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:01:06 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:01:06 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:01:06 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:01:06 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:01:06 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2017-07-11 22:01:06 --> Config file loaded: C:\xampp\htdocs\bit\application\config/image_upload.php
+DEBUG - 2017-07-11 22:01:08 --> Total execution time: 2.7304
+DEBUG - 2017-07-11 22:01:10 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:01:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:01:10 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:01:10 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:01:10 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:01:10 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:01:10 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:01:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:01:10 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:01:11 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:01:11 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:01:11 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:01:11 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2017-07-11 22:01:11 --> Config file loaded: C:\xampp\htdocs\bit\application\config/image_upload.php
+DEBUG - 2017-07-11 22:01:11 --> Total execution time: 0.4965
+DEBUG - 2017-07-11 22:01:16 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:01:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:01:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:01:16 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:01:16 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:01:16 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:01:17 --> Total execution time: 0.5006
+DEBUG - 2017-07-11 22:01:18 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:01:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:01:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:01:18 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:01:18 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:01:18 --> Total execution time: 0.6215
+DEBUG - 2017-07-11 22:01:19 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:01:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:01:19 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:01:19 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:01:19 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:01:19 --> Total execution time: 0.1600
+DEBUG - 2017-07-11 22:01:23 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:01:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:01:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:01:23 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:01:23 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:01:23 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:01:23 --> Total execution time: 0.4659
+DEBUG - 2017-07-11 22:01:25 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:01:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:01:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:01:25 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:01:25 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:01:26 --> Total execution time: 0.6562
+DEBUG - 2017-07-11 22:01:34 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:01:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:01:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:01:34 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:01:34 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:01:34 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:01:34 --> Total execution time: 0.5347
+DEBUG - 2017-07-11 22:01:38 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:01:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:01:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:01:38 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:01:38 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:01:38 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:01:39 --> Total execution time: 0.5335
+DEBUG - 2017-07-11 22:01:42 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:01:42 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:01:42 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:01:42 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:01:42 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:01:42 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:01:42 --> Total execution time: 0.5346
+DEBUG - 2017-07-11 22:01:46 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 22:01:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 22:01:46 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2017-07-11 22:01:46 --> Config file loaded: C:\xampp\htdocs\bit\application\config/bitcoin_index.php
+DEBUG - 2017-07-11 22:01:46 --> Smarty Class Initialized
+DEBUG - 2017-07-11 22:01:46 --> BW Form Validation Extras Initialized
+DEBUG - 2017-07-11 22:01:46 --> Unable to find validation rules
+ERROR - 2017-07-11 22:01:46 --> Severity: Notice --> Undefined index: email_updates C:\xampp\htdocs\bit\templates_c\b891ca693c623b415cb084ca90380f3aa8ef5389_0.file.edit.tpl.php 99
+ERROR - 2017-07-11 22:01:46 --> Severity: Notice --> Undefined index: email_updates C:\xampp\htdocs\bit\templates_c\b891ca693c623b415cb084ca90380f3aa8ef5389_0.file.edit.tpl.php 103
+DEBUG - 2017-07-11 22:01:46 --> Total execution time: 0.5446
