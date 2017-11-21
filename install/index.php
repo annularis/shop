@@ -15,11 +15,11 @@ if(strlen(@file_get_contents($config_config_file)) > 20 && strlen(@file_get_cont
 	die();
 
 // Modules which must be installed.
-//$check['mcrypt_module'] 	= ( ! function_exists('mcrypt_encrypt')) ? FALSE : TRUE;
-//$check['gmp_module']		= ( ! function_exists('gmp_init')) ? FALSE : TRUE;
-//$check['curl_module']		= ( ! function_exists('curl_init')) ? FALSE : TRUE;
-//$check['openssl_module'] 	= ( ! function_exists('openssl_random_pseudo_bytes')) ? FALSE : TRUE;
-//$check['gd_module'] 		= ( ! (extension_loaded('gd') && function_exists('gd_info'))) ? FALSE : TRUE;
+$check['mcrypt_module'] 	= ( ! function_exists('mcrypt_encrypt')) ? FALSE : TRUE;
+$check['gmp_module']		= ( ! function_exists('gmp_init')) ? FALSE : TRUE;
+$check['curl_module']		= ( ! function_exists('curl_init')) ? FALSE : TRUE;
+$check['openssl_module'] 	= ( ! function_exists('openssl_random_pseudo_bytes')) ? FALSE : TRUE;
+$check['gd_module'] 		= ( ! (extension_loaded('gd') && function_exists('gd_info'))) ? FALSE : TRUE;
 //$check['gpg_module'] 		= ( class_exists('gnupg') && function_exists('gnupg_init')) ? TRUE : FALSE;
 // Files which need to be writable
 $check['storage_directory_writable'] 	= ( ! is_writable($storage_directory)) ? FALSE : TRUE;
