@@ -6,6 +6,6 @@
                 "ext-gmp": "*",
                 "ext-mcrypt": "*",
                 "mdanter/ecc" : "*",
-                "bitwasp/bitcoin-lib": "dev-master"
+                "annularis/bitcoin-lib": "*"
         }
 }
