@@ -223,7 +223,7 @@ class Users extends MY_Controller
                 'activation_hash' => bin2hex(openssl_random_pseudo_bytes(16)),
                 'activation_id' => bin2hex(openssl_random_pseudo_bytes(7)),
                 'email_address' => ($this->bw_config->request_emails) ? $this->input->post('email_address') : '',
-                'email_activated' => ($this->bw_config->request_emails) ? '0' : '1',
+               // 'email_activated' => ($this->bw_config->request_emails) ? '0' : '1',
                 'user_hash' => $user_hash,
                 'user_name' => $user_name,
                 'user_role' => $data['role'],
