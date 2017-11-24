@@ -1,32 +1,39 @@
 [
     {
-        "name": "rych/hash_pbkdf2-compat",
-        "version": "v1.0.1",
-        "version_normalized": "1.0.1.0",
+        "name": "symfony/polyfill-mbstring",
+        "version": "v1.6.0",
+        "version_normalized": "1.6.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/rchouinard/hash_pbkdf2-compat.git",
-            "reference": "cc61512c5284616885449d4b8de231e087823e5c"
+            "url": "https://github.com/symfony/polyfill-mbstring.git",
+            "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/rchouinard/hash_pbkdf2-compat/zipball/cc61512c5284616885449d4b8de231e087823e5c",
-            "reference": "cc61512c5284616885449d4b8de231e087823e5c",
+            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
+            "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
             "shasum": ""
         },
         "require": {
-            "ext-hash": "*",
             "php": ">=5.3.3"
         },
-        "require-dev": {
-            "phpunit/phpunit": "^4.8"
+        "suggest": {
+            "ext-mbstring": "For best performance"
         },
-        "time": "2015-11-23T03:34:42+00:00",
+        "time": "2017-10-11T12:05:26+00:00",
         "type": "library",
-        "installation-source": "source",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.6-dev"
+            }
+        },
+        "installation-source": "dist",
         "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Mbstring\\": ""
+            },
             "files": [
-                "src/hash_pbkdf2_compat.php"
+                "bootstrap.php"
             ]
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -35,49 +42,281 @@
         ],
         "authors": [
             {
-                "name": "Ryan Chouinard",
-                "email": "rchouinard@gmail.com"
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
             }
         ],
-        "description": "Provides hash_pbkdf2() to PHP versions >=5.3,<5.5.",
+        "description": "Symfony polyfill for the Mbstring extension",
+        "homepage": "https://symfony.com",
         "keywords": [
             "compatibility",
-            "hash_pbkdf2",
-            "pbkdf2"
+            "mbstring",
+            "polyfill",
+            "portable",
+            "shim"
         ]
     },
     {
-        "name": "mdanter/ecc",
-        "version": "0.2.0",
-        "version_normalized": "0.2.0.0",
+        "name": "psr/log",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/phpecc/phpecc.git",
-            "reference": "ca9d127114e087bdeac24ada488631f18ae80d3f"
+            "url": "https://github.com/php-fig/log.git",
+            "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/phpecc/phpecc/zipball/ca9d127114e087bdeac24ada488631f18ae80d3f",
-            "reference": "ca9d127114e087bdeac24ada488631f18ae80d3f",
+            "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+            "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.3.3"
+            "php": ">=5.3.0"
+        },
+        "time": "2016-10-10T12:19:37+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Log\\": "Psr/Log/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for logging libraries",
+        "homepage": "https://github.com/php-fig/log",
+        "keywords": [
+            "log",
+            "psr",
+            "psr-3"
+        ]
+    },
+    {
+        "name": "symfony/debug",
+        "version": "v3.0.9",
+        "version_normalized": "3.0.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/debug.git",
+            "reference": "697c527acd9ea1b2d3efac34d9806bf255278b0a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/debug/zipball/697c527acd9ea1b2d3efac34d9806bf255278b0a",
+            "reference": "697c527acd9ea1b2d3efac34d9806bf255278b0a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.9",
+            "psr/log": "~1.0"
+        },
+        "conflict": {
+            "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
+        },
+        "require-dev": {
+            "symfony/class-loader": "~2.8|~3.0",
+            "symfony/http-kernel": "~2.8|~3.0"
+        },
+        "time": "2016-07-30T07:22:48+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Debug\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Debug Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "symfony/console",
+        "version": "v2.8.31",
+        "version_normalized": "2.8.31.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/console.git",
+            "reference": "7cad097cf081c0ab3d0322cc38d34ee80484d86f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/console/zipball/7cad097cf081c0ab3d0322cc38d34ee80484d86f",
+            "reference": "7cad097cf081c0ab3d0322cc38d34ee80484d86f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9",
+            "symfony/debug": "^2.7.2|~3.0.0",
+            "symfony/polyfill-mbstring": "~1.0"
+        },
+        "require-dev": {
+            "psr/log": "~1.0",
+            "symfony/event-dispatcher": "~2.1|~3.0.0",
+            "symfony/process": "~2.1|~3.0.0"
+        },
+        "suggest": {
+            "psr/log": "For using the console logger",
+            "symfony/event-dispatcher": "",
+            "symfony/process": ""
+        },
+        "time": "2017-11-16T15:20:19+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.8-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Console\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Console Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "fgrosse/phpasn1",
+        "version": "1.3.2",
+        "version_normalized": "1.3.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/fgrosse/PHPASN1.git",
+            "reference": "ee6d1abd18f8bcbaf0b55563ba87e5ed16cd0c98"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/fgrosse/PHPASN1/zipball/ee6d1abd18f8bcbaf0b55563ba87e5ed16cd0c98",
+            "reference": "ee6d1abd18f8bcbaf0b55563ba87e5ed16cd0c98",
+            "shasum": ""
+        },
+        "require": {
+            "ext-gmp": "*",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.5"
+        },
+        "time": "2015-07-15T21:26:40+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.3.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FG\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Friedrich Große",
+                "email": "friedrich.grosse@gmail.com",
+                "homepage": "https://github.com/FGrosse",
+                "role": "Author"
+            },
+            {
+                "name": "All contributors",
+                "homepage": "https://github.com/FGrosse/PHPASN1/contributors"
+            }
+        ],
+        "description": "A PHP Framework that allows you to encode and decode arbitrary ASN.1 structures using the ITU-T X.690 Encoding Rules.",
+        "homepage": "https://github.com/FGrosse/PHPASN1"
+    },
+    {
+        "name": "mdanter/ecc",
+        "version": "v0.3.2",
+        "version_normalized": "0.3.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/phpecc/phpecc.git",
+            "reference": "de1a69ad34d3b583690559de4145259a467a3966"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/phpecc/phpecc/zipball/de1a69ad34d3b583690559de4145259a467a3966",
+            "reference": "de1a69ad34d3b583690559de4145259a467a3966",
+            "shasum": ""
+        },
+        "require": {
+            "ext-gmp": "*",
+            "ext-mcrypt": "*",
+            "fgrosse/phpasn1": "~1.3.1",
+            "php": ">=5.4.0",
+            "symfony/console": "~2.6"
         },
         "require-dev": {
             "phpunit/phpunit": "~4.1",
-            "squizlabs/php_codesniffer": "~1.5"
-        },
-        "suggest": {
-            "ext-bcmath": "Required if GMP is not installed.",
-            "ext-gmp": "Improves drastically ECDSA library performance"
+            "squizlabs/php_codesniffer": "~2",
+            "symfony/yaml": "~2.6"
         },
         "time": "2014-07-07T12:44:15+00:00",
         "type": "library",
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Mdanter\\Ecc\\Tests\\": "tests/unit",
                 "Mdanter\\Ecc\\": "src/"
             }
         },
@@ -108,35 +347,83 @@
         "homepage": "https://github.com/mdanter/phpecc"
     },
     {
-        "name": "bitwasp/bitcoin-lib",
-        "version": "1.0.x-dev",
-        "version_normalized": "1.0.9999999.9999999-dev",
+        "name": "rych/hash_pbkdf2-compat",
+        "version": "v1.0.1",
+        "version_normalized": "1.0.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/Bit-Wasp/bitcoin-lib-php.git",
-            "reference": "098a53e0f5c496127dec894a31b2d9897045d3b0"
+            "url": "https://github.com/rchouinard/hash_pbkdf2-compat.git",
+            "reference": "cc61512c5284616885449d4b8de231e087823e5c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Bit-Wasp/bitcoin-lib-php/zipball/098a53e0f5c496127dec894a31b2d9897045d3b0",
-            "reference": "098a53e0f5c496127dec894a31b2d9897045d3b0",
+            "url": "https://api.github.com/repos/rchouinard/hash_pbkdf2-compat/zipball/cc61512c5284616885449d4b8de231e087823e5c",
+            "reference": "cc61512c5284616885449d4b8de231e087823e5c",
             "shasum": ""
         },
         "require": {
+            "ext-hash": "*",
+            "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8"
+        },
+        "time": "2015-11-23T03:34:42+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/hash_pbkdf2_compat.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ryan Chouinard",
+                "email": "rchouinard@gmail.com"
+            }
+        ],
+        "description": "Provides hash_pbkdf2() to PHP versions >=5.3,<5.5.",
+        "keywords": [
+            "compatibility",
+            "hash_pbkdf2",
+            "pbkdf2"
+        ]
+    },
+    {
+        "name": "bitwasp/bitcoin-lib",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Bit-Wasp/bitcoin-lib-php.git",
+            "reference": "d4e46fdd1edc29fae7b359d2bde952e37d143c45"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Bit-Wasp/bitcoin-lib-php/zipball/d4e46fdd1edc29fae7b359d2bde952e37d143c45",
+            "reference": "d4e46fdd1edc29fae7b359d2bde952e37d143c45",
+            "shasum": ""
+        },
+        "require": {
+            "ext-bcmath": "*",
             "ext-gmp": "*",
             "ext-mcrypt": "*",
-            "mdanter/ecc": "0.2.0",
+            "mdanter/ecc": "~0.3.0",
             "php": ">=5.3.3",
             "rych/hash_pbkdf2-compat": "~1.0"
         },
         "require-dev": {
-            "phpunit/phpunit": "~3.7",
-            "squizlabs/php_codesniffer": "~1.5"
+            "phpunit/phpunit": "~4.1",
+            "squizlabs/php_codesniffer": "~2"
         },
         "suggest": {
             "ext-intl": "Required for BIP39 Mnemonic Seeds with UTF-8 passphrases"
         },
-        "time": "2015-02-17T13:47:01+00:00",
+        "time": "2017-03-07T15:43:46+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {
