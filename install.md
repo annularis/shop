@@ -17,11 +17,7 @@ git clone https://github.com/annularis/shop
 chown www-data:www-data -Rv /shop
 cd shop/install
 
-# get composer and install dependency
-wget https://getcomposer.org/composer.phar
-php composer.phar install
-rm composer.phar
-
+# Enable Mod Rewrite
 a2enmod rewrite
 service apache2 restart
 
