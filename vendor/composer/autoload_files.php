@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
     '8eeb9807d08404c43e7a8d0d87eb404b' => $vendorDir . '/rych/hash_pbkdf2-compat/src/hash_pbkdf2_compat.php',
 );

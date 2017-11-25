@@ -4,17 +4,31 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit67923e17f0bc504386d14a9673015da4
+class ComposerStaticInit5448e9d94e22acc1489025c67249a9ad
 {
     public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '8eeb9807d08404c43e7a8d0d87eb404b' => __DIR__ . '/..' . '/rych/hash_pbkdf2-compat/src/hash_pbkdf2_compat.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\Debug\\' => 24,
+            'Symfony\\Component\\Console\\' => 26,
+        ),
+        'P' => 
+        array (
+            'Psr\\Log\\' => 8,
+        ),
         'M' => 
         array (
-            'Mdanter\\Ecc\\Tests\\' => 18,
             'Mdanter\\Ecc\\' => 12,
+        ),
+        'F' => 
+        array (
+            'FG\\' => 3,
         ),
         'B' => 
         array (
@@ -23,13 +37,29 @@ class ComposerStaticInit67923e17f0bc504386d14a9673015da4
     );
 
     public static $prefixDirsPsr4 = array (
-        'Mdanter\\Ecc\\Tests\\' => 
+        'Symfony\\Polyfill\\Mbstring\\' => 
         array (
-            0 => __DIR__ . '/..' . '/mdanter/ecc/tests/unit',
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\Debug\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/debug',
+        ),
+        'Symfony\\Component\\Console\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
         'Mdanter\\Ecc\\' => 
         array (
             0 => __DIR__ . '/..' . '/mdanter/ecc/src',
+        ),
+        'FG\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fgrosse/phpasn1/lib',
         ),
         'BitWasp\\BitcoinLib\\' => 
         array (
@@ -40,8 +70,8 @@ class ComposerStaticInit67923e17f0bc504386d14a9673015da4
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit67923e17f0bc504386d14a9673015da4::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit67923e17f0bc504386d14a9673015da4::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5448e9d94e22acc1489025c67249a9ad::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5448e9d94e22acc1489025c67249a9ad::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

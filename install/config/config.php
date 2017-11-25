@@ -310,7 +310,7 @@ $config['encryption_key'] = '%ENCRYPTION_KEY%';
 | 'sess_time_to_update'		= how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_driver']			= 'cookie';
+$config['sess_driver']			= 'files';
 $config['sess_valid_drivers']	= array();
 $config['sess_cookie_name']		= 'cisession';
 $config['sess_expiration']		= 7200;
