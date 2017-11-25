@@ -11,8 +11,7 @@
 payment is made to the order address, you will need authorize release of the funds before the
 order is dispatched.</p>
                     {else}
-<p align="justify">This order is proceeding via escrow. Once the payment has been processed the vendor will
-vendor will notify you once the order has been dispatched. When received you can release the funds to the vendor.
+<p align="justify">This order is proceeding via escrow. Once the payment has been processed the vendor will notify you once the order has been dispatched. When received you can release the funds to the vendor.
 </p>
 {/if}
 
