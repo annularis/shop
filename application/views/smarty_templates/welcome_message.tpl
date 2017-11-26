@@ -9,16 +9,16 @@
                 <p>Completely avoid the barrier of entry to the Bitcoin Market, and take part in the Bitcoin revolution!</p>
                 <p>Highly customizable, allowing you to tailor the site's configuration for your users requirements.</p>
                 <p>The project is open source, and well-reviewed, so rest assured people are working hard to keep your software secure.</p>
-                <p align='center'><a class="btn btn-success btn-medium" href="https://www.github.com/Bit-Wasp/BitWasp">Check out our source code on GitHub!</a> </p>
+                <p align='center'><a class="btn btn-success btn-medium" href="https://www.github.com/Annularis/shop">Check out our source code on GitHub!</a> </p>
 
 
                 <div class='row'>
-                    <p>Please consider donating to our Bitcoin address, 19EkDTAaGWySZv1QsWxyWwYMZpo7jpvPYe. Donations will go towards hosting, and to provide bounties for bugs.</p>
+                    <p>Please consider donating to our Bitcoin address, 12khtM9M3rr65apapJrG5gKfUbDxDsAbdv. Donations will go towards hosting, and to provide bounties for bugs.</p>
 
                     <div class='row'>
                         <div class='col-md-4'>
                             <h3>Fit for all Purposes</h3>
-                            <p>Maybe you want to solely sell your own products on the marketplace, or want to be the next BitMit. BitWasp is built for all purposes, and won't get in the way of what you'd like to do.</p>
+                            <p>Maybe you want to solely sell your own products on the marketplace, or want to be the next BitMit. Annularis is built for all purposes, and won't get in the way of what you'd like to do.</p>
                         </div>
 
                         <div class='col-md-4'>
@@ -35,7 +35,7 @@
                     <div class='row'>
                         <div class='col-md-4'>
                             <h3>The code is Free! (Gratis & Libre)</h3>
-                            <p>as in free speech and free beer! BitWasp is released under the Agorist Licence - it's use is unencumbered by restrictions (and warrantees). The code is yours to deploy in a marketplace, or to release your own, way better version.</p>
+                            <p>as in free speech and free beer! Annularis is released under the Agorist Licence - it's use is unencumbered by restrictions (and warrantees). The code is yours to deploy in a marketplace, or to release your own, way better version.</p>
                         </div>
 
                         <div class='col-md-4'>
