@@ -1,10 +1,11 @@
-# Annularis Project
+# Annularis Project <a href="https://travis-ci.org/annularis/shop"><img src="https://travis-ci.org/annularis/shop.svg" alt="Build Status"></a>
 ===
 
 ```
 Project Forums: https://annularis.org/forum/
 Test site: https://annularis.org/shop/
 ```
+
 
 Annularis is an open source PHP project which allows anyone to set up a secure bitcoin marketplace independent of other centralized services.
 
