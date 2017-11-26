@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+    <mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <database name="annularis">
+        <table_data name="bw_config">
+        <row>
+            <field name="id">4</field>
+            <field name="content">Annularis</field>
+        </row>
+        </table_data>
+    </database>
+    </mysqldump>
