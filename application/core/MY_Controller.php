@@ -44,7 +44,7 @@ class MY_Controller extends CI_Controller
         $info = json_decode($this->session->flashdata('returnMessage'));
         if (!isset($this->_template_data_array['returnMessage']) && count($info) !== 0 && isset($info->message)) {
             $this->smartie->assign('returnMessage', $info->message);
-            $this->smartie->assign('returnMessage_class', ((isset($info->class) ? $info->class : 'warning')));
+            $this->smarty->assign('returnMessage_class', (isset($info->class) ? $info->class : 'warning'));
         } else {
             $this->smartie->assign('returnMessage', '');
             $this->smartie->assign('returnMessage_class', '');
