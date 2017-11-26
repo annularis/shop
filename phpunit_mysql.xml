@@ -1,0 +1,3347 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="annularis">
+	<table_structure name="bw_alerts">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="source" Type="varchar(30)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="message" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="time" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_alerts" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_alerts" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:13" Collation="utf8_general_ci" Create_options="" Comment="Contains a log of the alert messages." />
+	</table_structure>
+	<table_data name="bw_alerts">
+	</table_data>
+	<table_structure name="bw_autorun">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="name" Type="varchar(40)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="interval" Type="varchar(8)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="interval_type" Type="varchar(10)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="last_update" Type="varchar(20)" Null="YES" Key="" Default="0" Extra="" Comment="" />
+		<field Field="description" Type="varchar(200)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="index" Type="varchar(40)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<key Table="bw_autorun" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_autorun" Non_unique="0" Key_name="index" Seq_in_index="1" Column_name="index" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_autorun" Engine="InnoDB" Version="10" Row_format="Compact" Rows="2" Avg_row_length="8192" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="3" Create_time="2017-11-26 12:25:13" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_autorun">
+	<row>
+		<field name="id">1</field>
+		<field name="name">Bitcoin Price Index</field>
+		<field name="interval">1</field>
+		<field name="interval_type">minutes</field>
+		<field name="last_update">1511714642</field>
+		<field name="description">An autorun job to update the Bitcoin exchange rates.</field>
+		<field name="index">price_index</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="name">Version Check</field>
+		<field name="interval">1</field>
+		<field name="interval_type">days</field>
+		<field name="last_update">1511702190</field>
+		<field name="description">An autorun job to check for updates to the Annularis source code.</field>
+		<field name="index">version_checker</field>
+	</row>
+	</table_data>
+	<table_structure name="bw_bip32_keys">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="key" Type="varchar(600)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="user_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="provider" Type="enum('Manual','Onchain','JS')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="key_index" Type="int(9)" Null="NO" Key="" Default="0" Extra="" Comment="" />
+		<key Table="bw_bip32_keys" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_bip32_keys" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:13" Collation="latin1_swedish_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_bip32_keys">
+	</table_data>
+	<table_structure name="bw_bip32_user_keys">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="user_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="order_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="order_hash" Type="varchar(30)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="user_role" Type="enum('Buyer','Vendor','Admin')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="parent_extended_public_key" Type="varchar(300)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="provider" Type="enum('Manual','Onchain','JS')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="extended_public_key" Type="varchar(300)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="public_key" Type="varchar(130)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="key_index" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_bip32_user_keys" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_bip32_user_keys" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="78" Create_time="2017-11-26 12:25:13" Collation="latin1_swedish_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_bip32_user_keys">
+	</table_data>
+	<table_structure name="bw_blocks">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="hash" Type="varchar(64)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<field Field="prev_hash" Type="varchar(64)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="height" Type="int(10)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_blocks" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_blocks" Non_unique="0" Key_name="hash" Seq_in_index="1" Column_name="hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_blocks" Non_unique="1" Key_name="hash_2" Seq_in_index="1" Column_name="hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_blocks" Non_unique="1" Key_name="hash_2" Seq_in_index="2" Column_name="height" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_blocks" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:13" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_blocks">
+	</table_data>
+	<table_structure name="bw_categories">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="description" Type="varchar(100)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="hash" Type="varchar(25)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<field Field="name" Type="varchar(40)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="parent_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_categories" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_categories" Non_unique="0" Key_name="hash" Seq_in_index="1" Column_name="hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_categories" Non_unique="1" Key_name="hash_2" Seq_in_index="1" Column_name="hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_categories" Non_unique="1" Key_name="hash_2" Seq_in_index="2" Column_name="parent_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_categories" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:13" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_categories">
+	</table_data>
+	<table_structure name="bw_config">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="parameter" Type="varchar(30)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<field Field="value" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_config" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="36" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_config" Non_unique="0" Key_name="parameter" Seq_in_index="1" Column_name="parameter" Collation="A" Cardinality="36" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_config" Engine="InnoDB" Version="10" Row_format="Compact" Rows="36" Avg_row_length="455" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="37" Create_time="2017-11-26 12:25:13" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_config">
+	<row>
+		<field name="id">1</field>
+		<field name="parameter">registration_allowed</field>
+		<field name="value">1</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="parameter">openssl_keysize</field>
+		<field name="value">2048</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="parameter">site_description</field>
+		<field name="value">open source bitcoin marketplace</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="parameter">site_title</field>
+		<field name="value">BitWasp</field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="parameter">login_timeout</field>
+		<field name="value">30</field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="parameter">vendor_registration_allowed</field>
+		<field name="value">1</field>
+	</row>
+	<row>
+		<field name="id">7</field>
+		<field name="parameter">captcha_length</field>
+		<field name="value">6</field>
+	</row>
+	<row>
+		<field name="id">8</field>
+		<field name="parameter">price_index</field>
+		<field name="value">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">9</field>
+		<field name="parameter">max_main_balance</field>
+		<field name="value">0.00000000</field>
+	</row>
+	<row>
+		<field name="id">10</field>
+		<field name="parameter">max_fees_balance</field>
+		<field name="value">0.00000000</field>
+	</row>
+	<row>
+		<field name="id">11</field>
+		<field name="parameter">encrypt_private_messages</field>
+		<field name="value">0</field>
+	</row>
+	<row>
+		<field name="id">12</field>
+		<field name="parameter">allow_guests</field>
+		<field name="value">1</field>
+	</row>
+	<row>
+		<field name="id">13</field>
+		<field name="parameter">force_vendor_pgp</field>
+		<field name="value">0</field>
+	</row>
+	<row>
+		<field name="id">14</field>
+		<field name="parameter">bip32_mpk</field>
+		<field name="value">00000000000000000000000000000000000000000000000000000000000000</field>
+	</row>
+	<row>
+		<field name="id">15</field>
+		<field name="parameter">bip32_iteration</field>
+		<field name="value">0</field>
+	</row>
+	<row>
+		<field name="id">16</field>
+		<field name="parameter">delete_logs_after</field>
+		<field name="value">14</field>
+	</row>
+	<row>
+		<field name="id">17</field>
+		<field name="parameter">entry_payment_vendor</field>
+		<field name="value">0</field>
+	</row>
+	<row>
+		<field name="id">18</field>
+		<field name="parameter">entry_payment_buyer</field>
+		<field name="value">0</field>
+	</row>
+	<row>
+		<field name="id">19</field>
+		<field name="parameter">minimum_fee</field>
+		<field name="value">0.0002</field>
+	</row>
+	<row>
+		<field name="id">20</field>
+		<field name="parameter">default_rate</field>
+		<field name="value">0.25</field>
+	</row>
+	<row>
+		<field name="id">21</field>
+		<field name="parameter">global_proxy_url</field>
+		<field name="value"></field>
+	</row>
+	<row>
+		<field name="id">22</field>
+		<field name="parameter">global_proxy_type</field>
+		<field name="value">Disabled</field>
+	</row>
+	<row>
+		<field name="id">23</field>
+		<field name="parameter">maintenance_mode</field>
+		<field name="value">0</field>
+	</row>
+	<row>
+		<field name="id">24</field>
+		<field name="parameter">settings_preserve</field>
+		<field name="value"></field>
+	</row>
+	<row>
+		<field name="id">25</field>
+		<field name="parameter">autorun_preserve</field>
+		<field name="value"></field>
+	</row>
+	<row>
+		<field name="id">26</field>
+		<field name="parameter">trusted_user_order_count</field>
+		<field name="value">7</field>
+	</row>
+	<row>
+		<field name="id">27</field>
+		<field name="parameter">trusted_user_review_count</field>
+		<field name="value">4</field>
+	</row>
+	<row>
+		<field name="id">28</field>
+		<field name="parameter">trusted_user_rating</field>
+		<field name="value">2.5</field>
+	</row>
+	<row>
+		<field name="id">29</field>
+		<field name="parameter">terms_of_service</field>
+		<field name="value"></field>
+	</row>
+	<row>
+		<field name="id">30</field>
+		<field name="parameter">terms_of_service_toggle</field>
+		<field name="value">0</field>
+	</row>
+	<row>
+		<field name="id">31</field>
+		<field name="parameter">location_list_source</field>
+		<field name="value">Default</field>
+	</row>
+	<row>
+		<field name="id">32</field>
+		<field name="parameter">escrow_rate</field>
+		<field name="value">1</field>
+	</row>
+	<row>
+		<field name="id">33</field>
+		<field name="parameter">upfront_rate</field>
+		<field name="value">1</field>
+	</row>
+	<row>
+		<field name="id">34</field>
+		<field name="parameter">bitcoin_callback_running</field>
+		<field name="value">false</field>
+	</row>
+	<row>
+		<field name="id">35</field>
+		<field name="parameter">bitcoin_callback_starttime</field>
+		<field name="value">100</field>
+	</row>
+	<row>
+		<field name="id">36</field>
+		<field name="parameter">request_emails</field>
+		<field name="value">0</field>
+	</row>
+	</table_data>
+	<table_structure name="bw_currencies">
+		<field Field="id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="name" Type="varchar(40)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="symbol" Type="varchar(10)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="code" Type="varchar(5)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="crypto_magic_byte" Type="varchar(2)" Null="NO" Key="" Extra="" Comment="" />
+		<options Name="bw_currencies" Engine="InnoDB" Version="10" Row_format="Compact" Rows="4" Avg_row_length="4096" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Create_time="2017-11-26 12:25:13" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_currencies">
+	<row>
+		<field name="id">0</field>
+		<field name="name">Bitcoin</field>
+		<field name="symbol">BTC</field>
+		<field name="code">BTC</field>
+		<field name="crypto_magic_byte">00</field>
+	</row>
+	<row>
+		<field name="id">1</field>
+		<field name="name">United States Dollar</field>
+		<field name="symbol">&amp;#36;</field>
+		<field name="code">USD</field>
+		<field name="crypto_magic_byte"></field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="name">British Pound Sterling</field>
+		<field name="symbol">&amp;pound;</field>
+		<field name="code">GBP</field>
+		<field name="crypto_magic_byte"></field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="name">Euro</field>
+		<field name="symbol">&amp;euro;</field>
+		<field name="code">EUR</field>
+		<field name="crypto_magic_byte"></field>
+	</row>
+	</table_data>
+	<table_structure name="bw_disputes">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="dispute_message" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="disputing_user_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="other_user_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="last_update" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="order_id" Type="int(9)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<field Field="final_response" Type="enum('0','1')" Null="NO" Key="" Default="0" Extra="" Comment="" />
+		<field Field="time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_disputes" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_disputes" Non_unique="0" Key_name="order_id" Seq_in_index="1" Column_name="order_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_disputes" Non_unique="1" Key_name="order_id_2" Seq_in_index="1" Column_name="order_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_disputes" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_disputes">
+	</table_data>
+	<table_structure name="bw_disputes_updates">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="order_id" Type="int(9)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="dispute_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="posting_user_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="message" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_disputes_updates" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_disputes_updates" Non_unique="1" Key_name="order_id" Seq_in_index="1" Column_name="order_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_disputes_updates" Non_unique="1" Key_name="order_id" Seq_in_index="2" Column_name="dispute_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_disputes_updates" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_disputes_updates">
+	</table_data>
+	<table_structure name="bw_email_update_requests">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="user_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="email_address" Type="varchar(150)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="expire_time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="activation_hash" Type="varchar(64)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="activation_id" Type="varchar(64)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="activated" Type="enum('0','1')" Null="YES" Key="" Default="0" Extra="" Comment="" />
+		<key Table="bw_email_update_requests" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_email_update_requests" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:20" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_email_update_requests">
+	</table_data>
+	<table_structure name="bw_entry_payment">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="user_hash" Type="varchar(25)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<field Field="amount" Type="decimal(20,8)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="bitcoin_address" Type="varchar(40)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_entry_payment" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_entry_payment" Non_unique="0" Key_name="user_hash" Seq_in_index="1" Column_name="user_hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_entry_payment" Non_unique="1" Key_name="user_hash_2" Seq_in_index="1" Column_name="user_hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_entry_payment" Non_unique="1" Key_name="user_hash_2" Seq_in_index="2" Column_name="bitcoin_address" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_entry_payment" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_entry_payment">
+	</table_data>
+	<table_structure name="bw_exchange_rates">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="usd" Type="decimal(10,4)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="eur" Type="decimal(10,4)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="gbp" Type="decimal(10,4)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="btc" Type="int(11)" Null="NO" Key="" Default="1" Extra="" Comment="" />
+		<field Field="price_index" Type="varchar(45)" Null="YES" Key="" Extra="" Comment="" />
+		<key Table="bw_exchange_rates" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="99" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_exchange_rates" Engine="InnoDB" Version="10" Row_format="Compact" Rows="99" Avg_row_length="165" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="100" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_exchange_rates">
+	<row>
+		<field name="id">1</field>
+		<field name="time">1396517400</field>
+		<field name="usd">421.6251</field>
+		<field name="eur">306.3123</field>
+		<field name="gbp">253.2567</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="time">1396519320</field>
+		<field name="usd">422.1184</field>
+		<field name="eur">306.6707</field>
+		<field name="gbp">253.5530</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="time">1396520220</field>
+		<field name="usd">437.1317</field>
+		<field name="eur">317.5407</field>
+		<field name="gbp">263.2079</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="time">1511699160</field>
+		<field name="usd">8951.6713</field>
+		<field name="eur">7502.5299</field>
+		<field name="gbp">6711.3812</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="time">1511702160</field>
+		<field name="usd">8997.9613</field>
+		<field name="eur">7541.3263</field>
+		<field name="gbp">6746.0865</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="time">1511702160</field>
+		<field name="usd">8997.9613</field>
+		<field name="eur">7541.3263</field>
+		<field name="gbp">6746.0865</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">7</field>
+		<field name="time">1511704680</field>
+		<field name="usd">8992.4100</field>
+		<field name="eur">7536.6737</field>
+		<field name="gbp">6741.9245</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">8</field>
+		<field name="time">1511704740</field>
+		<field name="usd">8990.2650</field>
+		<field name="eur">7534.8760</field>
+		<field name="gbp">6740.3163</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">9</field>
+		<field name="time">1511704920</field>
+		<field name="usd">8991.7950</field>
+		<field name="eur">7536.1583</field>
+		<field name="gbp">6741.4634</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">10</field>
+		<field name="time">1511705280</field>
+		<field name="usd">9012.4913</field>
+		<field name="eur">7553.5041</field>
+		<field name="gbp">6757.5659</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">11</field>
+		<field name="time">1511705340</field>
+		<field name="usd">9012.4888</field>
+		<field name="eur">7553.5020</field>
+		<field name="gbp">6757.5641</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">12</field>
+		<field name="time">1511705400</field>
+		<field name="usd">9009.2988</field>
+		<field name="eur">7550.8284</field>
+		<field name="gbp">6755.1722</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">13</field>
+		<field name="time">1511705520</field>
+		<field name="usd">9009.9350</field>
+		<field name="eur">7551.3617</field>
+		<field name="gbp">6755.6493</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">14</field>
+		<field name="time">1511705580</field>
+		<field name="usd">9008.0625</field>
+		<field name="eur">7549.7923</field>
+		<field name="gbp">6754.2453</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">15</field>
+		<field name="time">1511705700</field>
+		<field name="usd">9001.8088</field>
+		<field name="eur">7544.5509</field>
+		<field name="gbp">6749.5562</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">16</field>
+		<field name="time">1511705820</field>
+		<field name="usd">9001.6763</field>
+		<field name="eur">7544.4399</field>
+		<field name="gbp">6749.4569</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">17</field>
+		<field name="time">1511705880</field>
+		<field name="usd">8997.6613</field>
+		<field name="eur">7541.0749</field>
+		<field name="gbp">6746.4464</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">18</field>
+		<field name="time">1511706000</field>
+		<field name="usd">8987.2900</field>
+		<field name="eur">7532.3826</field>
+		<field name="gbp">6738.6700</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">19</field>
+		<field name="time">1511706060</field>
+		<field name="usd">8988.5688</field>
+		<field name="eur">7533.4543</field>
+		<field name="gbp">6739.6288</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">20</field>
+		<field name="time">1511706180</field>
+		<field name="usd">8999.1025</field>
+		<field name="eur">7542.2828</field>
+		<field name="gbp">6747.5271</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">21</field>
+		<field name="time">1511706300</field>
+		<field name="usd">9001.3975</field>
+		<field name="eur">7544.2063</field>
+		<field name="gbp">6749.2478</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">22</field>
+		<field name="time">1511706420</field>
+		<field name="usd">9000.5350</field>
+		<field name="eur">7543.4834</field>
+		<field name="gbp">6748.6011</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">23</field>
+		<field name="time">1511706540</field>
+		<field name="usd">9003.6888</field>
+		<field name="eur">7546.1266</field>
+		<field name="gbp">6750.9658</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">24</field>
+		<field name="time">1511706600</field>
+		<field name="usd">9009.7938</field>
+		<field name="eur">7551.2433</field>
+		<field name="gbp">6755.5434</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">25</field>
+		<field name="time">1511706720</field>
+		<field name="usd">9012.0813</field>
+		<field name="eur">7553.1605</field>
+		<field name="gbp">6757.2585</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">26</field>
+		<field name="time">1511706840</field>
+		<field name="usd">9016.5763</field>
+		<field name="eur">7556.9278</field>
+		<field name="gbp">6760.6289</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">27</field>
+		<field name="time">1511706900</field>
+		<field name="usd">9016.9513</field>
+		<field name="eur">7557.2421</field>
+		<field name="gbp">6760.9100</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">28</field>
+		<field name="time">1511707020</field>
+		<field name="usd">9011.9038</field>
+		<field name="eur">7553.0117</field>
+		<field name="gbp">6757.1254</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">29</field>
+		<field name="time">1511707080</field>
+		<field name="usd">9011.4613</field>
+		<field name="eur">7552.6408</field>
+		<field name="gbp">6756.7936</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">30</field>
+		<field name="time">1511707200</field>
+		<field name="usd">9011.9688</field>
+		<field name="eur">7553.0662</field>
+		<field name="gbp">6757.1742</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">31</field>
+		<field name="time">1511707320</field>
+		<field name="usd">9010.5638</field>
+		<field name="eur">7551.8886</field>
+		<field name="gbp">6756.1207</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">32</field>
+		<field name="time">1511707440</field>
+		<field name="usd">9001.3750</field>
+		<field name="eur">7544.1874</field>
+		<field name="gbp">6749.2310</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">33</field>
+		<field name="time">1511707500</field>
+		<field name="usd">8994.0725</field>
+		<field name="eur">7538.0671</field>
+		<field name="gbp">6743.7556</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">34</field>
+		<field name="time">1511707620</field>
+		<field name="usd">8995.2150</field>
+		<field name="eur">7539.0246</field>
+		<field name="gbp">6744.6122</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">35</field>
+		<field name="time">1511707740</field>
+		<field name="usd">8996.3063</field>
+		<field name="eur">7539.9392</field>
+		<field name="gbp">6745.4304</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">36</field>
+		<field name="time">1511707860</field>
+		<field name="usd">8997.2625</field>
+		<field name="eur">7540.7407</field>
+		<field name="gbp">6746.1474</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">37</field>
+		<field name="time">1511707980</field>
+		<field name="usd">8994.2325</field>
+		<field name="eur">7538.2012</field>
+		<field name="gbp">6743.8755</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">38</field>
+		<field name="time">1511708100</field>
+		<field name="usd">8992.4625</field>
+		<field name="eur">7536.7177</field>
+		<field name="gbp">6742.5484</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">39</field>
+		<field name="time">1511708160</field>
+		<field name="usd">8992.3313</field>
+		<field name="eur">7536.6077</field>
+		<field name="gbp">6742.4500</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">40</field>
+		<field name="time">1511708280</field>
+		<field name="usd">8993.6225</field>
+		<field name="eur">7537.6899</field>
+		<field name="gbp">6743.4182</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">41</field>
+		<field name="time">1511708340</field>
+		<field name="usd">8994.2788</field>
+		<field name="eur">7538.2399</field>
+		<field name="gbp">6743.9102</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">42</field>
+		<field name="time">1511708460</field>
+		<field name="usd">8992.5925</field>
+		<field name="eur">7536.8267</field>
+		<field name="gbp">6742.6459</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">43</field>
+		<field name="time">1511708520</field>
+		<field name="usd">8991.8575</field>
+		<field name="eur">7536.2106</field>
+		<field name="gbp">6742.0948</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">44</field>
+		<field name="time">1511708640</field>
+		<field name="usd">8996.2888</field>
+		<field name="eur">7539.9245</field>
+		<field name="gbp">6745.4173</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">45</field>
+		<field name="time">1511708700</field>
+		<field name="usd">8996.5863</field>
+		<field name="eur">7540.1739</field>
+		<field name="gbp">6745.6404</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">46</field>
+		<field name="time">1511708820</field>
+		<field name="usd">8999.2213</field>
+		<field name="eur">7542.3823</field>
+		<field name="gbp">6747.6161</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">47</field>
+		<field name="time">1511708880</field>
+		<field name="usd">9009.2513</field>
+		<field name="eur">7550.7886</field>
+		<field name="gbp">6755.1366</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">48</field>
+		<field name="time">1511709000</field>
+		<field name="usd">9018.8000</field>
+		<field name="eur">7558.7916</field>
+		<field name="gbp">6762.2962</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">49</field>
+		<field name="time">1511709060</field>
+		<field name="usd">9021.7438</field>
+		<field name="eur">7561.2588</field>
+		<field name="gbp">6764.5035</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">50</field>
+		<field name="time">1511709180</field>
+		<field name="usd">9025.9688</field>
+		<field name="eur">7564.7998</field>
+		<field name="gbp">6767.6714</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">51</field>
+		<field name="time">1511709300</field>
+		<field name="usd">9029.2325</field>
+		<field name="eur">7567.5352</field>
+		<field name="gbp">6770.1185</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">52</field>
+		<field name="time">1511709360</field>
+		<field name="usd">9026.8500</field>
+		<field name="eur">7565.5384</field>
+		<field name="gbp">6768.3321</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">53</field>
+		<field name="time">1511709480</field>
+		<field name="usd">9027.4213</field>
+		<field name="eur">7566.0172</field>
+		<field name="gbp">6768.7605</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">54</field>
+		<field name="time">1511709600</field>
+		<field name="usd">9020.1688</field>
+		<field name="eur">7559.9387</field>
+		<field name="gbp">6763.3225</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">55</field>
+		<field name="time">1511709720</field>
+		<field name="usd">9020.8200</field>
+		<field name="eur">7560.4846</field>
+		<field name="gbp">6763.8108</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">56</field>
+		<field name="time">1511709840</field>
+		<field name="usd">9034.5675</field>
+		<field name="eur">7572.0065</field>
+		<field name="gbp">6774.1187</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">57</field>
+		<field name="time">1511709960</field>
+		<field name="usd">9049.4913</field>
+		<field name="eur">7584.5144</field>
+		<field name="gbp">6785.3085</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">58</field>
+		<field name="time">1511710020</field>
+		<field name="usd">9054.6675</field>
+		<field name="eur">7588.8527</field>
+		<field name="gbp">6789.1897</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">59</field>
+		<field name="time">1511710140</field>
+		<field name="usd">9062.3175</field>
+		<field name="eur">7595.2642</field>
+		<field name="gbp">6794.9257</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">60</field>
+		<field name="time">1511710260</field>
+		<field name="usd">9059.8813</field>
+		<field name="eur">7593.2224</field>
+		<field name="gbp">6793.0990</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">61</field>
+		<field name="time">1511710320</field>
+		<field name="usd">9058.6213</field>
+		<field name="eur">7592.1663</field>
+		<field name="gbp">6792.1542</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">62</field>
+		<field name="time">1511710440</field>
+		<field name="usd">9062.3200</field>
+		<field name="eur">7595.2663</field>
+		<field name="gbp">6794.9275</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">63</field>
+		<field name="time">1511710500</field>
+		<field name="usd">9064.0925</field>
+		<field name="eur">7596.7519</field>
+		<field name="gbp">6796.2566</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">64</field>
+		<field name="time">1511710620</field>
+		<field name="usd">9072.8775</field>
+		<field name="eur">7604.1147</field>
+		<field name="gbp">6802.8435</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">65</field>
+		<field name="time">1511710680</field>
+		<field name="usd">9081.6538</field>
+		<field name="eur">7611.4702</field>
+		<field name="gbp">6809.4240</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">66</field>
+		<field name="time">1511710800</field>
+		<field name="usd">9095.8888</field>
+		<field name="eur">7623.4008</field>
+		<field name="gbp">6820.0974</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">67</field>
+		<field name="time">1511710920</field>
+		<field name="usd">9093.7138</field>
+		<field name="eur">7621.5779</field>
+		<field name="gbp">6818.4666</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">68</field>
+		<field name="time">1511711040</field>
+		<field name="usd">9097.2025</field>
+		<field name="eur">7624.5019</field>
+		<field name="gbp">6821.0824</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">69</field>
+		<field name="time">1511711100</field>
+		<field name="usd">9101.7300</field>
+		<field name="eur">7628.2964</field>
+		<field name="gbp">6824.4772</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">70</field>
+		<field name="time">1511711220</field>
+		<field name="usd">9105.9850</field>
+		<field name="eur">7631.8626</field>
+		<field name="gbp">6827.6676</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">71</field>
+		<field name="time">1511711340</field>
+		<field name="usd">9110.1988</field>
+		<field name="eur">7635.3942</field>
+		<field name="gbp">6830.8270</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">72</field>
+		<field name="time">1511711460</field>
+		<field name="usd">9114.9238</field>
+		<field name="eur">7639.3543</field>
+		<field name="gbp">6834.3698</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">73</field>
+		<field name="time">1511711580</field>
+		<field name="usd">9114.3125</field>
+		<field name="eur">7638.8420</field>
+		<field name="gbp">6833.9115</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">74</field>
+		<field name="time">1511711700</field>
+		<field name="usd">9114.0325</field>
+		<field name="eur">7638.6073</field>
+		<field name="gbp">6833.7016</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">75</field>
+		<field name="time">1511711820</field>
+		<field name="usd">9114.0800</field>
+		<field name="eur">7638.6472</field>
+		<field name="gbp">6833.7372</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">76</field>
+		<field name="time">1511711940</field>
+		<field name="usd">9118.0750</field>
+		<field name="eur">7641.9954</field>
+		<field name="gbp">6836.7326</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">77</field>
+		<field name="time">1511712060</field>
+		<field name="usd">9124.2688</field>
+		<field name="eur">7647.1865</field>
+		<field name="gbp">6841.3767</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">78</field>
+		<field name="time">1511712180</field>
+		<field name="usd">9136.7663</field>
+		<field name="eur">7657.6608</field>
+		<field name="gbp">6850.7473</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">79</field>
+		<field name="time">1511712300</field>
+		<field name="usd">9140.5663</field>
+		<field name="eur">7660.8457</field>
+		<field name="gbp">6853.5966</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">80</field>
+		<field name="time">1511712420</field>
+		<field name="usd">9147.0950</field>
+		<field name="eur">7666.3175</field>
+		<field name="gbp">6858.4918</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">81</field>
+		<field name="time">1511712540</field>
+		<field name="usd">9151.2225</field>
+		<field name="eur">7669.7768</field>
+		<field name="gbp">6861.5866</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">82</field>
+		<field name="time">1511712660</field>
+		<field name="usd">9150.6063</field>
+		<field name="eur">7669.2604</field>
+		<field name="gbp">6861.1246</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">83</field>
+		<field name="time">1511712720</field>
+		<field name="usd">9153.5363</field>
+		<field name="eur">7671.7160</field>
+		<field name="gbp">6863.3215</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">84</field>
+		<field name="time">1511712840</field>
+		<field name="usd">9152.9188</field>
+		<field name="eur">7671.1985</field>
+		<field name="gbp">6862.8585</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">85</field>
+		<field name="time">1511712960</field>
+		<field name="usd">9134.4163</field>
+		<field name="eur">7655.6913</field>
+		<field name="gbp">6848.9853</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">86</field>
+		<field name="time">1511713080</field>
+		<field name="usd">9139.0000</field>
+		<field name="eur">7659.5330</field>
+		<field name="gbp">6852.4222</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">87</field>
+		<field name="time">1511713200</field>
+		<field name="usd">9157.9050</field>
+		<field name="eur">7675.3775</field>
+		<field name="gbp">6866.5972</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">88</field>
+		<field name="time">1511713320</field>
+		<field name="usd">9176.8650</field>
+		<field name="eur">7691.2682</field>
+		<field name="gbp">6880.8134</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">89</field>
+		<field name="time">1511713440</field>
+		<field name="usd">9197.0413</field>
+		<field name="eur">7708.1782</field>
+		<field name="gbp">6895.9415</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">90</field>
+		<field name="time">1511713560</field>
+		<field name="usd">9197.5075</field>
+		<field name="eur">7708.5690</field>
+		<field name="gbp">6896.2911</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">91</field>
+		<field name="time">1511713680</field>
+		<field name="usd">9212.3325</field>
+		<field name="eur">7720.9941</field>
+		<field name="gbp">6907.4069</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">92</field>
+		<field name="time">1511713740</field>
+		<field name="usd">9202.4488</field>
+		<field name="eur">7712.7103</field>
+		<field name="gbp">6899.9961</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">93</field>
+		<field name="time">1511713860</field>
+		<field name="usd">9169.1413</field>
+		<field name="eur">7684.7948</field>
+		<field name="gbp">6875.0221</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">94</field>
+		<field name="time">1511713980</field>
+		<field name="usd">9196.0138</field>
+		<field name="eur">7707.3171</field>
+		<field name="gbp">6895.1711</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">95</field>
+		<field name="time">1511714100</field>
+		<field name="usd">9204.5875</field>
+		<field name="eur">7714.5029</field>
+		<field name="gbp">6901.5997</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">96</field>
+		<field name="time">1511714220</field>
+		<field name="usd">9202.1550</field>
+		<field name="eur">7712.4641</field>
+		<field name="gbp">6899.7758</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">97</field>
+		<field name="time">1511714340</field>
+		<field name="usd">9194.2675</field>
+		<field name="eur">7705.8535</field>
+		<field name="gbp">6893.8618</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">98</field>
+		<field name="time">1511714460</field>
+		<field name="usd">9189.4838</field>
+		<field name="eur">7701.8442</field>
+		<field name="gbp">6890.2749</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	<row>
+		<field name="id">99</field>
+		<field name="time">1511714580</field>
+		<field name="usd">9188.7625</field>
+		<field name="eur">7701.2397</field>
+		<field name="gbp">6889.7341</field>
+		<field name="btc">1</field>
+		<field name="price_index">CoinDesk</field>
+	</row>
+	</table_data>
+	<table_structure name="bw_fees">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="low" Type="decimal(20,8)" Null="NO" Key="" Extra="" Comment="Orders exceeding this value apply to this range" />
+		<field Field="high" Type="decimal(20,8)" Null="NO" Key="" Extra="" Comment="Orders less than this value apply to this range" />
+		<field Field="rate" Type="decimal(4,3)" Null="NO" Key="" Extra="" Comment="Percentage fee to be charged for this range" />
+		<key Table="bw_fees" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="3" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_fees" Engine="InnoDB" Version="10" Row_format="Compact" Rows="3" Avg_row_length="5461" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="4" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_fees">
+	<row>
+		<field name="id">1</field>
+		<field name="low">0.00000000</field>
+		<field name="high">0.50000000</field>
+		<field name="rate">1.000</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="low">0.50000000</field>
+		<field name="high">5.00000000</field>
+		<field name="rate">0.750</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="low">5.00000000</field>
+		<field name="high">500.00000000</field>
+		<field name="rate">0.500</field>
+	</row>
+	</table_data>
+	<table_structure name="bw_images">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="hash" Type="varchar(25)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<field Field="encoded" Type="longtext" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="height" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="width" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_images" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_images" Non_unique="0" Key_name="hash" Seq_in_index="1" Column_name="hash" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_images" Non_unique="1" Key_name="hash_2" Seq_in_index="1" Column_name="hash" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_images" Engine="InnoDB" Version="10" Row_format="Compact" Rows="1" Avg_row_length="32768" Data_length="32768" Max_data_length="0" Index_length="32768" Data_free="4194304" Auto_increment="2" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_images">
+	<row>
+		<field name="id">1</field>
+		<field name="hash">default</field>
+		<field name="encoded">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</field>
+		<field name="height">0</field>
+		<field name="width">0</field>
+	</row>
+	</table_data>
+	<table_structure name="bw_item_images">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="image_hash" Type="varchar(25)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="item_hash" Type="varchar(25)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<key Table="bw_item_images" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_item_images" Non_unique="1" Key_name="item_hash" Seq_in_index="1" Column_name="item_hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_item_images" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_item_images">
+	</table_data>
+	<table_structure name="bw_items">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="hash" Type="varchar(25)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<field Field="vendor_hash" Type="varchar(25)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="price" Type="decimal(20,8)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="currency" Type="int(5)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="category" Type="int(5)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="name" Type="varchar(100)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="description" Type="blob" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="main_image" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="add_time" Type="int(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="update_time" Type="int(20)" Null="YES" Key="" Default="0" Extra="" Comment="" />
+		<field Field="hidden" Type="enum('0','1')" Null="NO" Key="" Default="0" Extra="" Comment="" />
+		<field Field="prefer_upfront" Type="enum('0','1')" Null="NO" Key="" Default="0" Extra="" Comment="" />
+		<field Field="ship_from" Type="int(5)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_items" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_items" Non_unique="0" Key_name="hash" Seq_in_index="1" Column_name="hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_items" Non_unique="1" Key_name="hash_2" Seq_in_index="1" Column_name="hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_items" Non_unique="1" Key_name="hash_2" Seq_in_index="2" Column_name="vendor_hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_items" Non_unique="1" Key_name="hash_2" Seq_in_index="3" Column_name="category" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_items" Non_unique="1" Key_name="hash_2" Seq_in_index="4" Column_name="hidden" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_items" Non_unique="1" Key_name="hash_2" Seq_in_index="5" Column_name="ship_from" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_items" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_items">
+	</table_data>
+	<table_structure name="bw_key_usage">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="usage" Type="varchar(25)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mpk" Type="varchar(150)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="iteration" Type="varchar(150)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="public_key" Type="varchar(150)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="address" Type="varchar(40)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="order_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="fees_user_hash" Type="varchar(25)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_key_usage" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_key_usage" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_key_usage">
+	</table_data>
+	<table_structure name="bw_locations_custom_list">
+		<field Field="id" Type="int(4)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="location" Type="varchar(60)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="parent_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="hash" Type="varchar(30)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_locations_custom_list" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_locations_custom_list" Non_unique="1" Key_name="location" Seq_in_index="1" Column_name="location" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_locations_custom_list" Non_unique="1" Key_name="location" Seq_in_index="2" Column_name="parent_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_locations_custom_list" Non_unique="1" Key_name="location" Seq_in_index="3" Column_name="hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_locations_custom_list" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_locations_custom_list">
+	</table_data>
+	<table_structure name="bw_locations_default_list">
+		<field Field="id" Type="int(4)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="location" Type="varchar(60)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="parent_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="hash" Type="varchar(30)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_locations_default_list" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="239" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_locations_default_list" Non_unique="1" Key_name="location" Seq_in_index="1" Column_name="location" Collation="A" Cardinality="239" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_locations_default_list" Engine="InnoDB" Version="10" Row_format="Compact" Rows="239" Avg_row_length="68" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="240" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_locations_default_list">
+	<row>
+		<field name="id">1</field>
+		<field name="location">Afghanistan</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="location">Albania</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="location">Algeria</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="location">American Samoa</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="location">Andorra</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="location">Angola</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">7</field>
+		<field name="location">Anguilla</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">8</field>
+		<field name="location">Antarctica</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">9</field>
+		<field name="location">Antigua and Barbuda</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">10</field>
+		<field name="location">Argentina</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">11</field>
+		<field name="location">Armenia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">12</field>
+		<field name="location">Aruba</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">13</field>
+		<field name="location">Australia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">14</field>
+		<field name="location">Austria</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">15</field>
+		<field name="location">Azerbaijan</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">16</field>
+		<field name="location">Bahamas</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">17</field>
+		<field name="location">Bahrain</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">18</field>
+		<field name="location">Bangladesh</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">19</field>
+		<field name="location">Barbados</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">20</field>
+		<field name="location">Belarus</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">21</field>
+		<field name="location">Belgium</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">22</field>
+		<field name="location">Belize</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">23</field>
+		<field name="location">Benin</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">24</field>
+		<field name="location">Bermuda</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">25</field>
+		<field name="location">Bhutan</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">26</field>
+		<field name="location">Bolivia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">27</field>
+		<field name="location">Bosnia and Herzegowina</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">28</field>
+		<field name="location">Botswana</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">29</field>
+		<field name="location">Bouvet Island</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">30</field>
+		<field name="location">Brazil</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">31</field>
+		<field name="location">British Indian Ocean Territory</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">32</field>
+		<field name="location">Brunei Darussalam</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">33</field>
+		<field name="location">Bulgaria</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">34</field>
+		<field name="location">Burkina Faso</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">35</field>
+		<field name="location">Burundi</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">36</field>
+		<field name="location">Cambodia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">37</field>
+		<field name="location">Cameroon</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">38</field>
+		<field name="location">Canada</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">39</field>
+		<field name="location">Cape Verde</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">40</field>
+		<field name="location">Cayman Islands</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">41</field>
+		<field name="location">Central African Republic</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">42</field>
+		<field name="location">Chad</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">43</field>
+		<field name="location">Chile</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">44</field>
+		<field name="location">China</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">45</field>
+		<field name="location">Christmas Island</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">46</field>
+		<field name="location">Cocos (Keeling) Islands</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">47</field>
+		<field name="location">Colombia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">48</field>
+		<field name="location">Comoros</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">49</field>
+		<field name="location">Congo</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">50</field>
+		<field name="location">Congo, the Democratic Republic of the</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">51</field>
+		<field name="location">Cook Islands</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">52</field>
+		<field name="location">Costa Rica</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">53</field>
+		<field name="location">Cote dIvoire</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">54</field>
+		<field name="location">Croatia (Hrvatska)</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">55</field>
+		<field name="location">Cuba</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">56</field>
+		<field name="location">Cyprus</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">57</field>
+		<field name="location">Czech Republic</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">58</field>
+		<field name="location">Denmark</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">59</field>
+		<field name="location">Djibouti</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">60</field>
+		<field name="location">Dominica</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">61</field>
+		<field name="location">Dominican Republic</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">62</field>
+		<field name="location">East Timor</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">63</field>
+		<field name="location">Ecuador</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">64</field>
+		<field name="location">Egypt</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">65</field>
+		<field name="location">El Salvador</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">66</field>
+		<field name="location">Equatorial Guinea</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">67</field>
+		<field name="location">Eritrea</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">68</field>
+		<field name="location">Estonia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">69</field>
+		<field name="location">Ethiopia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">70</field>
+		<field name="location">Falkland Islands (Malvinas)</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">71</field>
+		<field name="location">Faroe Islands</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">72</field>
+		<field name="location">Fiji</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">73</field>
+		<field name="location">Finland</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">74</field>
+		<field name="location">France</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">75</field>
+		<field name="location">France Metropolitan</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">76</field>
+		<field name="location">French Guiana</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">77</field>
+		<field name="location">French Polynesia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">78</field>
+		<field name="location">French Southern Territories</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">79</field>
+		<field name="location">Gabon</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">80</field>
+		<field name="location">Gambia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">81</field>
+		<field name="location">Georgia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">82</field>
+		<field name="location">Germany</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">83</field>
+		<field name="location">Ghana</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">84</field>
+		<field name="location">Gibraltar</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">85</field>
+		<field name="location">Greece</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">86</field>
+		<field name="location">Greenland</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">87</field>
+		<field name="location">Grenada</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">88</field>
+		<field name="location">Guadeloupe</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">89</field>
+		<field name="location">Guam</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">90</field>
+		<field name="location">Guatemala</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">91</field>
+		<field name="location">Guinea</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">92</field>
+		<field name="location">Guinea-Bissau</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">93</field>
+		<field name="location">Guyana</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">94</field>
+		<field name="location">Haiti</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">95</field>
+		<field name="location">Heard and Mc Donald Islands</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">96</field>
+		<field name="location">Holy See (Vatican City State)</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">97</field>
+		<field name="location">Honduras</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">98</field>
+		<field name="location">Hong Kong</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">99</field>
+		<field name="location">Hungary</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">100</field>
+		<field name="location">Iceland</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">101</field>
+		<field name="location">India</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">102</field>
+		<field name="location">Indonesia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">103</field>
+		<field name="location">Iran (Islamic Republic of)</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">104</field>
+		<field name="location">Iraq</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">105</field>
+		<field name="location">Ireland</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">106</field>
+		<field name="location">Israel</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">107</field>
+		<field name="location">Italy</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">108</field>
+		<field name="location">Jamaica</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">109</field>
+		<field name="location">Japan</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">110</field>
+		<field name="location">Jordan</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">111</field>
+		<field name="location">Kazakhstan</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">112</field>
+		<field name="location">Kenya</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">113</field>
+		<field name="location">Kiribati</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">114</field>
+		<field name="location">Korea, Democratic People's Republic of</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">115</field>
+		<field name="location">Korea, Republic of</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">116</field>
+		<field name="location">Kuwait</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">117</field>
+		<field name="location">Kyrgyzstan</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">118</field>
+		<field name="location">Lao, People's Democratic Republic</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">119</field>
+		<field name="location">Latvia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">120</field>
+		<field name="location">Lebanon</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">121</field>
+		<field name="location">Lesotho</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">122</field>
+		<field name="location">Liberia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">123</field>
+		<field name="location">Libyan Arab Jamahiriya</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">124</field>
+		<field name="location">Liechtenstein</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">125</field>
+		<field name="location">Lithuania</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">126</field>
+		<field name="location">Luxembourg</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">127</field>
+		<field name="location">Macau</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">128</field>
+		<field name="location">Macedonia, The Former Yugoslav Republic of</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">129</field>
+		<field name="location">Madagascar</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">130</field>
+		<field name="location">Malawi</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">131</field>
+		<field name="location">Malaysia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">132</field>
+		<field name="location">Maldives</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">133</field>
+		<field name="location">Mali</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">134</field>
+		<field name="location">Malta</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">135</field>
+		<field name="location">Marshall Islands</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">136</field>
+		<field name="location">Martinique</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">137</field>
+		<field name="location">Mauritania</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">138</field>
+		<field name="location">Mauritius</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">139</field>
+		<field name="location">Mayotte</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">140</field>
+		<field name="location">Mexico</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">141</field>
+		<field name="location">Micronesia, Federated States of</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">142</field>
+		<field name="location">Moldova, Republic of</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">143</field>
+		<field name="location">Monaco</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">144</field>
+		<field name="location">Mongolia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">145</field>
+		<field name="location">Montserrat</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">146</field>
+		<field name="location">Morocco</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">147</field>
+		<field name="location">Mozambique</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">148</field>
+		<field name="location">Myanmar</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">149</field>
+		<field name="location">Namibia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">150</field>
+		<field name="location">Nauru</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">151</field>
+		<field name="location">Nepal</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">152</field>
+		<field name="location">Netherlands</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">153</field>
+		<field name="location">Netherlands Antilles</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">154</field>
+		<field name="location">New Caledonia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">155</field>
+		<field name="location">New Zealand</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">156</field>
+		<field name="location">Nicaragua</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">157</field>
+		<field name="location">Niger</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">158</field>
+		<field name="location">Nigeria</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">159</field>
+		<field name="location">Niue</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">160</field>
+		<field name="location">Norfolk Island</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">161</field>
+		<field name="location">Northern Mariana Islands</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">162</field>
+		<field name="location">Norway</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">163</field>
+		<field name="location">Oman</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">164</field>
+		<field name="location">Pakistan</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">165</field>
+		<field name="location">Palau</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">166</field>
+		<field name="location">Panama</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">167</field>
+		<field name="location">Papua New Guinea</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">168</field>
+		<field name="location">Paraguay</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">169</field>
+		<field name="location">Peru</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">170</field>
+		<field name="location">Philippines</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">171</field>
+		<field name="location">Pitcairn</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">172</field>
+		<field name="location">Poland</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">173</field>
+		<field name="location">Portugal</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">174</field>
+		<field name="location">Puerto Rico</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">175</field>
+		<field name="location">Qatar</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">176</field>
+		<field name="location">Reunion</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">177</field>
+		<field name="location">Romania</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">178</field>
+		<field name="location">Russian Federation</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">179</field>
+		<field name="location">Rwanda</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">180</field>
+		<field name="location">Saint Kitts and Nevis</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">181</field>
+		<field name="location">Saint Lucia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">182</field>
+		<field name="location">Saint Vincent and the Grenadines</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">183</field>
+		<field name="location">Samoa</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">184</field>
+		<field name="location">San Marino</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">185</field>
+		<field name="location">Sao Tome and Principe</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">186</field>
+		<field name="location">Saudi Arabia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">187</field>
+		<field name="location">Senegal</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">188</field>
+		<field name="location">Seychelles</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">189</field>
+		<field name="location">Sierra Leone</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">190</field>
+		<field name="location">Singapore</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">191</field>
+		<field name="location">Slovakia (Slovak Republic)</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">192</field>
+		<field name="location">Slovenia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">193</field>
+		<field name="location">Solomon Islands</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">194</field>
+		<field name="location">Somalia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">195</field>
+		<field name="location">South Africa</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">196</field>
+		<field name="location">South Georgia and the South Sandwich Islands</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">197</field>
+		<field name="location">Spain</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">198</field>
+		<field name="location">Sri Lanka</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">199</field>
+		<field name="location">St. Helena</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">200</field>
+		<field name="location">St. Pierre and Miquelon</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">201</field>
+		<field name="location">Sudan</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">202</field>
+		<field name="location">Suriname</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">203</field>
+		<field name="location">Svalbard and Jan Mayen Islands</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">204</field>
+		<field name="location">Swaziland</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">205</field>
+		<field name="location">Sweden</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">206</field>
+		<field name="location">Switzerland</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">207</field>
+		<field name="location">Syrian Arab Republic</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">208</field>
+		<field name="location">Taiwan, Province of China</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">209</field>
+		<field name="location">Tajikistan</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">210</field>
+		<field name="location">Tanzania, United Republic of</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">211</field>
+		<field name="location">Thailand</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">212</field>
+		<field name="location">Togo</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">213</field>
+		<field name="location">Tokelau</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">214</field>
+		<field name="location">Tonga</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">215</field>
+		<field name="location">Trinidad and Tobago</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">216</field>
+		<field name="location">Tunisia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">217</field>
+		<field name="location">Turkey</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">218</field>
+		<field name="location">Turkmenistan</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">219</field>
+		<field name="location">Turks and Caicos Islands</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">220</field>
+		<field name="location">Tuvalu</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">221</field>
+		<field name="location">Uganda</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">222</field>
+		<field name="location">Ukraine</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">223</field>
+		<field name="location">United Arab Emirates</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">224</field>
+		<field name="location">United Kingdom</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">225</field>
+		<field name="location">United States</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">226</field>
+		<field name="location">United States Minor Outlying Islands</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">227</field>
+		<field name="location">Uruguay</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">228</field>
+		<field name="location">Uzbekistan</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">229</field>
+		<field name="location">Vanuatu</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">230</field>
+		<field name="location">Venezuela</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">231</field>
+		<field name="location">Vietnam</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">232</field>
+		<field name="location">Virgin Islands (British)</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">233</field>
+		<field name="location">Virgin Islands (U.S.)</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">234</field>
+		<field name="location">Wallis and Futuna Islands</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">235</field>
+		<field name="location">Western Sahara</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">236</field>
+		<field name="location">Yemen</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">237</field>
+		<field name="location">Yugoslavia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">238</field>
+		<field name="location">Zambia</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	<row>
+		<field name="id">239</field>
+		<field name="location">Zimbabwe</field>
+		<field name="parent_id">0</field>
+		<field name="hash"></field>
+	</row>
+	</table_data>
+	<table_structure name="bw_logs">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="caller" Type="varchar(35)" Null="NO" Key="" Extra="" Comment="Name of the script which left the log" />
+		<field Field="message" Type="varchar(250)" Null="NO" Key="" Extra="" Comment="The message for the admins" />
+		<field Field="title" Type="varchar(50)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="time" Type="varchar(20)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="info_level" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="hash" Type="varchar(25)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<key Table="bw_logs" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_logs" Non_unique="0" Key_name="hash" Seq_in_index="1" Column_name="hash" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_logs" Non_unique="1" Key_name="time" Seq_in_index="1" Column_name="time" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_logs" Non_unique="1" Key_name="time" Seq_in_index="2" Column_name="info_level" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_logs" Non_unique="1" Key_name="time" Seq_in_index="3" Column_name="hash" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_logs" Engine="InnoDB" Version="10" Row_format="Compact" Rows="1" Avg_row_length="16384" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="4194304" Auto_increment="2" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_logs">
+	<row>
+		<field name="id">1</field>
+		<field name="caller">Version Checker</field>
+		<field name="message">There is a new version of Annularis available on GitHub. It is recommended that you download this new version (using 1511697600)</field>
+		<field name="title">New Annularis code available</field>
+		<field name="time">1511705371</field>
+		<field name="info_level">Info</field>
+		<field name="hash">0e2d82c8a797ec623775</field>
+	</row>
+	</table_data>
+	<table_structure name="bw_messages">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="content" Type="blob" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="encrypted" Type="enum('0','1')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="rsa_encrypted" Type="enum('0','1')" Null="YES" Key="" Default="0" Extra="" Comment="" />
+		<field Field="aes_iv" Type="mediumblob" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="aes_key" Type="mediumblob" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="hash" Type="varchar(25)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<field Field="remove_on_read" Type="enum('0','1')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="time" Type="int(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="to" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="viewed" Type="enum('0','1')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="order_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_messages" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_messages" Non_unique="0" Key_name="hash" Seq_in_index="1" Column_name="hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_messages" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="Stores encrypted/plaintext messages." />
+	</table_structure>
+	<table_data name="bw_messages">
+	</table_data>
+	<table_structure name="bw_migrations">
+		<field Field="version" Type="bigint(20)" Null="NO" Key="" Extra="" Comment="" />
+		<options Name="bw_migrations" Engine="InnoDB" Version="10" Row_format="Compact" Rows="1" Avg_row_length="16384" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Create_time="2017-11-26 12:25:20" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_migrations">
+	<row>
+		<field name="version">5</field>
+	</row>
+	</table_data>
+	<table_structure name="bw_onchain_requests">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="user_token" Type="varchar(64)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="totp_secret" Type="varchar(50)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="request_type" Type="enum('mpk','sign')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="sign_order_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="user_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_onchain_requests" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_onchain_requests" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="latin1_swedish_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_onchain_requests">
+	</table_data>
+	<table_structure name="bw_orders">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="created_time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="currency" Type="int(2)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="items" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="price" Type="decimal(20,8)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="shipping_costs" Type="decimal(20,8)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="fees" Type="decimal(20,8)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="extra_fees" Type="decimal(20,8)" Null="NO" Key="" Default="0.00000000" Extra="" Comment="" />
+		<field Field="time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="progress" Type="int(1)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="buyer_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="vendor_hash" Type="varchar(25)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="finalized" Type="enum('0','1')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="confirmed_time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="vendor_selected_escrow" Type="enum('0','1')" Null="NO" Key="" Default="0" Extra="" Comment="" />
+		<field Field="vendor_selected_upfront" Type="enum('0','1')" Null="NO" Key="" Default="0" Extra="" Comment="" />
+		<field Field="vendor_selected_upfront_time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="dispatched_time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="dispatched" Type="enum('0','1')" Null="NO" Key="" Default="0" Extra="" Comment="" />
+		<field Field="disputed_time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="disputed" Type="enum('0','1')" Null="NO" Key="" Default="0" Extra="" Comment="" />
+		<field Field="selected_payment_type_time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="received_time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="finalized_time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="buyer_public_key" Type="varchar(150)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="vendor_public_key" Type="varchar(150)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="admin_public_key" Type="varchar(150)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="redeemScript" Type="varchar(500)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="address" Type="varchar(40)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="unsigned_transaction" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="json_inputs" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="partially_signed_transaction" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="partially_signing_user_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="partially_signed_time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="refund_time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="refund_completed_time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="refunded" Type="enum('0','1')" Null="YES" Key="" Default="0" Extra="" Comment="" />
+		<field Field="final_transaction_id" Type="varchar(64)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="paid_time" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="finalized_correctly" Type="enum('0','1')" Null="NO" Key="" Default="0" Extra="" Comment="" />
+		<field Field="vendor_payout" Type="varchar(45)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="buyer_payout" Type="varchar(45)" Null="YES" Key="" Extra="" Comment="" />
+		<key Table="bw_orders" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_orders" Non_unique="1" Key_name="id" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_orders" Non_unique="1" Key_name="id" Seq_in_index="2" Column_name="progress" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_orders" Non_unique="1" Key_name="id" Seq_in_index="3" Column_name="created_time" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_orders" Non_unique="1" Key_name="id" Seq_in_index="4" Column_name="finalized" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_orders" Non_unique="1" Key_name="id" Seq_in_index="5" Column_name="buyer_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_orders" Non_unique="1" Key_name="id" Seq_in_index="6" Column_name="vendor_hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_orders" Non_unique="1" Key_name="id" Seq_in_index="7" Column_name="disputed" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_orders" Non_unique="1" Key_name="id" Seq_in_index="8" Column_name="address" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_orders" Non_unique="1" Key_name="id" Seq_in_index="9" Column_name="finalized_correctly" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_orders" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:20" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_orders">
+	</table_data>
+	<table_structure name="bw_page_authorization">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="auth_level" Type="varchar(15)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="system" Type="enum('0','1')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="timeout" Type="int(3)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="URI" Type="varchar(30)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<key Table="bw_page_authorization" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="19" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_page_authorization" Non_unique="1" Key_name="URI" Seq_in_index="1" Column_name="URI" Collation="A" Cardinality="19" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_page_authorization" Engine="InnoDB" Version="10" Row_format="Compact" Rows="19" Avg_row_length="862" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="20" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_page_authorization">
+	<row>
+		<field name="id">1</field>
+		<field name="auth_level">guestonly</field>
+		<field name="system">1</field>
+		<field name="timeout">0</field>
+		<field name="URI">login</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="auth_level">guestonly</field>
+		<field name="system">1</field>
+		<field name="timeout">0</field>
+		<field name="URI">register</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="auth_level">login</field>
+		<field name="system">1</field>
+		<field name="timeout">0</field>
+		<field name="URI">inbox</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="auth_level">login</field>
+		<field name="system">1</field>
+		<field name="timeout">0</field>
+		<field name="URI">message</field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="auth_level">login</field>
+		<field name="system">1</field>
+		<field name="timeout">0</field>
+		<field name="URI">messages</field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="auth_level">login</field>
+		<field name="system">1</field>
+		<field name="timeout">0</field>
+		<field name="URI">account</field>
+	</row>
+	<row>
+		<field name="id">7</field>
+		<field name="auth_level">login</field>
+		<field name="system">1</field>
+		<field name="timeout">0</field>
+		<field name="URI">accounts</field>
+	</row>
+	<row>
+		<field name="id">8</field>
+		<field name="auth_level">login</field>
+		<field name="system">1</field>
+		<field name="timeout">0</field>
+		<field name="URI">user</field>
+	</row>
+	<row>
+		<field name="id">9</field>
+		<field name="auth_level">auth|all</field>
+		<field name="system">1</field>
+		<field name="timeout">5</field>
+		<field name="URI">pgp</field>
+	</row>
+	<row>
+		<field name="id">10</field>
+		<field name="auth_level">login</field>
+		<field name="system">0</field>
+		<field name="timeout">0</field>
+		<field name="URI">home</field>
+	</row>
+	<row>
+		<field name="id">11</field>
+		<field name="auth_level">login</field>
+		<field name="system">0</field>
+		<field name="timeout">0</field>
+		<field name="URI"></field>
+	</row>
+	<row>
+		<field name="id">12</field>
+		<field name="auth_level">vendor</field>
+		<field name="system">1</field>
+		<field name="timeout">0</field>
+		<field name="URI">listings</field>
+	</row>
+	<row>
+		<field name="id">13</field>
+		<field name="auth_level">login</field>
+		<field name="system">1</field>
+		<field name="timeout">0</field>
+		<field name="URI">bitcoin</field>
+	</row>
+	<row>
+		<field name="id">14</field>
+		<field name="auth_level">login</field>
+		<field name="system">1</field>
+		<field name="timeout">0</field>
+		<field name="URI">authorize</field>
+	</row>
+	<row>
+		<field name="id">15</field>
+		<field name="auth_level">admin</field>
+		<field name="system">1</field>
+		<field name="timeout">0</field>
+		<field name="URI">admin</field>
+	</row>
+	<row>
+		<field name="id">16</field>
+		<field name="auth_level">login</field>
+		<field name="system"></field>
+		<field name="timeout">0</field>
+		<field name="URI">items</field>
+	</row>
+	<row>
+		<field name="id">17</field>
+		<field name="auth_level">buyer</field>
+		<field name="system">0</field>
+		<field name="timeout">0</field>
+		<field name="URI">purchase</field>
+	</row>
+	<row>
+		<field name="id">18</field>
+		<field name="auth_level">vendor</field>
+		<field name="system">1</field>
+		<field name="timeout">0</field>
+		<field name="URI">orders</field>
+	</row>
+	<row>
+		<field name="id">19</field>
+		<field name="auth_level">buyer</field>
+		<field name="system">0</field>
+		<field name="timeout">0</field>
+		<field name="URI">purchases</field>
+	</row>
+	</table_data>
+	<table_structure name="bw_paid_orders_cache">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="order_id" Type="int(9)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<key Table="bw_paid_orders_cache" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_paid_orders_cache" Non_unique="1" Key_name="order_id" Seq_in_index="1" Column_name="order_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_paid_orders_cache" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_paid_orders_cache">
+	</table_data>
+	<table_structure name="bw_payout_address">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="address" Type="varchar(40)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="user_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="time" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_payout_address" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_payout_address" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:20" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_payout_address">
+	</table_data>
+	<table_structure name="bw_pgp_keys">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="fingerprint" Type="varchar(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="public_key" Type="blob" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="user_id" Type="int(9)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<key Table="bw_pgp_keys" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_pgp_keys" Non_unique="1" Key_name="user_id" Seq_in_index="1" Column_name="user_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_pgp_keys" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_pgp_keys">
+	</table_data>
+	<table_structure name="bw_registration_tokens">
+		<field Field="id" Type="int(11)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="comment" Type="varchar(100)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="user_type" Type="enum('1','2','3')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="token_content" Type="varchar(128)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="entry_payment" Type="decimal(20,8)" Null="YES" Key="" Extra="" Comment="" />
+		<key Table="bw_registration_tokens" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_registration_tokens" Non_unique="1" Key_name="id" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_registration_tokens" Non_unique="1" Key_name="token_content" Seq_in_index="1" Column_name="token_content" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_registration_tokens" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_registration_tokens">
+	</table_data>
+	<table_structure name="bw_review_auth_tokens">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="auth_token" Type="varchar(64)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="user_hash" Type="varchar(25)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="review_type" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="order_id" Type="int(9)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<key Table="bw_review_auth_tokens" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_review_auth_tokens" Non_unique="1" Key_name="order_id" Seq_in_index="1" Column_name="order_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_review_auth_tokens" Non_unique="1" Key_name="order_id" Seq_in_index="2" Column_name="auth_token" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_review_auth_tokens" Non_unique="1" Key_name="order_id" Seq_in_index="3" Column_name="user_hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_review_auth_tokens" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_review_auth_tokens">
+	</table_data>
+	<table_structure name="bw_reviews">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="review_type" Type="varchar(10)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="subject_hash" Type="varchar(25)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="json" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="average_rating" Type="varchar(4)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="timestamp" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="disputed" Type="enum('0','1')" Null="NO" Key="" Default="0" Extra="" Comment="" />
+		<key Table="bw_reviews" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_reviews" Non_unique="1" Key_name="review_type" Seq_in_index="1" Column_name="review_type" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_reviews" Non_unique="1" Key_name="review_type" Seq_in_index="2" Column_name="subject_hash" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_reviews" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_reviews">
+	</table_data>
+	<table_structure name="bw_shipping_costs">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="item_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="destination_id" Type="varchar(10)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="cost" Type="decimal(20,8)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="enabled" Type="enum('0','1')" Null="YES" Key="" Default="1" Extra="" Comment="" />
+		<key Table="bw_shipping_costs" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_shipping_costs" Non_unique="1" Key_name="destination_id" Seq_in_index="1" Column_name="destination_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_shipping_costs" Non_unique="1" Key_name="destination_id" Seq_in_index="2" Column_name="item_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_shipping_costs" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_shipping_costs">
+	</table_data>
+	<table_structure name="bw_transactions_block_cache">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="tx_id" Type="varchar(64)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="tx_raw" Type="text" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="block_height" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_transactions_block_cache" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_transactions_block_cache" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_transactions_block_cache">
+	</table_data>
+	<table_structure name="bw_transactions_broadcast_cache">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="transaction" Type="varchar(1024)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="attempts_remaining" Type="enum('1','2','3','4','5')" Null="NO" Key="" Default="2" Extra="" Comment="" />
+		<key Table="bw_transactions_broadcast_cache" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_transactions_broadcast_cache" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_transactions_broadcast_cache">
+	</table_data>
+	<table_structure name="bw_transactions_expected_cache">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="outputs_hash" Type="varchar(64)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="address" Type="varchar(50)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="order_id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_transactions_expected_cache" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_transactions_expected_cache" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_transactions_expected_cache">
+	</table_data>
+	<table_structure name="bw_transactions_payments_cache">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="block_height" Type="int(9)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="tx_id" Type="varchar(64)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="address" Type="varchar(40)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="value" Type="decimal(20,8)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="vout" Type="int(9)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="pkScript" Type="varchar(150)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="order_id" Type="int(9)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="purpose" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="fees_user_hash" Type="varchar(25)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_transactions_payments_cache" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_transactions_payments_cache" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_transactions_payments_cache">
+	</table_data>
+	<table_structure name="bw_two_factor_tokens">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="user_id" Type="int(9)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="solution" Type="varchar(128)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="bw_two_factor_tokens" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_two_factor_tokens" Non_unique="1" Key_name="user_id" Seq_in_index="1" Column_name="user_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_two_factor_tokens" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_two_factor_tokens">
+	</table_data>
+	<table_structure name="bw_used_public_keys">
+		<field Field="id" Type="int(9)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="public_key_sha256" Type="varchar(64)" Null="NO" Key="" Extra="" Comment="" />
+		<options Name="bw_used_public_keys" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="4194304" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_used_public_keys">
+	</table_data>
+	<table_structure name="bw_users">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="banned" Type="enum('0','1')" Null="YES" Key="" Default="0" Extra="" Comment="" />
+		<field Field="block_non_pgp" Type="enum('0','1')" Null="YES" Key="" Default="0" Extra="" Comment="" />
+		<field Field="entry_paid" Type="enum('0','1')" Null="YES" Key="" Default="0" Extra="" Comment="" />
+		<field Field="force_pgp_messages" Type="enum('0','1')" Null="YES" Key="" Default="0" Extra="" Comment="" />
+		<field Field="location" Type="int(3)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="login_time" Type="int(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="display_login_time" Type="enum('0','1')" Null="YES" Key="" Default="0" Extra="" Comment="" />
+		<field Field="password" Type="varchar(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="public_key" Type="blob" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="private_key" Type="blob" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="private_key_salt" Type="varchar(64)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="register_time" Type="int(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="salt" Type="varchar(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="wallet_salt" Type="varchar(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="user_hash" Type="varchar(25)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="user_name" Type="varchar(40)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="user_role" Type="enum('Buyer','Vendor','Admin')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="local_currency" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="completed_order_count" Type="int(9)" Null="YES" Key="" Default="0" Extra="" Comment="" />
+		<field Field="totp_secret" Type="varchar(25)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="totp_two_factor" Type="enum('0','1')" Null="YES" Key="" Default="0" Extra="" Comment="" />
+		<field Field="pgp_two_factor" Type="enum('0','1')" Null="YES" Key="" Default="0" Extra="" Comment="" />
+		<field Field="email_address" Type="varchar(150)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="activation_hash" Type="varchar(64)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="activation_id" Type="varchar(64)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="email_activated" Type="enum('0','1')" Null="YES" Key="" Default="1" Extra="" Comment="" />
+		<field Field="email_updates" Type="enum('0','1')" Null="YES" Key="" Default="1" Extra="" Comment="" />
+		<key Table="bw_users" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_users" Non_unique="0" Key_name="user_hash" Seq_in_index="1" Column_name="user_hash" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_users" Non_unique="0" Key_name="user_hash" Seq_in_index="2" Column_name="user_name" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_users" Non_unique="1" Key_name="user_name" Seq_in_index="1" Column_name="user_name" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_users" Non_unique="1" Key_name="user_name" Seq_in_index="2" Column_name="user_hash" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_users" Non_unique="1" Key_name="user_name" Seq_in_index="3" Column_name="banned" Collation="A" Cardinality="1" Null="YES" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_users" Non_unique="1" Key_name="user_name" Seq_in_index="4" Column_name="entry_paid" Collation="A" Cardinality="1" Null="YES" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_users" Non_unique="1" Key_name="user_name" Seq_in_index="5" Column_name="register_time" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_users" Non_unique="1" Key_name="user_name" Seq_in_index="6" Column_name="user_role" Collation="A" Cardinality="1" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_users" Engine="InnoDB" Version="10" Row_format="Compact" Rows="1" Avg_row_length="16384" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="4194304" Auto_increment="2" Create_time="2017-11-26 12:25:20" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_users">
+	<row>
+		<field name="id">1</field>
+		<field name="banned">0</field>
+		<field name="block_non_pgp">0</field>
+		<field name="entry_paid">1</field>
+		<field name="force_pgp_messages">0</field>
+		<field name="location">1</field>
+		<field name="login_time">1511704721</field>
+		<field name="display_login_time">0</field>
+		<field name="password">0000000000000000000000000000000</field>
+		<field name="public_key" xsi:type="xs:hexBinary">30</field>
+		<field name="private_key" xsi:type="xs:hexBinary">30</field>
+		<field name="private_key_salt">0000000000000000000000</field>
+		<field name="register_time">1511699113</field>
+		<field name="salt">000000000000000000000000000000</field>
+		<field name="wallet_salt"></field>
+		<field name="user_hash">9be2755a363953c9</field>
+		<field name="user_name">admin</field>
+		<field name="user_role">Admin</field>
+		<field name="local_currency">0</field>
+		<field name="completed_order_count">0</field>
+		<field name="totp_secret"></field>
+		<field name="totp_two_factor">0</field>
+		<field name="pgp_two_factor">0</field>
+		<field name="email_address" xsi:nil="true" />
+		<field name="activation_hash" xsi:nil="true" />
+		<field name="activation_id" xsi:nil="true" />
+		<field name="email_activated">1</field>
+		<field name="email_updates">1</field>
+	</row>
+	</table_data>
+	<table_structure name="bw_watched_addresses">
+		<field Field="id" Type="int(9)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="purpose" Type="varchar(20)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="address" Type="varchar(35)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<key Table="bw_watched_addresses" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="bw_watched_addresses" Non_unique="1" Key_name="address" Seq_in_index="1" Column_name="address" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="bw_watched_addresses" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="4194304" Auto_increment="1" Create_time="2017-11-26 12:25:14" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="bw_watched_addresses">
+	</table_data>
+</database>
+</mysqldump>
