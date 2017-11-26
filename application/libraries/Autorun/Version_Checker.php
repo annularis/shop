@@ -6,14 +6,14 @@ define('BITWASP_CREATED_TIME', $ini['bitwasp_created_time']);
 /**
  * Version Checker
  *
- * This job is used to check for an updated version of BitWasp on GitHub
+ * This job is used to check for an updated version of Annularis on GitHub
  * and is run once a week. Called by the autorun library, and reports
  * new version information to the admin via the logging system.
  *
- * @package        BitWasp
- * @subpackage    Autorun
- * @category    Version Checker
- * @author        BitWasp
+ * @package      Annularis
+ * @subpackage   Autorun
+ * @category     Version Checker
+ * @author       Annularis
  */
 class Version_Checker
 {
@@ -25,7 +25,7 @@ class Version_Checker
      * description, and the frequency at which it should be run.
      */
     public $config = array('name' => 'Version Check',
-        'description' => 'An autorun job to check for updates to the BitWasp source code.',
+        'description' => 'An autorun job to check for updates to the Annularis source code.',
         'index' => 'version_checker',
         'interval' => '0',
         'interval_type' => 'days');
@@ -50,7 +50,7 @@ class Version_Checker
     public function job()
     {
 
-        $latest_version = parse_ini_string($this->CI->bw_curl->get_request('https://raw.github.com/Bit-Wasp/BitWasp/master/version.ini'));
+        $latest_version = parse_ini_string($this->CI->bw_curl->get_request('https://raw.githubusercontent.com/Annularis/shop/master/version.ini'));
 
         // Check the recent commits for an alert message
         $alert = $this->check_alerts();
@@ -61,8 +61,8 @@ class Version_Checker
             if ($this->CI->alerts_model->check($alert['message']) == FALSE) {
 
                 // Log a message for the admin
-                $log_message = "A serious alert has been trigged by the Bitwasp developers on " . $alert['date'] . ":<br />" . $alert['message'] . "<br />";
-                $this->CI->logs_model->add('BitWasp Developers', 'Please respond to serious alert', $log_message, 'Alert');
+                $log_message = "A serious alert has been trigged by the Annularis developers on " . $alert['date'] . ":<br />" . $alert['message'] . "<br />";
+                $this->CI->logs_model->add('Annularis Developers', 'Please respond to serious alert', $log_message, 'Alert');
                 unset($alert['date']);
 
                 // Record the alert.
@@ -79,7 +79,7 @@ class Version_Checker
         if ($latest_version !== FALSE && BITWASP_CREATED_TIME !== FALSE) {
             if ($latest_version['bitwasp_created_time'] > BITWASP_CREATED_TIME) {
                 $this->CI->load->model('logs_model');
-                if ($this->CI->logs_model->add('Version Checker', 'New BitWasp code available', 'There is a new version of BitWasp available on GitHub. It is recommended that you download this new version (using ' . BITWASP_CREATED_TIME . ')', 'Info'))
+                if ($this->CI->logs_model->add('Version Checker', 'New Annularis code available', 'There is a new version of Annularis available on GitHub. It is recommended that you download this new version (using ' . BITWASP_CREATED_TIME . ')', 'Info'))
                     return TRUE;
             }
         }
@@ -98,7 +98,7 @@ class Version_Checker
     public function check_alerts()
     {
 
-        $repo = json_decode($this->CI->bw_curl->get_request("https://api.github.com/repos/Bit-Wasp/BitWasp/commits"));
+        $repo = json_decode($this->CI->bw_curl->get_request("https://api.github.com/repos/Annularis/shop/commits"));
         if ($repo == FALSE)
             return FALSE;
 
