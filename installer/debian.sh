@@ -19,7 +19,6 @@ fi
 
 # Enable Mod Rewrite
 a2enmod rewrite
-service apache2 restart
 
 # Install bitcoin
 if [ ! -f /usr/bin/bitcoind ]; then
@@ -43,22 +42,29 @@ sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOve
 
 # Change DocumentRoot to /var/www/html/shop
 echo "Setting up Apache2 DocumentRoot.."
-sed -i 's#/var/www/html#/var/www/html/shop#' /etc/apache2/sites-enabled/000-default.conf
+if ! grep -q "shop" /etc/apache2/sites-enabled/000-default.conf; then
+    sed -i 's#/var/www/html#/var/www/html/shop#' /etc/apache2/sites-enabled/000-default.conf
+fi
 
 # Add mysql user and add database
 echo "Setting up MySQL.."
 mysql -e "CREATE DATABASE annularis;"
-mysql -e "CREATE USER annularis IDENTIFIED BY 'password';"
+mysql -e "CREATE USER IF NOT EXISTS annularis IDENTIFIED BY 'password';"
 mysql -e "GRANT ALL PRIVILEGES ON annularis.* TO annularis@localhost IDENTIFIED BY 'password';"
 
 # Install annularis source (from git)
+echo "Cloning Annularis.."
 cd /var/www/html
 git clone https://github.com/annularis/shop
-chown www-data:www-data -Rv /var/www/html/shop
+chown www-data:www-data -R /var/www/html/shop
+
+# Restart Apache
+systemctl restart apache2.service
 
 # Info
-echo "Open your browser to http://your-ip/ and fill as follow:"
-echo "--------------------------------------------------------"
+echo ""
+echo "Open your browser to http://your-ip/install and fill as follow:"
+echo "---------------------------------------------------------------"
 echo "DB User / DB Name: annularis"
 echo "DB Pass: password"
 echo "Bitcoin port: 7530"
@@ -67,4 +73,4 @@ echo "Bitcoin pass: bitcoinpass"
 echo "For 'Bip32 public key' see 'http://bip32.org'"
 echo "Set 'Tidy URL' to 'No'"
 echo "Set 'Force Vendor to use PGP' to 'No'"
-echo "--------------------------------------------------------"
+echo "---------------------------------------------------------------"
