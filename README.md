@@ -4,6 +4,7 @@
 ```
 Project Forums: https://annularis.org/forum/
 Test site: https://annularis.org/shop/
+Facebook page: https://www.facebook.com/BitWasp/
 ```
 
 
