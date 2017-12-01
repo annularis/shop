@@ -1,5 +1,4 @@
 # Annularis Project <a href="https://travis-ci.org/annularis/shop"><img src="https://travis-ci.org/annularis/shop.svg" alt="Build Status"></a>
-===
 
 ```
 Project Forums: https://annularis.org/forum/
