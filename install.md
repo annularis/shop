@@ -1,8 +1,18 @@
-Apache
+Automatic Setup
 ===
-
+*Currently available only for Debian*
 ```bash
-# annularis configuration
+cd /tmp
+wget https://raw.githubusercontent.com/annularis/shop/master/install.sh
+svn checkout https://github.com/annularis/shop/trunk/installer
+chmod a+x install.sh installer/*
+./install.sh
+```
+
+Manual Setup
+===
+```bash
+# Annularis setup
 # tested in debian 9.2 in virtualbox
 
 # be a root
