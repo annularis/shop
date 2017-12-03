@@ -43,7 +43,7 @@ foreach($check as $key => $outcome) {
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-		<title>Install | BitWasp</title>
+		<title>Install | Annularis</title>
 
 		<style type="text/css">
 		  body {
@@ -166,7 +166,7 @@ foreach($check as $key => $outcome) {
 
 				<li>Set critical directories to read-only:<br />$ chmod 755 <?php echo $installdir; ?> -R && chmod 777 <?php echo $installdir; ?>/application/storage/ </li><br />
 				
-				<li><a href='../'>Click here to see your new Bitwasp install!</a></li>
+				<li><a href='../'>Click here to see your new Annularis install!</a></li>
 			</ul>
 			
 		<?php 
