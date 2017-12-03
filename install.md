@@ -1,6 +1,6 @@
 Automatic Setup
 ===
-*Currently available only for Debian*
+*Currently available only for Debian & CentOS*
 ```bash
 cd /tmp
 wget https://raw.githubusercontent.com/annularis/shop/master/install.sh
