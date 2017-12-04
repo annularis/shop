@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "== Debian installer =="
+echo "== Ubuntu installer =="
 
 #Check if root
 if [ "$EUID" -ne 0 ]
