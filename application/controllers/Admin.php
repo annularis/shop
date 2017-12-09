@@ -300,6 +300,7 @@ class Admin extends MY_Controller
      * Edit the Bitcoin Settings.
      * URI: /admin/edit/bitcoin
      *
+     *
      * If the user submitted the Price Index form, we check for updates.
      * If the source specified exists, then update the config setting.
      * + If the source was previously disabled, re-setup the periodic updates.

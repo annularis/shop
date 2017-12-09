@@ -136,7 +136,7 @@ INSERT INTO `bw_config` (`parameter`, `value`) VALUES
 ('registration_allowed', '1'),
 ('openssl_keysize', '2048'),
 ('site_description', 'open source bitcoin marketplace'),
-('site_title', 'BitWasp'),
+('site_title', 'Annularis'),
 ('login_timeout', '30'),
 ('vendor_registration_allowed', '1'),
 ('captcha_length', '6'),
