@@ -290,7 +290,7 @@ class Smarty extends Smarty_Internal_TemplateBase
      *
      * @var array
      */
-    protected $template_dir = '';
+    protected $template_dir = array('./templates/');
 
     /**
      * flags for normalized template directory entries
@@ -409,7 +409,7 @@ class Smarty extends Smarty_Internal_TemplateBase
      *
      * @var boolean
      */
-    public $force_compile = true;
+    public $force_compile = false;
 
     /**
      * check template for modifications?
@@ -511,7 +511,7 @@ class Smarty extends Smarty_Internal_TemplateBase
      *
      * @var string
      */
-    public $debugging_ctrl = 'URL';
+    public $debugging_ctrl = 'NONE';
 
     /**
      * Name of debugging URL-param.
@@ -759,7 +759,6 @@ class Smarty extends Smarty_Internal_TemplateBase
         if (Smarty::$_CHARSET !== 'UTF-8') {
             Smarty::$_UTF8_MODIFIER = '';
         }
-        $this->setTemplateDir('application\views');
     }
 
     /**
