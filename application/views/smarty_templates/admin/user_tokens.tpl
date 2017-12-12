@@ -8,9 +8,9 @@
                 <legend>Create Registration Invites</legend>
                 {form method="open" action='admin/tokens' attr='class="form-horizontal"'}
                     <div class="form-group">
-                        <div class="col-xs-12">
-                            <label class="col-xs-2 control-label" for="user_role">Details:</label>
-                            <div class="col-xs-4">
+                        <div class="col-12">
+                            <label class="col-2 control-label" for="user_role">Details:</label>
+                            <div class="col-4">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i>Role</i></span>
                                     <select class="form-control" id="user_role" name="user_role">
@@ -21,29 +21,29 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-xs-4">
+                            <div class="col-4">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i>Cost</i></span>
                                     <input type='text' class='form-control' name='entry_payment' value='default' />
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-10 col-md-offset-2">{form method="form_error" field='user_role'}{form method="form_error" field='entry_payment'}</div>
+                        <div class="col-12 col-md-10 col-md-offset-2">{form method="form_error" field='user_role'}{form method="form_error" field='entry_payment'}</div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-xs-12">
-                            <label class="col-xs-2 control-label">Comment:</label>
-                            <div class="col-xs-8">
+                        <div class="col-12">
+                            <label class="col-2 control-label">Comment:</label>
+                            <div class="col-8">
                                 <input type="text" name="token_comment" value="" class="form-control" placeholder="Optional. This will not be shown to the user." />
                             </div>
                         </div>
-                        <div class="col-xs-12"></div>
+                        <div class="col-12"></div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-2 col-lg-2 col-md-2" for="submit"></label>
-                        <div class="col-sm-5 col-lg-5 col-md-5">
+                        <div class="col-md-5 col-xl-5 col-lg-5">
                             <p align="center">
                                 <input type="submit" name="create_token" value="Create" class="btn btn-primary" />
                             </p>
@@ -51,7 +51,7 @@
                     </div>
                 </form>
 
-                <div class="col-xs-12">&nbsp;</div>
+                <div class="col-12">&nbsp;</div>
 
                 {if $tokens == TRUE}
                 <table class='table' cellspacing='0'>
