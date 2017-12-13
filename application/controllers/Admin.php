@@ -99,7 +99,7 @@ class Admin extends MY_Controller
         foreach ($this->nav as $entry) {
             $links .= '<li';
             if (uri_string() == 'admin' . $entry['panel'] || uri_string() == 'admin/edit' . $entry['panel']) {
-                $links .= ' class="active" ';
+                $links .= ' class="active nav-item" ';
                 $self = $entry;
                 $heading = $entry['heading'];
                 $panel_url = $self['panel'];
@@ -113,7 +113,7 @@ class Admin extends MY_Controller
                 <li class="col-xs-3"><h4>' . $self['heading'] . '</h4></li>
                 <li class="col-xs-1">';
 
-        if ($panel_url !== '/logs' AND $panel_url !== '/autorun' ) $nav .= " " . anchor('admin/edit' . $panel_url, '<span class="glyphicon glyphicon-wrench"></span>', 'class="btn btn-xs btn-primary"');
+		if ($panel_url !== '/logs' AND $panel_url !== '/autorun') $nav .= " " . anchor('admin/edit' . $panel_url, 'Edit', array('class' => 'nav-link'));
         $nav .= '
                 </li>
                 <li class="col-xs-8">' . $links . '
