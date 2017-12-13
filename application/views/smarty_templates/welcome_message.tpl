@@ -35,17 +35,17 @@
                     <div class='row'>
                         <div class='col-lg-4'>
                             <h3>The code is Free! (Gratis & Libre)</h3>
-                            <p>as in free speech and free beer! Annularis is released under the Agorist Licence - it's use is unencumbered by restrictions (and warrantees). The code is yours to deploy in a marketplace, or to release your own, way better version.</p>
+                            <p>as in free speech and free beer! Annularis is released under the MIT License - it's use is unencumbered by restrictions (and warrantees). The code is yours to deploy in a marketplace, or to release your own, way better version.</p>
                         </div>
 
                         <div class='col-lg-4'>
                             <h3>Deal in your local currency</h3>
-                            <p>BitWasp gathers exchange rates for Bitcoin, against USD, GBP, and EUR from some of the leading Price Index API's. Currently comes with built-in support for CoinDesk and BitcoinAverage.com. With this feature, you can set prices in your local currency, and charge users based on the current value of Bitcoin.</p>
+                            <p>Annularis gathers exchange rates for Bitcoin, against USD, GBP, and EUR from some of the leading Price Index API's. Currently comes with built-in support for CoinDesk and BitcoinAverage.com. With this feature, you can set prices in your local currency, and charge users based on the current value of Bitcoin.</p>
                         </div>
 
                         <div class='col-lg-4'>
                             <h3>We're Privacy Conscious</h3>
-                            <p>BitWasp takes the privacy of it's users seriously. All uploaded images are stripped of GPS information, and other meta-data. Private Messages are encrypted using RSA encryption, and completely unreadable until you login and enter your PIN. This presents a barrier to attackers and even nosy administrators.</p>
+                            <p>Annularis takes the privacy of it's users seriously. All uploaded images are stripped of GPS information, and other meta-data. Private Messages are encrypted using RSA encryption, and completely unreadable until you login and enter your PIN. This presents a barrier to attackers and even nosy administrators.</p>
                         </div>
                     </div>
                 </div>
