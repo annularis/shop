@@ -104,7 +104,7 @@ class Admin extends MY_Controller
                 $heading = $entry['heading'];
                 $panel_url = $self['panel'];
             }
-            $links .= '>' . anchor('admin' . $entry['panel'], $entry['title']) . '</li>';
+	    $links .= '>' . anchor('admin' . $entry['panel'],  $entry['title'], array('class' => 'nav-link')) . '</li>';
         }
 
         $nav .= '
@@ -116,7 +116,7 @@ class Admin extends MY_Controller
         if ($panel_url !== '/logs' AND $panel_url !== '/autorun' ) $nav .= " " . anchor('admin/edit' . $panel_url, '<span class="glyphicon glyphicon-wrench"></span>', 'class="btn btn-xs btn-primary"');
         $nav .= '
                 </li>
-                <li class="col-xs-8">' . $links . '</li>
+                <li class="col-xs-8">' . $links . '
             </ul>
         </div>
         <div class="row">&nbsp;</div>';
@@ -299,7 +299,6 @@ class Admin extends MY_Controller
     /**
      * Edit the Bitcoin Settings.
      * URI: /admin/edit/bitcoin
-     *
      *
      * If the user submitted the Price Index form, we check for updates.
      * If the source specified exists, then update the config setting.
