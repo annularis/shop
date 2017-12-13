@@ -1,7 +1,7 @@
       </div> <!-- /row-fluid -->
       <hr />
       <footer>
-        <p class="pull-right">
+        <p class="float-right">
             <i>
 {if $footer.price_index != 'Disabled' && isset($footer.exchange_rates)}
 	{foreach from=$footer.exchange_rates key=code item=rate}
