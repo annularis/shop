@@ -168,7 +168,7 @@
                                             <!-- End Tx Info -->
                                             {if isset($invalid_transaction_error) == TRUE}
                                             <div class='row'>
-                                                <div class="col-7 col-offset-3">
+                                                <div class="col-7 mx-auto">
                                                     {$invalid_transaction_error}
                                                 </div>
                                             </div>
