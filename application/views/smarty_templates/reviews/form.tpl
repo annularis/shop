@@ -1,4 +1,4 @@
-            <div class="col-md-9" id="review_form">
+            <div class="col-lg-9" id="review_form">
                 <h2>Review Order #{$review_state.order_id}</h2>
 
                 {assign var="defaultMessage" value=""}
@@ -8,7 +8,7 @@
                 {capture name="t_vendor_url"}user/{$review_info.vendor.user_hash}{/capture}
 
                 <div class="row">
-                    <div class="col-xs-6">
+                    <div class="col-6">
                         <b>Order Information</b>
                         <ul>
                             <li>This order was with {url type="anchor" url=$smarty.capture.t_vendor_url text=$review_info.vendor.user_name|escape:"html":"UTF-8" attr=''}.</li>
@@ -29,7 +29,7 @@
                             {/if}
                         </ul>
                     </div>
-                    <div class='col-xs-3'>
+                    <div class='col-3'>
                         <b>Items</b>
                         <ul>
                         {foreach from=$review_info.items item=item}
@@ -42,14 +42,14 @@
                 {form method="open" action=$action_page attr='class="form-horizontal"'}
                     {form method="validation_errors"}
                     {form method="form_error" field="review_length"}
-                    <div class='col-xs-12'>
+                    <div class='col-12'>
                         <div class='well' style='background-color:white;'>
                             <h4>Vendor Feedback</h4>
 
                             <div class="form-group">
-                                <div class="col-xs-12">
-                                    <label class="control-label col-xs-2" for="vendor_communication">Communication</label>
-                                    <div class="col-xs-3">
+                                <div class="col-12">
+                                    <label class="control-label col-2" for="vendor_communication">Communication</label>
+                                    <div class="col-3">
                                         <select name="vendor_communication" id="vendor_communication" class="form-control">
                                             <option value=''></option>
                                             <option value='1'>1</option>
@@ -60,13 +60,13 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-xs-10 col-xs-offset-2">{form method="form_error" field="vendor_communication"}</div>
+                                <div class="col-10 mx-auto">{form method="form_error" field="vendor_communication"}</div>
                             </div>
 
                             <div class="form-group">
-                                <div class="col-xs-12">
-                                    <label class="control-label col-xs-2" for="vendor_shipping">Shipping</label>
-                                    <div class="col-xs-3">
+                                <div class="col-12">
+                                    <label class="control-label col-2" for="vendor_shipping">Shipping</label>
+                                    <div class="col-3">
                                         <select name='vendor_shipping' id="vendor_shipping" autocomplete='off' class='form-control'>
                                             <option value=''></option>
                                             <option value='1'>1</option>
@@ -77,13 +77,13 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-xs-10 col-xs-offset-2">{form method="form_error" field="vendor_shipping"}</div>
+                                <div class="col-10 mx-auto">{form method="form_error" field="vendor_shipping"}</div>
                             </div>
 
                             <div class="form-group">
-                                <div class="col-xs-12">
-                                    <label class="control-label col-xs-2" for="location">Comments</label>
-                                    <div class="col-xs-7">
+                                <div class="col-12">
+                                    <label class="control-label col-2" for="location">Comments</label>
+                                    <div class="col-7">
                                         <label class="radio-inline">
                                             <input type='radio' class='form-control' name='vendor_comments_source' value='prepared' /> Use prepared feedback?
                                         </label>
@@ -105,7 +105,7 @@
 
                                     </div>
                                 </div>
-                                <div class="col-xs-10 col-xs-offset-2">
+                                <div class="col-10 mx-auto">
                                     {form method="form_error" field="vendor_comments_source"}
                                     {form method="form_error" field="vendor_prepared_comments"}
                                 </div>
@@ -121,9 +121,9 @@
                                 {/if}</h4>
 
                             <div class="form-group">
-                                <div class="col-xs-12">
-                                    <label class="control-label col-xs-2" for="short_item_quality">Item Quality</label>
-                                    <div class="col-xs-3">
+                                <div class="col-12">
+                                    <label class="control-label col-2" for="short_item_quality">Item Quality</label>
+                                    <div class="col-3">
                                         <select name='short_item_quality' autocomplete='off' class='form-control'>
                                             <option value=''></option>
                                             <option value='1'>1</option>
@@ -134,13 +134,13 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-xs-10 col-xs-offset-2">{form method="form_error" field="short_item_quality"}</div>
+                                <div class="col-10 mx-auto">{form method="form_error" field="short_item_quality"}</div>
                             </div>
 
                             <div class="form-group">
-                                <div class="col-xs-12">
-                                    <label class="control-label col-xs-2" for="short_item_matches_desc">Matches Description</label>
-                                    <div class="col-xs-3">
+                                <div class="col-12">
+                                    <label class="control-label col-2" for="short_item_matches_desc">Matches Description</label>
+                                    <div class="col-3">
                                         <select name='short_item_matches_desc' autocomplete='off' class='form-control'>
                                             <option value=''></option>
                                             <option value='1'>1</option>
@@ -151,13 +151,13 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-xs-10 col-xs-offset-2">{form method="form_error" field="short_item_matches_desc"}</div>
+                                <div class="col-10 mx-auto">{form method="form_error" field="short_item_matches_desc"}</div>
                             </div>
 
                             <div class="form-group">
-                                <div class="col-xs-12">
-                                    <label class="control-label col-xs-2" for="short_item_comments_source">Comments</label>
-                                    <div class="col-xs-7">
+                                <div class="col-12">
+                                    <label class="control-label col-2" for="short_item_comments_source">Comments</label>
+                                    <div class="col-7">
                                         <label class="radio-inline">
                                             <input type='radio' name='short_item_comments_source' class='form-control' value='prepared' /> Use prepared statements?
                                         </label>
@@ -176,7 +176,7 @@
                                         <textarea name='short_item_free_comments' class='form-control'></textarea>
                                     </div>
                                 </div>
-                                <div class="col-xs-10 col-xs-offset-2">
+                                <div class="col-10 mx-auto">
                                     {form method="form_error" field="short_item_comments_source"}
                                     {form method="form_error" field="short_item_prepared_comments"}
                                 </div>
@@ -192,9 +192,9 @@
                             {foreach from=$review_info.items item=item}
                                 <b>{($c+1)}: {$item.name|escape:"html":"UTF-8"}</b>
                                 <div class="form-group">
-                                    <div class="col-xs-12">
-                                        <label class="control-label col-xs-2" for="item[{$c}[quality]">Quality</label>
-                                        <div class="col-xs-5">
+                                    <div class="col-12">
+                                        <label class="control-label col-2" for="item[{$c}[quality]">Quality</label>
+                                        <div class="col-5">
                                             <select name='item[{$c}][quality]' id='item[{$c}][quality]' autocomplete='off' class='form-control'>
                                                 <option value=''></option>
                                                 <option value='1'>1</option>
@@ -205,15 +205,15 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-xs-10 col-xs-offset-2">{capture name="t_item_q_field"}item[{$c}][quality]{/capture}
+                                    <div class="col-10 mx-auto">{capture name="t_item_q_field"}item[{$c}][quality]{/capture}
                                         {form method="form_error" field=$smarty.capture.t_item_q_field}
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <div class="col-xs-12">
-                                        <label class="control-label col-xs-2" for="item[{$c}][matches_desc]">Matches Description</label>
-                                        <div class="col-xs-5">
+                                    <div class="col-12">
+                                        <label class="control-label col-2" for="item[{$c}][matches_desc]">Matches Description</label>
+                                        <div class="col-5">
                                             <select name='item[{$c}][matches_desc]' autocomplete='off' class='form-control'>
                                                 <option value=''></option>
                                                 <option value='1'>1</option>
@@ -224,16 +224,16 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-xs-10 col-xs-offset-2">
+                                    <div class="col-10 mx-auto">
                                         {capture name="t_item_m_field"}item[{$c}][matches_desc]{/capture}
                                         {form method="form_error" field=$smarty.capture.t_item_m_field}
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <div class="col-xs-12">
-                                        <label class="control-label col-xs-2" for="location">Comments</label>
-                                        <div class="col-xs-5">
+                                    <div class="col-12">
+                                        <label class="control-label col-2" for="location">Comments</label>
+                                        <div class="col-5">
 
                                             <label class="radio-inline">
                                                 <input type='radio' class='form-control' name='item[{$c}][comments_source]' value='prepared' /> Use prepared statements?
@@ -252,7 +252,7 @@
                                             <textarea class='form-control' name='item[{$c}][free_comments]'></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-xs-10 col-xs-offset-2">
+                                    <div class="col-10 mx-auto">
                                         {capture name="t_item_cs_field"}item[{$c}][comments_source]{/capture}
                                         {capture name="t_item_ps_field"}item[{$c}][prepared_comments]{/capture}
                                         {form method="form_error" field=$smarty.capture.t_item_cs_field}
@@ -263,9 +263,9 @@
                                 {capture name="t_item_cs_field"}item[{$c}][comments_source]{/capture}
                                 {capture name="t_item_ps_field"}item[{$c}][prepared_comments]{/capture}
                                 <div class="form-group">
-                                    <div class="col-xs-12">
-                                        <label class="control-label col-xs-2" for="location">Comments</label>
-                                        <div class="col-xs-5">
+                                    <div class="col-12">
+                                        <label class="control-label col-2" for="location">Comments</label>
+                                        <div class="col-5">
 
                                             <label class="radio-inline">
                                                 <input type='radio' class='form-control' name='item[{$c}][comments_source]' value='prepared' /> Use prepared statements?
@@ -284,7 +284,7 @@
                                             <textarea class='form-control' name='item[{$c}][free_comments]'></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-xs-10 col-xs-offset-2">
+                                    <div class="col-10 mx-auto">
                                         {form method="form_error" field=$smarty.capture.t_item_cs_field}
                                         {form method="form_error" field=$smarty.capture.t_item_ps_field}
                                     </div>
@@ -297,8 +297,8 @@
                         {/if}
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-2 col-lg-2 col-md-2" for="submit"></label>
-                        <div class="col-sm-5 col-lg-5 col-md-5">
+                        <label class="control-label col-sm-2 col-lg-2 col-lg-2" for="submit"></label>
+                        <div class="col-sm-5 col-lg-5 col-lg-5">
                             <p align="center">
                                 <input type='submit' name='buyer_submit_review' value='Submit Review' class='btn btn-primary'/>
                                 {url type="anchor" url=$cancel_page text="Cancel" attr='class="btn btn-default"'}
@@ -311,7 +311,7 @@
                 {capture name="t_buyer_url"}user/{$review_info.buyer.user_hash}{/capture}
 
                 <div class='row'>
-                    <div class='col-xs-6'>
+                    <div class='col-6'>
                         <b>Order Information</b>
                         <ul>
                             <li>This order was made by {url type="anchor" url=$smarty.capture.t_buyer_url text=$review_info.buyer.user_name attr=''}</li>
@@ -334,7 +334,7 @@
                             {/if}
                         </ul>
                     </div>
-                    <div class='col-xs-3'>
+                    <div class='col-3'>
                         <b>Items</b>
                         <ul>
                             {foreach from=$review_info.items item=item}
@@ -350,9 +350,9 @@
                         <h4>Buyer Feedback</h4>
 
                         <div class="form-group">
-                            <div class="col-xs-12">
-                                <label class="control-label col-xs-2" for="buyer_communication">Communication</label>
-                                <div class="col-xs-3">
+                            <div class="col-12">
+                                <label class="control-label col-2" for="buyer_communication">Communication</label>
+                                <div class="col-3">
                                     <select name='buyer_communication' autocomplete='off' class="form-control">
                                         <option value=''></option>
                                         <option value='1'>1</option>
@@ -363,13 +363,13 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-xs-10 col-xs-offset-2">{form method="form_error" field="buyer_communication"}</div>
+                            <div class="col-10 mx-auto">{form method="form_error" field="buyer_communication"}</div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-xs-12">
-                                <label class="control-label col-xs-2" for="buyer_cooperation">Cooperation</label>
-                                <div class="col-xs-3">
+                            <div class="col-12">
+                                <label class="control-label col-2" for="buyer_cooperation">Cooperation</label>
+                                <div class="col-3">
                                     <select name='buyer_cooperation' autocomplete='off' class="form-control">
                                         <option value=''></option>
                                         <option value='1'>1</option>
@@ -380,13 +380,13 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-xs-10 col-xs-offset-2">{form method="form_error" field="buyer_cooperation"}</div>
+                            <div class="col-10 mx-auto">{form method="form_error" field="buyer_cooperation"}</div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-xs-12">
-                                <label class="control-label col-xs-2" for="buyer_comments_source">Comments</label>
-                                <div class="col-xs-5">
+                            <div class="col-12">
+                                <label class="control-label col-2" for="buyer_comments_source">Comments</label>
+                                <div class="col-5">
                                     <label class="radio-inline">
                                         <input type='radio' class='form-control' name='buyer_comments_source' value='prepared' /> Use prepared statements?
                                     </label>
@@ -404,7 +404,7 @@
                                     <textarea name='buyer_free_comments' class='form-control'></textarea>
                                 </div>
                             </div>
-                            <div class="col-xs-10 col-xs-offset-2">
+                            <div class="col-10 mx-auto">
                                 {form method="form_error" field="buyer_comments_source"}
                                 {form method="form_error" field="buyer_prepared_comments"}
                             </div>
@@ -412,8 +412,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-2 col-lg-2 col-md-2" for="submit"></label>
-                        <div class="col-sm-5 col-lg-5 col-md-5">
+                        <label class="control-label col-sm-2 col-lg-2 col-lg-2" for="submit"></label>
+                        <div class="col-sm-5 col-lg-5 col-xl-5">
                             <p align="center">
                                 <input type='submit' name='vendor_submit_review' value='Submit Review' class='btn btn-primary'/>
                                 {url type="anchor" url=$cancel_page text="Cancel" attr='class="btn btn-default"'}
