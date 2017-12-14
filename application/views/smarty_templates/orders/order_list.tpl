@@ -1,4 +1,4 @@
-            <div class="col-md-9" id="my-orders">
+            <div class="col-lg-9" id="my-orders">
                 <h2>{if $current_user.user_role == 'Vendor'}My Orders{else}My Purchases{/if}</h2>
 
                 {assign var="defaultMessage" value=""}
@@ -16,39 +16,39 @@
                         <div class="row">
 
                             <!-- Order Header: Buyer, Items, Buttons -->
-                            <div class="col-md-9">
-                                <div class="col-md-6">
+                            <div class="col-lg-9">
+                                <div class="col-lg-6">
                                     <!--<div class="row">
-                                        <div class="col-xs-4"><strong>ID</strong></div>
-                                        <div class="col-xs-8"><a href='#'>1</a></div>
+                                        <div class="col-4"><strong>ID</strong></div>
+                                        <div class="col-8"><a href='#'>1</a></div>
                                     </div>-->
 
                                     {if $current_user.user_role == 'Buyer'}
                                     <div class="row">
-                                        <div class="col-xs-4"><strong>Vendor</strong></div>
-                                        <div class="col-xs-8" style='word-wrap: break-word;'>{url type='anchor' url=$smarty.capture.t_vendor_url text=$order.vendor.user_name|escape:"html":"UTF-8" attr=''}</div>
+                                        <div class="col-4"><strong>Vendor</strong></div>
+                                        <div class="col-8" style='word-wrap: break-word;'>{url type='anchor' url=$smarty.capture.t_vendor_url text=$order.vendor.user_name|escape:"html":"UTF-8" attr=''}</div>
                                     </div>
                                     {else}
                                     <div class="row">
-                                        <div class="col-xs-4"><strong>Buyer</strong></div>
-                                        <div class="col-xs-8" style='word-wrap: break-word;'>{url type='anchor' url=$smarty.capture.t_buyer_url text=$order.buyer.user_name|escape:"html":"UTF-8" attr=''}</div>
+                                        <div class="col-4"><strong>Buyer</strong></div>
+                                        <div class="col-8" style='word-wrap: break-word;'>{url type='anchor' url=$smarty.capture.t_buyer_url text=$order.buyer.user_name|escape:"html":"UTF-8" attr=''}</div>
                                     </div>
                                     {/if}
 
                                     <div class="row">
-                                        <div class="col-xs-4"><strong>Price</strong></div>
-                                        <div class="col-xs-8">{$current_user.currency.symbol}{$order.price_l}</div>
+                                        <div class="col-4"><strong>Price</strong></div>
+                                        <div class="col-8">{$current_user.currency.symbol}{$order.price_l}</div>
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-xs-4"><strong>Updated</strong></div>
-                                        <div class="col-xs-8">{$order.time_f}</div>
+                                        <div class="col-4"><strong>Updated</strong></div>
+                                        <div class="col-8">{$order.time_f}</div>
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
-                                    <div class="col-md-1"><strong>Items</strong></div>
-                                    <div class="col-md-10">
+                                <div class="col-lg-6">
+                                    <div class="col-lg-6"><strong>Items</strong></div>
+                                    <div class="col-lg-10">
                                         <ul>
                                             {foreach from=$order.items item=item}
                                                 {capture name="t_item_url"}item/{$item.hash}{/capture}
@@ -72,7 +72,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-lg-3">
                                 {if $order.progress == 0}
 
                                     <input type="submit" class="btn btn-default btn-block" name="recount" value="Update" />
@@ -111,43 +111,43 @@
                                 {/if}
                             </div>
 
-                            <div class="col-md-12">&nbsp;
+                            <div class="col-lg-12">&nbsp;
                             </div>
                             <!-- Order Body -->
-                            <div class="col-md-12">
-                                <div class="col-xs-12 col-md-10 col-md-offset-2">{$order.progress_message}</div>
-                                <div class="col-xs-12 col-md-10">
+                            <div class="col-lg-12">
+                                <div class="col-12 col-lg-10 col-lg-offset-2">{$order.progress_message}</div>
+                                <div class="col-12 col-lg-10">
 
                                     <div class="row bs-wizard" style="border-bottom:0;">
-                                        <div class="col-xs-3 bs-wizard-step {if $order.progress > 1}complete{else}active{/if}">
+                                        <div class="col-3 bs-wizard-step {if $order.progress > 1}complete{else}active{/if}">
                                             <div class="text-center bs-wizard-stepnum">Step 1</div>
                                             <div class="progress"><div class="progress-bar"></div></div>
                                             <a href="#" class="bs-wizard-dot"></a>
                                             <div class="bs-wizard-info text-center">Order accepted</div>
                                         </div>
 
-                                        <div class="col-xs-3 bs-wizard-step {if $order.progress > 2}complete{else}disabled{/if}"><!-- complete -->
+                                        <div class="col-3 bs-wizard-step {if $order.progress > 2}complete{else}disabled{/if}"><!-- complete -->
                                             <div class="text-center bs-wizard-stepnum">Step 2</div>
                                             <div class="progress"><div class="progress-bar"></div></div>
                                             <a href="#" class="bs-wizard-dot"></a>
                                             <div class="bs-wizard-info text-center">Payment made</div>
                                         </div>
                                         {if $order.refund_time !== ''}
-                                            <div class="col-xs-3 bs-wizard-step {if $order.progress == 7}complete{else}disabled{/if}">
+                                            <div class="col-3 bs-wizard-step {if $order.progress == 7}complete{else}disabled{/if}">
                                                 <div class="text-center bs-wizard-stepnum">Step 3</div>
                                                 <div class="progress"><div class="progress-bar"></div></div>
                                                 <a href="#" class="bs-wizard-dot"></a>
                                                 <div class="bs-wizard-info text-center">Refund complete</div>
                                             </div>
                                         {else}
-                                            <div class="col-xs-3 bs-wizard-step {if $order.progress > 4}complete{else}disabled{/if}"><!-- complete -->
+                                            <div class="col-3 bs-wizard-step {if $order.progress > 4}complete{else}disabled{/if}"><!-- complete -->
                                                 <div class="text-center bs-wizard-stepnum">Step 3</div>
                                                 <div class="progress"><div class="progress-bar"></div></div>
                                                 <a href="#" class="bs-wizard-dot"></a>
                                                 <div class="bs-wizard-info text-center">Item dispatched</div>
                                             </div>
 
-                                            <div class="col-xs-3 bs-wizard-step {if $order.progress == 7}complete{else}disabled{/if}"><!-- active -->
+                                            <div class="col-3 bs-wizard-step {if $order.progress == 7}complete{else}disabled{/if}"><!-- active -->
                                                 <div class="text-center bs-wizard-stepnum">Step 4</div>
                                                 <div class="progress"><div class="progress-bar"></div></div>
                                                 <a href="#" class="bs-wizard-dot"></a>
@@ -159,7 +159,7 @@
                             </div>
 
                         </div>
-                        <div class="col-md-12">&nbsp;
+                        <div class="col-lg-12">&nbsp;
                         </div>
                         </form>
                         <hr>
