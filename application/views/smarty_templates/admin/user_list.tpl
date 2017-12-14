@@ -51,18 +51,18 @@
                     <a name="Search"></a><legend>Search for Users</legend>
                     {form method="open" action="admin/users/list" attr='class="form-horizontal"'}
                         <div class='row'>
-                            <label class="control-label col-2 col-offset-1" for="user_name">User Name:</label>
-                            <div class="col-4"><input type="text" class="form-control" id="user_name" name="user_name" value="" /></div>
+                            <label class="control-label col-3 col-offset-1" for="user_name">User Name:</label>
+                            <div class="col-6"><input type="text" class="form-control" id="user_name" name="user_name" value="" /></div>
                             <div class="col-2"><input type="submit" name="search_username" value="Search" class="btn btn-primary"/></div>
                         </div>
 
                         <div class='row'>
-                            <div class='col-2 col-offset-3'>or</div>
+                            <div class='col-4 col-offset-3'>or</div>
                         </div>
 
                         <div class='row'>
-                            <label class="control-label col-2 col-offset-1" for="search_for">Search For:</label>
-                            <div class="col-4">
+                            <label class="control-label col-3 col-offset-1" for="search_for">Search For:</label>
+                            <div class="col-6">
                                 <select name='search_for' id="search_for" class="form-control">
                                     <option value=''></option>
                                     <option value='all_users'>All Users</option>
@@ -77,8 +77,8 @@
                         </div>
 
                         <div class='row'>
-                            <label class="control-label col-2 col-offset-1" for="with_property">That Are:</label>
-                            <div class='col-4'>
+                            <label class="control-label col-3 col-offset-1" for="with_property">That Are:</label>
+                            <div class='col-6'>
                                 <select name='with_property' id="with_property" class="form-control">
                                     <option value=''></option>
                                     <option value='activated'>Activated</option>
@@ -90,8 +90,8 @@
                         </div>
 
                         <div class="row">
-                            <label class="control-label col-2 col-offset-1">Order By</label>
-                            <div class="col-4">
+                            <label class="control-label col-3 col-offset-1">Order By</label>
+                            <div class="col-6">
                                 <select name="order_by" id="order_by" class="form-control">
                                     <option value=""></option>
                                     <option value="id">User ID</option>
@@ -104,8 +104,8 @@
                         </div>
 
                         <div class='row'>
-                            <label class='control-label col-2 col-offset-1'>List</label>
-                            <div class='col-7'>
+                            <label class='control-label col-3 col-offset-1'>List</label>
+                            <div class='col-9'>
                                 <label class="radio-inline">
                                     <input type='radio' name='list' value='ASC' /> Ascending
                                 </label>
