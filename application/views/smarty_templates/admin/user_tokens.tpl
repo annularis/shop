@@ -1,4 +1,4 @@
-            <div class="col-md-9" id="registration-tokens">
+           <div class="col-lg-9" id="registration-tokens">
 
                 <h2>{url type="anchor" url='admin/users' text='Back' attr='class="btn btn-default"'} Registration Invites</h2>
 
@@ -28,7 +28,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-10 col-md-offset-2">{form method="form_error" field='user_role'}{form method="form_error" field='entry_payment'}</div>
+                        <div class="col-12 col-lg-10 mx-lg-auto">{form method="form_error" field='user_role'}{form method="form_error" field='entry_payment'}</div>
                     </div>
 
                     <div class="form-group">
@@ -42,8 +42,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-2 col-lg-2 col-md-2" for="submit"></label>
-                        <div class="col-md-5 col-xl-5 col-lg-5">
+                        <label class="control-label col-sm-2 col-xl-2 col-lg-2" for="submit"></label>
+                        <div class="col-lg-5 col-xl-5 col-xl-5">
                             <p align="center">
                                 <input type="submit" name="create_token" value="Create" class="btn btn-primary" />
                             </p>
@@ -81,5 +81,4 @@
                     </tbody>
                 </table>
                 {/if}
-
             </div>
