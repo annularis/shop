@@ -12,7 +12,7 @@
                 {if $shipping_costs == TRUE}
                 {form method="open" action=$smarty.capture.t_form_action attr=['class'=>'form-horizontal']}
                     <div class='container'>
-                        <div class="card bg-light card-body mb-3 col-xl-8"></div>
+                        <div class="card bg-light card-body mb-3 col-xl-14">
 
                             {if strlen($smarty.capture.t_alter_form_errors) > 0}
                             <div class="alert alert-danger">{$smarty.capture.t_alter_form_errors}</div>
@@ -21,17 +21,15 @@
                             <br />
 
                             <div class='form-group'>
-                                <div class='col-3'><label class="control-label col-3" for="title_dest">Destination</label></div>
-                                <div class='col-5'><label class="control-label col-5" for="title_cost">Cost</label></div>
-                                <div class='col-2'><label class="control-label col-2" for="title_dest">Offered</label></div>
+                            <div class='col-10'><label class="control-label col-12" for="title_dest">Destination cost offered</label></div>
                             </div>
                             {foreach from=$shipping_costs item=cost}
                                 {capture name="t_cost_field"}cost[{$cost.id}][cost]{/capture}
                                 {capture name="t_enabled_field"}cost[{$cost.id}][enabled]{/capture}
                                 <div class="form-group">
-                                    <div class="col-12">
-                                        <div class='col-3'><label class="control-label col-3" for="add_price">{$cost.destination_f}</label></div>
-                                        <div class="col-5">
+                                    <div class="col-14">
+                                        <div class='col-14'><label class="control-label col-14" for="add_price">{$cost.destination_f}</label></div>
+                                        <div class="col-14">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i>{$item.currency.code}</i></span>
                                                 <input type="text" class='form-control' name="{$smarty.capture.t_cost_field}" value="{$cost.cost}" />
@@ -39,7 +37,7 @@
                                         </div>
                                         <div class="col-2"><input type="checkbox" name="{$smarty.capture.t_enabled_field}" value="1" {if $cost.enabled == '1'}checked{/if} /></div>
                                     </div>
-                                    <div class="col-9 mx-auto">
+                                    <div class="col-2 mx-auto">
                                         {form method="form_error" field=$smarty.capture.t_cost_field}
                                         {form method="form_error" field=$smarty.capture.t_enabled_field}
                                     </div>
@@ -49,7 +47,7 @@
 
                             <div class="form-group">
                                 <label class="control-label col-2" for="submit"></label>
-                                <div class="col-5">
+                                <div class="col-12">
                                     <p align="center">
                                         <input type='submit' name='update_shipping_cost' value='Update' class='btn btn-primary' />
                                         {url type="anchor" url="listings" text="Cancel" attr='title="Cancel" class="btn btn-default"'}
@@ -64,21 +62,21 @@
 
                 {form method="open" action=$smarty.capture.t_form_action attr=['class'=>'form-horizontal']}
                 <div class='container'>
-                   <div class="card bg-light card-body mb-3 col-xl-8"></div>
-                      <h4>New Shipping Cost</h4>
+                        <div class="card bg-light card-body mb-3 col-xl-10">
+                        <h4>New Shipping Cost</h4>
                         <br />
 
                         <div class="form-group">
-                            <label class="control-label col-2" for="add_location">Destination</label>
-                            <div class="col-5">
+                            <label class="control-label col-8" for="add_location">Destination</label>
+                            <div class="col-9">
                                 {$locations}
                             </div>
                             <span class="help-inline">{form method="form_error" field="add_location"}</span>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-2" for="add_price">Price</label>
-                            <div class="col-5">
+                            <label class="control-label col-10" for="add_price">Price</label>
+                            <div class="col-6">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i>{$item.currency.code}</i></span>
                                     <input type='text' name='add_price' class="form-control" id="add_price" value="{if $item.currency.id == '0'}0.003{else}10{/if}" />
@@ -89,7 +87,7 @@
 
                         <div class="form-group">
                             <label class="control-label col-2" for="submit"></label>
-                            <div class="col-5">
+                            <div class="col-6">
                                 <p align="center">
                                     <input type='submit' name='add_shipping_cost' value='Add' class='btn btn-primary' />
                                     {url type="anchor" url=$smarty.capture.t_form_cancel text="Cancel" attr='class="btn btn-default"'}
@@ -100,3 +98,4 @@
                 </form>
                 </div>
         </div>
+
