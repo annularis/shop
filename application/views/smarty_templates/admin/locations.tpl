@@ -31,7 +31,7 @@
                             <div class="col-3"></div>
                             <div class="col-1"><input type='submit' name='update_location_list_source' value='Submit' class="btn btn-primary"/></div>
                         </div>
-                        <div class='col-12 col-lg-8 col-lg-offset-2'>
+                        <div class='col-12 col-lg-8 mx-lg-auto'>
                             {form method="form_error" field="location_source"}
                         </div>
                     </div>
