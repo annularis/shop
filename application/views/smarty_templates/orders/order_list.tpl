@@ -115,7 +115,7 @@
                             </div>
                             <!-- Order Body -->
                             <div class="col-lg-12">
-                                <div class="col-12 col-lg-10 col-lg-offset-2">{$order.progress_message}</div>
+                                <div class="col-12 col-lg-10 mx-lg-auto">{$order.progress_message}</div>
                                 <div class="col-12 col-lg-10">
 
                                     <div class="row bs-wizard" style="border-bottom:0;">
