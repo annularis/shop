@@ -34,11 +34,11 @@
                             <label class="control-label col-4" for="display_login_time">Display login activity?</label>
                             <div class="col-6">
                                 <label class="radio-inline">
-                                    <input type='radio' class="radio" name='display_login_time' value='0' {if $user.display_login_time = '0'}checked{/if} /> Disabled
+                                    <input type='radio' class="radio" name='display_login_time' value='0' {if $user.display_login_time == '0'}checked{/if} /> Disabled
                                 </label>
 
                                 <label class="radio-inline">
-                                    <input type='radio' class="radio" name='display_login_time' value='1' {if $user.display_login_time = '1'}checked{/if} /> Enabled
+                                    <input type='radio' class="radio" name='display_login_time' value='1' {if $user.display_login_time == '1'}checked{/if} /> Enabled
                                 </label>
                             </div>
                         </div>
@@ -50,11 +50,11 @@
                             <label class="control-label col-4" for="email_updates">Forward messages to email?</label>
                             <div class="col-6">
                                 <label class="radio-inline">
-                                    <input type='radio' class="radio" name='email_updates' value='0' {if $user.email_updates = '0'}checked{/if} /> Disabled
+                                    <input type='radio' class="radio" name='email_updates' value='0' {if $user.email_updates == '0'}checked{/if} /> Disabled
                                 </label>
 
                                 <label class="radio-inline">
-                                    <input type='radio' class="radio" name='email_updates' value='1' {if $user.email_updates = '1'}checked{/if} /> Enabled
+                                    <input type='radio' class="radio" name='email_updates' value='1' {if $user.email_updates == '1'}checked{/if} /> Enabled
                                 </label>
                             </div>
                         </div>
@@ -80,11 +80,11 @@
                             <label class="control-label col-4" for="force_pgp_messages">Force PGP Messages</label>
                             <div class="col-6">
                                 <label class="radio-inline">
-                                    <input type='radio' name='force_pgp_messages' value='0' {if $user.force_pgp_messages = '0'}checked{/if} /> Disabled
+                                    <input type='radio' name='force_pgp_messages' value='0' {if $user.force_pgp_messages == '0'}checked{/if} /> Disabled
                                 </label>
 
                                 <label class="radio-inline">
-                                    <input type='radio' name='force_pgp_messages' value='1' {if $user.force_pgp_messages = '1'}checked{/if} /> Enabled
+                                    <input type='radio' name='force_pgp_messages' value='1' {if $user.force_pgp_messages == '1'}checked{/if} /> Enabled
                                 </label>
                             </div>
                         </div>
@@ -97,11 +97,11 @@
                             <div class="col-8">
 
                                 <label class="radio-inline">
-                                    <input type='radio' name='block_non_pgp' value='0' {if $user.block_non_pgp = '0'}checked{/if} /> Disabled
+                                    <input type='radio' name='block_non_pgp' value='0' {if $user.block_non_pgp == '0'}checked{/if} /> Disabled
                                 </label>
 
                                 <label class="radio-inline">
-                                    <input type='radio' name='block_non_pgp' value='1' {if $user.block_non_pgp = '1'}checked{/if} /> Enabled
+                                    <input type='radio' name='block_non_pgp' value='1' {if $user.block_non_pgp == '1'}checked{/if} /> Enabled
                                 </label>
                             </div>
                         </div>
