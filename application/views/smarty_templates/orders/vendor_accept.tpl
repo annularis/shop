@@ -2,7 +2,7 @@
             {capture name="t_buyer_url"}user/{$order.buyer.user_hash}{/capture}
             {capture name="t_accept_order_url"}orders/accept/{$order.id}{/capture}
 
-		    <div class="col-md-9" id="vendor_public_keys">
+                    <div class="col-lg-9" id="vendor_public_keys">
                 <h2>Accept Order {$order.id}</h2>
 
                 {assign var="defaultMessage" value=""}
@@ -18,7 +18,7 @@
                 {form method="open" action=$smarty.capture.t_accept_order_url attr='class="form-horizontal"'}
                     <div class="row">
 
-                        <div class="col-xs-10 col-xs-offset-1">
+                        <div class="col-10 mx-auto">
                             <div class="table-responsive">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">Order with {url type="anchor" url=$smarty.capture.t_buyer_url text=$order.buyer.user_name|escape:"html":"UTF-8" attr=''}:</div>
@@ -61,16 +61,16 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-xs-9 col-xs-offset-3">Your order will be <strong>{$order_type}</strong>.</div>
+                        <div class="col-9 col-offset-3">Your order will be <strong>{$order_type}</strong>.</div>
                     </div>
 
-                    <div class='col-xs-12'>&nbsp;</div>
+                    <div class='col-12'>&nbsp;</div>
 
                     <input type="hidden" name="vendor_accept_order_id" value="{$order.id}" />
 
                     <div class="form-group">
-                        <label class="control-label col-sm-2 col-lg-2 col-md-2" for="submit"></label>
-                        <div class="col-sm-5 col-lg-5 col-md-5">
+                        <label class="control-label col-md-2 col-xl-2 col-lg-2" for="submit"></label>
+                        <div class="col-md-5 col-xl-5 col-lg-5">
                             <p align="center">
                                 <input type='submit' class="btn btn-primary" name='vendor_accept_order' value='Accept Order' onclick='messageEncrypt()' />
                                 {url type="anchor" url="orders" text="Cancel" attr='title="Cancel" class="btn btn-default"'}
