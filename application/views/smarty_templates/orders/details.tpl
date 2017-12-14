@@ -1,7 +1,7 @@
             {capture name='t_vendor_url'}user/{$order.vendor.user_hash}{/capture}
             {capture name='t_buyer_url'}user/{$order.buyer.user_hash}{/capture}
 
-            <div class="col-md-9" id="order-details">
+            <div class="col-lg-9" id="order-details">
 
                 <h2>Order Details: #{$order.id}</h2>
 
@@ -10,10 +10,10 @@
 
                 <div class="row">
                     <!-- Display Order Items, Shipping Info, Fees -->
-                    <div class="col-xs-12 col-md-10 col-md-offset-1">
+                    <div class="col-12 col-lg-12 col-lg-offset-1">
                         <div class="table-responsive">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
+                            <div class="panel panel-dark">
+                                <div class="card-header">
                                 {if $current_user.user_role == 'Admin'}
                                     {url type="anchor" url=$smarty.capture.t_buyer_url text=$order.buyer.user_name attr=''}'s order with {url type="anchor" url=$smarty.capture.t_vendor_url text=$order.vendor.user_name|escape:"html":"UTF-8" attr=''}
                                 {elseif $current_user.user_role == 'Buyer'}
@@ -72,31 +72,31 @@
 
                 {if $order.address == TRUE}
                 <div class="row">
-                    <div class="col-xs-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Payment Details</div>
-                            <div class="panel-body">
-                                <div class="col-xs-12 col-md-10">
+                    <div class="col-12">
+                        <div class="panel panel-dark">
+                            <div class="card-header">Payment Details</div>
+                            <div class="card-body">
+                                <div class="col-12 col-lg-10">
                                     <div class="row">
-                                        <label class="col-xs-3" for="address">Address</label>
-                                        <div class="col-xs-9">{$order.address}</div>
+                                        <label class="col-3" for="address">Address</label>
+                                        <div class="col-9">{$order.address}</div>
                                     </div>
                                     <div class="row">
-                                        <label class="col-xs-3" for="redeem_script">Redeem Script</label>
-                                        <div class="col-xs-9"><textarea id="redeem_script" class="form-control">{$order.redeemScript|escape:"html":"UTF-8"}</textarea></div>
+                                        <label class="col-3" for="redeem_script">Redeem Script</label>
+                                        <div class="col-9"><textarea id="redeem_script" class="form-control">{$order.redeemScript|escape:"html":"UTF-8"}</textarea></div>
                                     </div>
                                     {if $my_multisig_key.provider == 'Manual'}
                                     <div class="row">
-                                        <label class="col-xs-3" for="import_command">Import Command</label>
-                                        <div class="col-xs-9">
+                                        <label class="col-3" for="import_command">Import Command</label>
+                                        <div class="col-9">
                                             <textarea id="import_command" class="form-control">addmultisigaddress 2 '["{$redeem_script.keys.0|escape:"html":"UTF-8"}","{$redeem_script.keys.1|escape:"html":"UTF-8"}","{$redeem_script.keys.2|escape:"html":"UTF-8"}"]'</textarea>
                                         </div>
                                     </div>
                                     {elseif $my_multisig_key.provider == 'JS'}
                                     <noscript>
                                         <div class="row">
-                                            <label class="col-xs-3" for="import_command">Import Command</label>
-                                            <div class="col-xs-9">
+                                            <label class="col-3" for="import_command">Import Command</label>
+                                            <div class="col-9">
                                                 <textarea id="import_command" class="form-control">addmultisigaddress 2 '["{$redeem_script.keys.0|escape:"html":"UTF-8"}","{$redeem_script.keys.1|escape:"html":"UTF-8"}","{$redeem_script.keys.2|escape:"html":"UTF-8"}"]'</textarea>
                                             </div>
                                         </div>
@@ -104,14 +104,14 @@
                                     {/if}
                                     {if $order.final_transaction_id !== ''}
                                     <div class="row">
-                                        <label class="col-xs-3" for="import_command">Final Transaction</label>
-                                        <div class="col-xs-9">
+                                        <label class="col-3" for="import_command">Final Transaction</label>
+                                        <div class="col-9">
                                             {$order.final_transaction_id}
                                         </div>
                                     </div>
                                     {/if}
                                 </div>
-                                <div class="col-xs-12 col-md-2">
+                                <div class="col-14 col-lg-3">
                                     {if isset($qr) == TRUE}
                                         Scan to Pay: <a href='{$payment_url}'><img style="width:100%" src='data:image/png;base64,{$qr}' /></a>
                                         {$coin.code}{$order.order_price|escape:"html":"UTF-8"}
@@ -126,37 +126,37 @@
                 {if $order.paid_time !== '' && $order.final_transaction_id == null}
                 <div class="row">
                     {form method="open" action=$action_page attr='class="form-horizontal" name="sign_transaction" id="sign_transaction"'}
-                        <div class="col-xs-12">
+                        <div class="col-12">
                             <div class="table-responsive">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">Add Signature</div>
-                                    <div class="panel-body">
-                                        <div class="col-xs-10">
+                                <div class="panel panel-dark">
+                                    <div class="card-header">Add Signature</div>
+                                    <div class="card-body">
+                                        <div class="col-10">
                                             <!-- Display Tx Info -->
                                             <div class='row'>
-                                                <label class="col-xs-3" for="paying">Paying:</label>
-                                                <div class='col-xs-9'>
+                                                <label class="col-3" for="paying">Paying:</label>
+                                                <div class='col-9'>
                                                     {foreach from=$raw_tx.vout item=arr}
                                                         <div class='row'>
 
                                                         {$addr = $arr.scriptPubKey.addresses.0}
                                                         {if isset($addrs.{$addr}) == FALSE }
-                                                            <div class='col-xs-2'>Unknown!</div>
-                                                            <div class='col-xs-4'>{$coin.symbol} {$arr.value}</div>
-                                                            <div class='col-xs-6'>{$addr}</div>
+                                                            <div class='col-2'>Unknown!</div>
+                                                            <div class='col-4'>{$coin.symbol} {$arr.value}</div>
+                                                            <div class='col-6'>{$addr}</div>
                                                         {else}
                                                             {if $addrs.{$addr} == 'admin'}
-                                                                <div class='col-xs-2'>Fees</div>
-                                                                <div class='col-xs-4'>{$coin.symbol} {$arr.value}</div>
-                                                                <div class='col-xs-6'>{$addr}</div>
+                                                                <div class='col-2'>Fees</div>
+                                                                <div class='col-4'>{$coin.symbol} {$arr.value}</div>
+                                                                <div class='col-6'>{$addr}</div>
                                                             {elseif in_array($addrs.{$addr}, ['buyer','vendor']) }
                                                                 {capture name="t_pay_user_url"}user/{$order.{$addrs.{$addr}}.user_hash}{/capture}
                                                                 {capture name="t_pay_user_name"}{$order.{$addrs.{$addr}}.user_name|escape:"html":"UTF-8"}{/capture}
-                                                                <div class='col-xs-2'>{url type="anchor" url=$smarty.capture.t_pay_user_url text=$smarty.capture.t_pay_user_name attr=''}</div>
-                                                                <div class='col-xs-4'>{$coin.symbol} {$arr.value}</div>
-                                                                <div class='col-xs-6'>{$addr}</div>
+                                                                <div class='col-2'>{url type="anchor" url=$smarty.capture.t_pay_user_url text=$smarty.capture.t_pay_user_name attr=''}</div>
+                                                                <div class='col-4'>{$coin.symbol} {$arr.value}</div>
+                                                                <div class='col-6'>{$addr}</div>
                                                             {else}
-                                                                <div class='col-xs-2'>Unknown</div>
+                                                                <div class='col-2'>Unknown</div>
                                                             {/if}
                                                         {/if}
 
@@ -168,7 +168,7 @@
                                             <!-- End Tx Info -->
                                             {if isset($invalid_transaction_error) == TRUE}
                                             <div class='row'>
-                                                <div class="col-xs-7 col-xs-offset-3">
+                                                <div class="col-7 col-offset-3">
                                                     {$invalid_transaction_error}
                                                 </div>
                                             </div>
