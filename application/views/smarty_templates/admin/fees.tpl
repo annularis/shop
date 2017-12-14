@@ -1,56 +1,56 @@
-            <div class="col-md-9" id="admin_fees_panel">
+            <div class="col-lg-9" id="admin_fees_panel">
 
                 <h2>{url type="anchor" url="admin/items" text="Back" attr='class="btn btn-default"'} Fees Configuration</h2>
 
                 {assign var="defaultMessage" value=""}
                 {returnMessage defaultMessage="$defaultMessage" returnMessage="$returnMessage" class="$returnMessage_class"}
-                <div class="col-xs-12">&nbsp;</div>
+                <div class="col-12">&nbsp;</div>
 
                 {form method="open" action="admin/items/fees" attr='class="form-horizontal"'}
                     <h3>Basic Settings</h3>
 
                     <div class="form-group">
-                        <div class="col-xs-12">
-                            <label class="control-label col-xs-3" for="minimum_fee">Minimum Fee:</label>
-                            <div class="col-xs-7">
+                        <div class="col-12">
+                            <label class="control-label col-3" for="minimum_fee">Minimum Fee:</label>
+                            <div class="col-7">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i>{$coin.symbol}</i></span>
                                     <input type="text" name="minimum_fee" id="minimum_fee" class="form-control" value="{$config.minimum_fee}" />
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-9 col-xs-offset-3">{form method="form_error" field="minimum_fee"}</div>
+                        <div class="col-9 mx-auto">{form method="form_error" field="minimum_fee"}</div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-xs-12">
-                            <label class="control-label col-xs-3" for="default_rate">Default Rate</label>
-                            <div class="col-xs-7">
+                        <div class="col-12">
+                            <label class="control-label col-3" for="default_rate">Default Rate</label>
+                            <div class="col-7">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i>%</i></span>
                                     <input type="text" class="form-control" name="default_rate" id="default_rate" value='{$config.default_rate|escape:"html":"UTF-8"}' />
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-9 col-xs-offset-3">{form method="form_error" field="default_rate"}</div>
+                        <div class="col-9 mx-auto">{form method="form_error" field="default_rate"}</div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-xs-12">
-                            <label class="control-label col-xs-3" for="escrow_rate">Escrow Rate</label>
-                            <div class="col-xs-7">
+                        <div class="col-12">
+                            <label class="control-label col-3" for="escrow_rate">Escrow Rate</label>
+                            <div class="col-7">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i>%</i></span>
                                     <input type='text' class="form-control" name='escrow_rate' id="escrow_rate" value='{$config.escrow_rate|escape:"html":"UTF-8"}' />
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-9 col-xs-offset-3">{form method="form_error" field="escrow_rate"}</div>
+                        <div class="col-9 mx-auto">{form method="form_error" field="escrow_rate"}</div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-xs-2" for="submit"></label>
-                        <div class="col-xs-5">
+                        <label class="control-label col-2" for="submit"></label>
+                        <div class="col-5">
                             <p align="center">
                                 <input type="submit" name="update_config" value="Update" class="btn btn-primary" />
                                 {url type="anchor" url="admin/items" text="Cancel" attr='title="Cancel" class="btn btn-default"'}
@@ -61,7 +61,7 @@
 
                 <h3>Fee Ranges</h3>
                 {if $fees == TRUE}
-                    <div class="col-xs-12">
+                    <div class="col-12">
                         <table class="table">
                             <thead>
                             <tr>
@@ -91,8 +91,8 @@
                     <h4>Create a Fee Range:</h4>
 
                     <div class="form-group">
-                        <label class="control-label col-xs-3" for="lower_limit">Lower Limit:</label>
-                        <div class="col-xs-7">
+                        <label class="control-label col-3" for="lower_limit">Lower Limit:</label>
+                        <div class="col-7">
                             <div class="input-group">
                                 <span class="input-group-addon"><i>{$coin.symbol}</i></span>
                                 <input type="text" name="lower_limit" id="lower_limit" class="form-control" value="" />
@@ -102,8 +102,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-xs-3" for="upper_limit">Upper Limit</label>
-                        <div class="col-xs-7">
+                        <label class="control-label col-3" for="upper_limit">Upper Limit</label>
+                        <div class="col-7">
                             <div class="input-group">
                                 <span class="input-group-addon"><i>BTC</i></span>
                                 <input type="text" class="form-control" name="upper_limit" id="upper_limit" value='' />
@@ -113,8 +113,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-xs-3" for="percentage_fee">% Fee</label>
-                        <div class="col-xs-7">
+                        <label class="control-label col-3" for="percentage_fee">% Fee</label>
+                        <div class="col-7">
                             <div class="input-group">
                                 <span class="input-group-addon"><i>%</i></span>
                                 <input type='text' class="form-control" name='percentage_fee' id="percentage_fee" value='' />
@@ -124,8 +124,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-xs-2" for="submit"></label>
-                        <div class="col-xs-5">
+                        <label class="control-label col-2" for="submit"></label>
+                        <div class="col-5">
                             <p align="center">
                                 <input type='submit' name='create_fee' value='Add' class='btn btn-primary' />
                             </p>
