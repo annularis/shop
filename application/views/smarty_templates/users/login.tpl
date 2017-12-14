@@ -12,7 +12,7 @@
                                     <input type='text' class="form-control" name='user_name' value="{form method="set_value" field="user_name"}" />
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-offset-2 col-lg-10">{form method="form_error" field="user_name"}</div>
+                            <div class="col-12 mx-lg-auto col-lg-10">{form method="form_error" field="user_name"}</div>
                         </div>
 
                         <div class="form-group">
@@ -42,7 +42,7 @@
                                     <input type="text" class="form-control" id="captcha" name="captcha" />
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-offset-2 col-lg-10">{form method="form_error" field="captcha"}</div>
+                            <div class="col-12 mx-lg-auto col-lg-10">{form method="form_error" field="captcha"}</div>
                         </div>
                         <!-- /Captcha --> {/if}
 
