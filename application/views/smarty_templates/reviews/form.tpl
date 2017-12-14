@@ -297,8 +297,8 @@
                         {/if}
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-2 col-lg-2 col-lg-2" for="submit"></label>
-                        <div class="col-sm-5 col-lg-5 col-lg-5">
+                        <label class="control-label col-sm-2 col-lg-2 col-xl-2" for="submit"></label>
+                        <div class="col-sm-5 col-lg-5 col-xl-5">
                             <p align="center">
                                 <input type='submit' name='buyer_submit_review' value='Submit Review' class='btn btn-primary'/>
                                 {url type="anchor" url=$cancel_page text="Cancel" attr='class="btn btn-default"'}
