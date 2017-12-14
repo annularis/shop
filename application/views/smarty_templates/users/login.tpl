@@ -22,7 +22,7 @@
                                     <input type='password' class="form-control" name='password' value='' autocomplete="off" />
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-offset-2 col-lg-10">{form method="form_error" field="password"}</div>
+                            <div class="col-12 mx-lg-auto col-xl-10">{form method="form_error" field="password"}</div>
                         </div>
 
                         {if $display_captcha eq TRUE}<!-- Captcha -->
