@@ -10,7 +10,7 @@
 
                 <div class="row">
                     <!-- Display Order Items, Shipping Info, Fees -->
-                    <div class="col-12 col-lg-12 col-lg-offset-1">
+                    <div class="col-12 col-lg-12 mx-lg-auto">
                         <div class="table-responsive">
                             <div class="panel panel-dark">
                                 <div class="card-header">
