@@ -1,4 +1,8 @@
-y">
+<div class="col-12">&nbsp;</div>
+
+<!-- Display Unsigned/Partially signed transaction -->
+{if $display_sign_form == TRUE}
+    <div class="row jsonly">
         <label class="col-3"></label>
         <div class="col-9">
             {$display_sign_msg}
