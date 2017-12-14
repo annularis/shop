@@ -61,7 +61,7 @@
                             </div>
                             <div class="col-1"><input type='submit' name='add_custom_location' value='Submit' class="btn btn-primary"/></div>
                         </div>
-                        <div class='col-12 col-lg-8 col-lg-offset-2'>{form method="form_error" field="create_location"}{form method='form_error' field='location'}</div>
+                        <div class='col-12 col-lg-8 mx-lg-auto'>{form method="form_error" field="create_location"}{form method='form_error' field='location'}</div>
                     </div>
 
                     <div class="form-group">
@@ -77,7 +77,7 @@
                             </div>
                             <div class="col-1"><input type="submit" name="delete_custom_location" value="Submit" class="btn btn-primary" /></div>
                         </div>
-                        <div class='col-12 col-lg-8 col-lg-offset-2'>{form method="form_error" field="location_delete"}</div>
+                        <div class='col-12 col-lg-8 mx-lg-auto'>{form method="form_error" field="location_delete"}</div>
                     </div>
                 </form>
 
