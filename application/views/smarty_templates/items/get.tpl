@@ -16,7 +16,7 @@
             {form method="open" action="purchases" attr=''}
             {/if}
 
-            <div class="thumbnail">
+            <div class="card bg-light card-body mb-3">
                 {if $item.main_image.hash !== 'default'}
                     {capture name="t_img_uri"}image/{$item.main_image.hash}{/capture}
                     {capture name="t_img"}{url type="site" url=$smarty.capture.t_img_uri}{/capture}
@@ -25,9 +25,9 @@
                     {url type="anchor" url=$smarty.capture.t_item_url text=$smarty.capture.t_item_img attr='title="{$item.name|escape:"html":"UTF-8"}"'}
                 {/if}
                 <div class="caption-full">
-                    <h4 class="pull-right">{$item.price_f|escape:"none"}</h4>
+                    <h4 class="float-right">{$item.price_f|escape:"none"}</h4>
                     <h4>{url type="anchor" url=$smarty.capture.t_item_url text=$item.name|escape:"html":"UTF-8" attr="title='{$item.name|escape:"html":"UTF-8"}'"}</h4>
-                    <p class="pull-right">
+                    <p class="float-right">
                         {if $current_user.logged_in == TRUE}
                             {if $current_user.user_hash != $item.vendor.user_hash}{url type="anchor" url=$smarty.capture.t_message_vendor_url text="Message" attr='class="btn btn-default"'}<br />{/if}
                             {if $current_user.user_role == 'Buyer'}
@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="ratings">
-                    <p class="pull-right">
+                    <p class="float-right">
                         {url type="anchor" url=$smarty.capture.t_reviews_url text=$smarty.capture.t_reviews_str attr=''}
                     </p>
                     <p>{rating rating=$item.average_rating}</p>
@@ -53,15 +53,15 @@
 
                 {if $shipping_costs == TRUE}
                 <div class="caption">
-                    <div class="col-xs-12">
-                        <div class='col-xs-6'><strong>Available Locations</strong></div>
-                        <div class='col-xs-6'><strong>Cost</strong></div>
+                    <div class="col-14">
+                        <div class='col-6'><strong>Available Locations</strong></div>
+                        <div class='col-6'><strong>Cost</strong></div>
                     </div>
 
                     {foreach from=$shipping_costs item=shipping_charge}
-                    <div class="col-xs-12">
-                        <div class='col-xs-6'>{$shipping_charge.destination_f}</div>
-                        <div class='col-xs-6'>
+                    <div class="col-14">
+                        <div class='col-6'>{$shipping_charge.destination_f}</div>
+                        <div class='col-6'>
                             {if $current_user.currency.id !== '0'}
                                 {$current_user.currency.symbol} {number_format($shipping_charge.cost*$current_user.currency.rate,2)} /
                             {/if}
@@ -82,7 +82,7 @@
             {/foreach}
 
             {if $reviews == TRUE}
-            <div class="well" style="background:white;">
+            <div class="card bg-light card-body mb-3">
                 <h4>Recent Reviews</h4>
                 {capture name='t_item_all_reviews_url'}reviews/view/item/{$item.hash}{/capture}
                 {capture name='t_all_reviews_str'}[All Reviews: {$review_count.all}]{/capture}
@@ -123,7 +123,7 @@
                         </div>
                         <div class="col-md-6"></div>
 
-                        <span class="pull-right">{$review.time_f}</span>
+                        <span class="float-right">{$review.time_f}</span>
                         <p>{$review.comments|escape:"html":"UTF-8"}</p>
                     </div>
                 </div>
