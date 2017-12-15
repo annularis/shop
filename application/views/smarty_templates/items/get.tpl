@@ -7,7 +7,7 @@
         {capture name="t_reviews_url"}reviews/view/item/{$item.hash}{/capture}
         {capture name="t_reviews_str"}{$item.review_count} reviews{/capture}
 
-        <div class="col-md-9" id="item_detail">
+        <div class="col-lg-9" id="item_detail">
 
             {assign var="defaultMessage" value=""}
             {returnMessage defaultMessage="$defaultMessage" returnMessage="$returnMessage" class="$returnMessage_class"}
