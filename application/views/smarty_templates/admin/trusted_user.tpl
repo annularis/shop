@@ -5,10 +5,10 @@
                 {assign var="defaultMessage" value=""}
                 {returnMessage defaultMessage="$defaultMessage" returnMessage="$returnMessage" class="$returnMessage_class"}
 
-                <div class='row'>
+                   <div class="col-12">
                     <p align='justify'>This form allows you to define what makes a 'trusted user'. This is used to determine if a vendor should be allowed to request up-front payment for particular items, or early finalization of escrow orders. </p>
                     <p align='justify'>To ignore a particular attribute simply set it to zero.</p>
-                </div>
+                   </div>
 
 
                 {form method="open" action="admin/trusted_user" attr='class="form-horizontal"'}
