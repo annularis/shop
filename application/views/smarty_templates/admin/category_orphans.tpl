@@ -1,5 +1,5 @@
             {capture name="t_action_url"}admin/category/orphans/{$category.hash}{/capture}
-            <div class="col-xs-9" id="admin_category_orphans">
+            <div class="col-9" id="admin_category_orphans">
                 <h2>Fix Orphans</h2>
 
                 {assign var="defaultMessage" value=""}
@@ -9,9 +9,9 @@
 
                 {form method="open" action="admin/items/fees" attr='class="form-horizontal"'}
                     <div class="form-group">
-                        <div class="col-xs-12">
-                            <label class="col-xs-2 col-xs-offset-1">New Category</label>
-                            <div class="col-xs-4">
+                        <div class="col-12">
+                            <label class="col-2 mx-auto">New Category</label>
+                            <div class="col-4">
                                 <select name='category_id' class="form-control" autocomplete='off'>
                                     <option value=''></option>
                                     {if $allow_root == TRUE}<option value='0'>Root Category</option>{/if}
@@ -21,13 +21,13 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-xs-9 col-xs-offset-3"}{form method="form_error" field='category_id'}</div>
+                        <div class="col-9 mx-auto"}{form method="form_error" field='category_id'}</div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-xs-12">
-                            <label class="control-label col-xs-2" for="submit"></label>
-                            <div class="col-xs-5">
+                        <div class="col-12">
+                            <label class="control-label col-2" for="submit"></label>
+                            <div class="col-5">
                                 <p align="center">
                                     <input type="submit" value="Update" class="btn btn-primary" />
                                     {url type="anchor" url="admin/edit/items" text="Cancel" attr='class="btn"'}

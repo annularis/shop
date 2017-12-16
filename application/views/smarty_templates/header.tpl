@@ -2,80 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="{$header.site_description|escape:'html':'UTF-8'}" />
     <title>{$header.title|escape:'html':'UTF-8'} | {$header.site_title|escape:'html':'UTF-8'}</title>
     <link rel="stylesheet" type="text/css"  href="{url type="base_url" url=""}assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="{url type="base_url" url=""}assets/css/style.css">
     <!-- JavaScript -->
-    <script src="{url type="site" url="assets/js/jquery-1.8.1.min.js"}"></script>
+    <script src="{url type="site" url="assets/js/jquery-3.2.1.min.js"}"></script>
     <script src="{url type="site" url="assets/js/bootstrap.js"}"></script>
-    {$header.header_meta}
+	{$header.header_meta}
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                {url type="anchor" url="" text=$header.site_title|escape:"html":"UTF-8" attr="class='navbar-brand'"}
-            </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    {if $current_user.user_role eq 'Admin'}
-                        <li>{url type="anchor" url="" text="Home" attr="title='Home'"}</li>
-                        <li>{url type="anchor" url="items" text="Items" attr="title='Items'"}</li>
-                        <li>{url type="anchor" url="admin" text="Admin" attr="title='Admin'"}</li>
-                        <li>{url type="anchor" url="inbox" text="Inbox{if $count_unread_messages gt 0} ($count_unread_messages){/if}" attr='title="Inbox"'}</li>
-                        <li>{url type="anchor" url="account" text="Account" attr="title='Account'"}</li>
-                        <li>{url type="anchor" url="logout" text="Logout" attr="title='Logout'"}</li>
-
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="container">
+		{url type="anchor" url="" text=$header.site_title|escape:"html":"UTF-8" attr="class='navbar-brand'"}
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav ml-auto">
+                {if $current_user.user_role eq 'Admin'}
+                        <li class="nav-item">
+						<a class="nav-link" href="/index.php">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/items">Items</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/admin">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/inbox">Inbox{if $count_unread_messages gt 0} {$count_unread_messages}{/if}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/account">Account</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/logout">Logout</a></li>
                     {elseif $current_user.user_role eq 'Buyer'}
-                        <li>{url type="anchor" url="" text="Home" attr="title='Home'"}</li>
-                        <li>{url type="anchor" url="items" text="Items" attr="title='Items'"}</li>
-                        <li>{url type="anchor" url="inbox" text="Inbox{if $count_unread_messages gt 0} ($count_unread_messages){/if}" attr='title="Inbox"'}</li>
-                        <li>{url type="anchor" url="account" text="Account" attr="title='Account'"}</li>
-                        <li>{url type="anchor" url="logout" text="Logout" attr="title='Logout'"}</li>
-
+                        <li class="nav-item"><a class="nav-link" href="/index.php">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/items">Items</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/inbox">Inbox{if $count_unread_messages gt 0} {$count_unread_messages}{/if}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/account">Account</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/logout">Logout</a></li>
                     {elseif $current_user.user_role == 'Vendor'}
-                        <li>{url type="anchor" url="" text="Home" attr="title='Home'"}</li>
-                        <li>{url type="anchor" url="items" text="Items" attr="title='Items'"}</li>
-                        <li>{url type="anchor" url="inbox" text="Inbox{if $count_unread_messages gt 0} ($count_unread_messages){/if}" attr='title="Inbox"'}</li>
-                        <li>{url type="anchor" url="account" text="Account" attr="title='Account'"}</li>
-                        <li>{url type="anchor" url="logout" text="Logout" attr="title='Logout'"}</li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/items">Items</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/inbox">Inbox{if $count_unread_messages gt 0} {$count_unread_messages}{/if}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/account">Account</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/logout">Logout</a></li>
 
                     {elseif $current_user.user_role == 'half'}
                         {if $allow_guests eq TRUE}
-                            <li>{url type="anchor" url="" text="Home" attr="title='Home'"}</li>
-                            <li>{url type="anchor" url="items" text="Items" attr="title='Items'"}</li>
+                            <li class="nav-item"><a class="nav-link" href="/index.php">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/index.php/items">Items</a></li>
                         {/if}
-                        <li>{url type="anchor" url="logout" text="Logout" attr="title='Logout'"}</li>
+                        <li class="nav-item"><a class="nav-link">Logout</a></li>
                     {else}
                         {if $allow_guests eq TRUE}
-                            <li>{url type="anchor" url="" text="Home" attr="title='Home'"}</li>
-                            <li>{url type="anchor" url="items" text="Items" attr="title='Items'"}</li>
+                            <li class="nav-item"><a class="nav-link" href="/index.php">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/index.php/items">Items</a></li>
                         {/if}
-                        <li>{url type="anchor" url="login" text="Login" attr="title='Login'"}</li>
-                        <li>{url type="anchor" url="register" text="Register" attr="title='Register'"}</li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index.php/register">Register</a></li>
                     {/if}
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-
-        </div>
-    </nav>
-
-    <div class="container">
+            </ul>
+		</div>
+	</div>  
+</nav>
+<br>
+<!-- left-side-bar-space -->
+ <div class="container">
         <div class="row">
-            <!-- Begin: Menu -->
-            <div class="col-md-3">
+            <!-- sidebar-nav -->
+            <div class="col-lg-3">
                 {if in_array($current_user.user_role, ['guest','half']) eq FALSE}
                 <!-- Logged in bar-->
                 <div class="list-group">
@@ -92,13 +83,15 @@
                         {url type="anchor" url="purchases" text="My Purchases" attr="class='list-group-item' title='Your Purchases'"}
                     {/if}
                 </div>
-            {/if}
+				{/if}
 
-            {if $category_data.block eq FALSE}<div class="well sidebar-nav">
-            <ul class="nav nav-list">
-                <li class="nav-header">Categories</li>
-                {$category_data.cats}
-            </ul>
-        </div>{/if}
+				{if $category_data.block eq FALSE}<div class="card bg-light card-body mb-3 sidebar-nav">
+					<ul class="nav navbar-nav list-inline">
+						<h6>Categories:</h6>
+						{$category_data.cats}
+					</ul>
+				</div>
+				{/if}
 
-            </div>
+        </div>
+<!-- /sidebar-nav -->

@@ -1,7 +1,7 @@
 
-            <div class="col-md-9" id="my-orders">
+            <div class="col-lg-9" id="my-orders">
                 <div class="row">
-			        <h2>Review Order</h2>
+                                <h2>Review Order</h2>
 
                     {assign var="defaultMessage" value=""}
                     {returnMessage defaultMessage="$defaultMessage" returnMessage="$returnMessage" class="$returnMessage_class"}
@@ -22,7 +22,7 @@ order is dispatched.</p>
 
                     <div class="row">
 
-                        <div class="col-xs-10 col-xs-offset-1">
+                        <div class="col-10 mx-auto">
                             <div class="table-responsive">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">Order with {url type="anchor" url=$smarty.capture.t_vendor_url text=$order.vendor.user_name attr=''}:</div>
@@ -66,13 +66,13 @@ order is dispatched.</p>
 
                         <div class="row">
                             <div class="form-group">
-                                <div class="col-xs-12">
-                                    <label class="control-label col-xs-3" for="buyer_address">Shipping Address:</label>
-                                    <div class="col-xs-7">
+                                <div class="col-12">
+                                    <label class="control-label col-3" for="buyer_address">Shipping Address:</label>
+                                    <div class="col-7">
                                         <textarea name='buyer_address' rows='5' class='form-control'></textarea>
                                     </div>
                                 </div>
-                                <div class="col-xs-9 col-xs-offset-3">{form method='form_error' field='buyer_address'}</div>
+                                <div class="col-9 col-offset-3">{form method='form_error' field='buyer_address'}</div>
                             </div>
                         </div>
 
@@ -81,25 +81,25 @@ order is dispatched.</p>
 
                         <div class="row">
                             <div class="row">
-                                <div class="col-xs-10">You don't have a refund address set up at the moment. Please enter one now, along with your password, in case you need a refund at any point.</div>
+                                <div class="col-10">You don't have a refund address set up at the moment. Please enter one now, along with your password, in case you need a refund at any point.</div>
                             </div>
                             <div class="form-group">
-                                <div class="col-xs-12">
-                                    <label class="control-label col-xs-3" for="buyer_payout">Refund Address:</label>
-                                    <div class="col-xs-7">
+                                <div class="col-12">
+                                    <label class="control-label col-3" for="buyer_payout">Refund Address:</label>
+                                    <div class="col-7">
                                         <input type="text" name="buyer_payout" id="buyer_payout" class="form-control" value="">
                                     </div>
                                 </div>
-                                <div class="col-xs-9 col-xs-offset-3">{form method='form_error' field='buyer_payout'}</div>
+                                <div class="col-9 col-offset-3">{form method='form_error' field='buyer_payout'}</div>
                             </div>
                             <div class="form-group">
-                                <div class="col-xs-12">
-                                    <label class="control-label col-xs-3" for="password">Password:</label>
-                                    <div class="col-xs-7">
+                                <div class="col-12">
+                                    <label class="control-label col-3" for="password">Password:</label>
+                                    <div class="col-7">
                                         <input type="password" name="password" id="password" class="form-control" value="">
                                     </div>
                                 </div>
-                                <div class="col-xs-9 col-xs-offset-3">{form method='form_error' field='password'}</div>
+                                <div class="col-9 col-offset-3">{form method='form_error' field='password'}</div>
                             </div>
                         </div>
                         {/if}
@@ -109,8 +109,8 @@ order is dispatched.</p>
                         {/if}
 
                         <div class="form-group">
-                            <label class="control-label col-sm-2 col-lg-2 col-md-2" for="submit"></label>
-                            <div class="col-sm-5 col-lg-5 col-md-5">
+                            <label class="control-label col-md-2 col-xl-2 col-lg-2" for="submit"></label>
+                            <div class="col-md-5 col-xl-5 col-lg-5">
                                 <p align="center">
                                     <input type="submit" class="btn btn-primary" value='Place Order' {if isset($order.vendor.pgp) == TRUE}onclick='messageEncrypt()'{/if} />
                                     {url type="anchor" url='purchases' text="Cancel" attr='class="btn btn-default"'}
@@ -120,4 +120,4 @@ order is dispatched.</p>
 
                     </form>
                 </div>
-    		</div>
+                </div>

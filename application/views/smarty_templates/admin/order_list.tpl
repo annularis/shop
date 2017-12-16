@@ -1,4 +1,4 @@
-            <div class="col-md-9 mainContent" id="admin-order-list">
+           <div class="col-lg-9 mainContent" id="admin-order-list">
 
                 <h2>{url type="anchor" url="admin" text="Back" attr='class="btn btn-default"'} Order List</h2>
 
@@ -6,7 +6,7 @@
                 {returnMessage defaultMessage="$defaultMessage" returnMessage="$returnMessage" class="$returnMessage_class"}
 
                 {if is_array($orders) == TRUE }
-                    <div class="col-md-10 col-md-offset-1 col-xs-12">
+                    <div class="col-lg-10 mx-lg-auto col-12">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -41,4 +41,4 @@
                 {else}
                     There are no orders at this time
                 {/if}
-    		</div>
+                </div>
