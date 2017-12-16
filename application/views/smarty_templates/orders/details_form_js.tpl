@@ -1,21 +1,21 @@
-<div class="col-xs-12">&nbsp;</div>
+<div class="col-12">&nbsp;</div>
 
 <!-- Display Unsigned/Partially signed transaction -->
 {if $display_sign_form == TRUE}
     <div class="row jsonly">
-        <label class="col-xs-3"></label>
-        <div class="col-xs-9">
+        <label class="col-3"></label>
+        <div class="col-9">
             {$display_sign_msg}
         </div>
 
         <div class="form-group">
-            <div class="col-xs-12">
-                <label class="col-xs-3" for="wallet_passphrase">Wallet Passphrase</label>
-                <div class="col-xs-9">
+            <div class="col-12">
+                <label class="col-3" for="wallet_passphrase">Wallet Passphrase</label>
+                <div class="col-9">
                     <input type="password" name="wallet_passphrase" id="wallet_passphrase" class="form-control" value="" />
                 </div>
             </div>
-            <div class="col-xs-9 col-xs-offset-3">
+            <div class="col-9 mx-auto">
                 {form method="form_error" field="js_transaction"}
             </div>
         </div>
@@ -25,25 +25,25 @@
         <div class="row">
 
             <div class="form-group">
-                <label class="col-xs-3" for="tx">Raw Transaction</label>
-                <div class="col-xs-9">
+                <label class="col-3" for="tx">Raw Transaction</label>
+                <div class="col-9">
                     <textarea name="tx" id="tx" class="form-control">{if strlen($order.partially_signed_transaction) > 0}{$order.partially_signed_transaction}{else}{$order.unsigned_transaction}{/if}</textarea>
                 </div>
             </div>
 
-            <div class="col-xs-9 col-xs-offset-3">
+            <div class="col-9 mx-auto">
                 {$display_sign_msg}
             </div>
 
             <div class="form-group">
 
-                <label class="col-xs-3" for="partially_signed_transaction">Wallet Passphrase</label>
-                <div class="col-xs-9">
+                <label class="col-3" for="partially_signed_transaction">Wallet Passphrase</label>
+                <div class="col-9">
                     <textarea name="partially_signed_transaction" id="partially_signed_transaction" class="form-control"></textarea>
                     Sign with key {$signing_info.key_index}
                 </div>
 
-                <div class="col-xs-9 col-xs-offset-3">
+                <div class="col-9 mx-auto">
                     {form method="form_error" field="partially_signed_transaction"}
                 </div>
             </div>
@@ -54,8 +54,8 @@
 
 {if ($display_sign_form == FALSE AND $order.partially_signed_transaction == null) OR $order.partially_signing_user_id == $current_user.user_id}
 
-<label class="col-xs-3" for="message"></label>
-<div class="col-xs-9">
+<label class="col-3" for="message"></label>
+<div class="col-9">
     Waiting on the other user to sign.
 </div>
 {/if}
@@ -66,8 +66,8 @@
 
 <!-- Buttons -->
 <div class="row">
-    <label class="col-xs-3" for="submit"></label>
-    <div class="col-xs-9">
+    <label class="col-3" for="submit"></label>
+    <div class="col-9">
         {if $display_sign_form == TRUE}
 
             <input type="submit" name="submit_js_signed_transaction" class="btn btn-primary jsonly" value="Submit Transaction" onclick="sign_raw_transaction()" />

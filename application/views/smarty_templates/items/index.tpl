@@ -1,7 +1,7 @@
-            <div class="col-md-9">
+            <div class="col-lg-9">
                 <div class="row">
-                    <div class="col-md-12 btn-group">
-                        <div class='pull-right'>
+                    <div class="col-lg-12 btn-group">
+                        <div class='float-right'>
                             {$links}
                         </div>
                         <h2>{if isset($custom_title) == TRUE}{$custom_title|escape:'html':'UTF-8'}
@@ -22,8 +22,8 @@
                         {capture name="t_item_vendor_url"}user/{$item.vendor.user_hash}{/capture}
                         {capture name="t_reviews_url"}reviews/view/item/{$item.hash}{/capture}
                         {capture name="t_reviews_str"}{$item.review_count} reviews{/capture}
-                            <div class="col-sm-4 col-lg-4 col-md-4">
-                                <div class="thumbnail">
+                            <div class="col-md-4 col-xl-4 col-lg-4">
+                                <div class="card bg-light card-body mb-3">
                                     {url type="anchor" url=$smarty.capture.t_item_url text=$smarty.capture.t_item_img attr="title='{$item.name|escape:"html":"UTF-8"}'"}
                                     <div class="caption">
                                         <h4>{url type="anchor" url=$smarty.capture.t_item_url text=$item.name|escape:"html":"UTF-8" attr="title='{$item.name|escape:"html":"UTF-8"}'"}
@@ -31,7 +31,7 @@
                                         <p>{$item.price_f} - {url type="anchor" url=$smarty.capture.t_item_vendor_url text=$item.vendor.user_name|escape:"html":"UTF-8" attr=""}</p>
                                     </div>
                                     <div class="ratings">
-                                        <p class="pull-right">{url type="anchor" url=$smarty.capture.t_reviews_url text=$smarty.capture.t_reviews_str attr=''}</p>
+                                        <p class="float-right">{url type="anchor" url=$smarty.capture.t_reviews_url text=$smarty.capture.t_reviews_str attr=''}</p>
                                         <p>{rating rating=$item.average_rating}</p>
                                     </div>
                                 </div>

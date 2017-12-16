@@ -1,11 +1,11 @@
-            <div class="col-md-9" id="admin-key-usage">
+           <div class="col-lg-9" id="admin-key-usage">
 
                 <h3>Key Usage</h3>
 
                 {assign var="defaultMessage" value=""}
                 {returnMessage defaultMessage="$defaultMessage" returnMessage="$returnMessage" class="$returnMessage_class"}
 
-                <div class='col-xs-12 col-md-10 col-md-offset1'>
+                <div class='col-12 col-lg-10 mx-lg-auto'>
                     {if $count > 0}
                     <div class="panel panel-success">
                         <div class="panel-heading">Created Addresses: {$count}</div>

@@ -1,4 +1,4 @@
-            <div class="col-md-9" id="admin_edit_items">
+            <div class="col-lg-9" id="admin_edit_items">
 
                 {$nav}
 
@@ -29,11 +29,11 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-xs-10 col-xs-offset-1"><i>{$job.description|escape:"html":"UTF-8"}</i></div>
+                                        <div class="col-12 mx-auto"><i>{$job.description|escape:"html":"UTF-8"}</i></div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="col-xs-12">
-                                            <div class="col-xs-7 col-xs-offset-1">
+                                        <div class="col-7">
+                                            <div class="col-14 mx-auto">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i>Run every</i></span>
                                                     <input type="text" name="{$smarty.capture.t_jobs_interval_field}" class="form-control" value="{$job.interval|escape:"html":"UTF-8"}" />
@@ -41,7 +41,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-xs-4">
+                                            <div class="col-4">
                                                 <div class="checkbox-inline">
                                                     <input type='checkbox' name='disabled_jobs[{$index}]' value='1' {if $job.interval == '0'}checked {/if}/> Disabled
                                                 </div>
@@ -54,9 +54,9 @@
                     {/foreach}
 
                     <div class="form-group">
-                        <div class="col-xs-12">
-                            <label class="control-label col-xs-2" for="submit"></label>
-                            <div class="col-xs-5">
+                        <div class="col-12">
+                            <label class="control-label col-2" for="submit"></label>
+                            <div class="col-5">
                                 <p align="center">
                                     <input type='submit' value='Update' class='btn btn-primary' />
                                     {url type="anchor" url="admin/autorun" text="Cancel" attr='class="btn btn-default"'}

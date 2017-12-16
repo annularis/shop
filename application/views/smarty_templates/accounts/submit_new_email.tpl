@@ -1,11 +1,11 @@
-            <div class="col-md-9" id="account_email_address">
+            <div class="col-lg-9" id="account_email_address">
 
                 <h2>{if $action_type == 'new'}Set{else}Update{/if} Email Address</h2>
 
                 <p align="justify">{if $action_type == 'new'}
                     If you wish you can register an email address with your account, to receive updates about your orders, and notifications from the site.
                 {else}
-                    Use this form if you wish to change your email to something else.
+                    Use this form to change your email.
                 {/if}
                 An email will be sent to the address, and will need to follow the activation link, or manually enter the given details to confirm this change.
                 </p>
@@ -16,7 +16,7 @@
                 {if count($pending_verification) > 0}
                 {form method="open" action="accounts/email" attr=""}
                     {form method="validation_errors"}
-                <div class='col-xs-10 col-xs-offset-1'>
+                <div class='col-10 mx-auto'>
                     <div class="panel panel-default">
                         <div class="panel-heading">Pending Verification: </div>
 
@@ -41,28 +41,28 @@
 
                 {form method="open" action="accounts/email" attr='class="form-horizontal"'}
                     <div class="form-group">
-                        <div class="col-xs-12">
-                            <label class="control-label col-xs-3" for="email_address">Email Address</label>
-                            <div class="col-xs-6">
+                        <div class="col-12">
+                            <label class="control-label col-3" for="email_address">Email Address</label>
+                            <div class="col-6">
                                 <input type="text" class="form-control" name="email_address" id="email_address" value="" />
                             </div>
                         </div>
-                        <div class="col-xs-8 col-xs-offset-3">{form method='form_error' field='email_address'}</div>
+                        <div class="col-8 mx-auto">{form method='form_error' field='email_address'}</div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-xs-12">
-                            <label class="control-label col-xs-3" for="password">Password:</label>
-                            <div class="col-xs-6">
+                        <div class="col-12">
+                            <label class="control-label col-3" for="password">Password:</label>
+                            <div class="col-6">
                                 <input type="password" name="password" id="password" class="form-control" value="">
                             </div>
                         </div>
-                        <div class="col-xs-9 col-xs-offset-3">{form method='form_error' field='password'}</div>
+                        <div class="col-9 mx-auto">{form method='form_error' field='password'}</div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-xs-2" for="submit"></label>
-                        <div class="col-xs-5">
+                        <label class="control-label col-2" for="submit"></label>
+                        <div class="col-5">
                             <p align="center">
                                 <input type="submit" name="submit_new_email_address" value="Submit" class="btn btn-primary" />
                                 {url type="anchor" url="account" text="Cancel" attr='title="Cancel" class="btn btn-default"'}

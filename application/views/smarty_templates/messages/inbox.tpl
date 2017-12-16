@@ -1,7 +1,7 @@
 
-            <div class="col-md-9" id="inbox">
+            <div class="col-lg-9" id="inbox">
                 <div class="row">
-		            <h2>Inbox {if $count_unread_messages > 0}<small>{$count_unread_messages} new messages</small>{/if}</h2>
+                            <h2>Inbox {if $count_unread_messages > 0}<small>{$count_unread_messages} new messages</small>{else}<small>(no new message!)</small>{/if}</h2>
 
                     {assign var="defaultMessage" value=""}
                     {returnMessage defaultMessage="$defaultMessage" returnMessage="$returnMessage" class="$returnMessage_class"}
@@ -42,22 +42,22 @@
                         {/foreach}
                         </tbody>
                     </table>
-                    {else}
-                        <p>No messages in your inbox.</p>
                     {/if}
 
                     {form method="open" action="inbox" class="form-horizontal"}
 
                         <div class="form-group">
-                            <label class="control-label col-sm-2 col-lg-2 col-md-2" for="submit"></label>
-                            <div class="col-sm-5 col-lg-5 col-md-5">
-                                <p align="center">
+                            <label class="form-control-label col-md-2 col-xl-2 col-lg-2" for="submit"></label>
+                            <div class="col-md-5 col-xl-5 col-lg-5">
+                                <p align="center"><br><br>
                                     {url type="anchor" url="message/send" text="Compose" attr='class="btn btn-primary"'}
+                                    {if $messages > 0}
                                     <input type='submit' name='delete_all_messages' value='Delete All' class="btn btn-danger"/>
                                     <input type='hidden' name="delete_message" value="all" />
+                                    {/if}
                                 </p>
                             </div>
                         </div>
                     </form>
-		        </div>
+                        </div>
             </div>
