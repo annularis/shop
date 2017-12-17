@@ -117,7 +117,7 @@
                                     Average
                                 </div>
                                 <div class="col-md-5">
-                                    {for $var1=1 to $review.average_rating}<span class="glyphicon glyphicon-star"></span>{/for}{for $var=$var1 to 5}<span class="glyphicon glyphicon-star-empty"></span>{/for}
+                                    {for $var1=1 to $review.average_rating}<span class="fas fa-star"></span>{/for}{for $var=$var1 to 5}<span class="far fa-star"></span>{/for}
                                 </div>
                             </div>
                         </div>

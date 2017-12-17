@@ -30,7 +30,7 @@
                                 <td>{url type="anchor" url=$smarty.capture.t_from_user_url text=$message.from.user_name|escape:"html":"UTF-8" attr=''}</td>
                                 <td>{url type="anchor" url=$smarty.capture.t_msg_url text=$smarty.capture.t_msg_subject attr=''}</td>
                                 <td>{$message.time_f}</td>
-                                <td>{if $message.encrypted == '1'}<a title="PGP encrypted"><span class="glyphicon glyphicon-lock"></span></a>{/if} {if $message.remove_on_read == '1'}<a title="Will be deleted once read"><span class="glyphicon glyphicon-fire"></span></a>{/if}</td>
+                                <td>{if $message.encrypted == '1'}<a title="PGP encrypted"><span class="fas fa-lock"></span></a>{/if} {if $message.remove_on_read == '1'}<a title="Will be deleted once read"><span class="fab fa-gripfire"></span></a>{/if}</td>
                                 <td>{url type="anchor" url=$smarty.capture.t_msg_url text="View" attr='class="btn btn-primary"'}
                                 {if $message.viewed == '1'}
                                     {url type="anchor" url=$smarty.capture.t_msg_send_url text='Reply' attr='class="btn btn-success"'}
