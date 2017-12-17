@@ -8,8 +8,8 @@
     <title>{$header.title|escape:'html':'UTF-8'} | {$header.site_title|escape:'html':'UTF-8'}</title>
     <link rel="stylesheet" type="text/css"  href="{url type="base_url" url=""}assets/css/bootstrap.css">
     <!-- JavaScript -->
-    <script src="{url type="site" url="assets/js/jquery-3.2.1.min.js"}"></script>
-    <script src="{url type="site" url="assets/js/bootstrap.js"}"></script>
+    <script src="{url type="base_url" url=""}assets/js/jquery-3.2.1.min.js"></script>
+    <script src="{url type="base_url" url=""}assets/js/bootstrap.js"></script>
 	{$header.header_meta}
 </head>
 <body>
