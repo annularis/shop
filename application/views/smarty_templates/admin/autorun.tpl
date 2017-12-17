@@ -23,7 +23,7 @@
                         {else}
                             <div class="panel panel-{if $job.interval == '0'}warning{else}success{/if}">
                                 <div class="panel-heading">
-                                    <span class="{if $job.interval == '0'}glyphicon glyphicon-remove{else}glyphicon glyphicon-ok{/if}"></span>
+                                    <span class="{if $job.interval == '0'}fas fa-times{else}fas fa-check{/if}"></span>
                                     {$job.name|escape:"html":"UTF-8"}
                                     <div class="pull-right">Last Run: {strtolower($job.time_f)}</div>
                                 </div>

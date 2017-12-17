@@ -28,7 +28,7 @@
                                 <td>{$verification_record.email_address|escape:"html":"UTF-8"}</td>
                                 <td></td>
                                 <td>expires {format_time ts=$verification_record.expire_time}</td>
-                                <td><button type="submit" class="btn btn-default btn-xs" name="delete_request[{$verification_record.id}][]" value='1' title="delete"><i class="glyphicon glyphicon-trash"></i></button>
+                                <td><button type="submit" class="btn btn-default btn-xs" name="delete_request[{$verification_record.id}][]" value='1' title="delete"><i class="fas fa-trash"></i></button>
 
                             </tr>
                             {/foreach}
