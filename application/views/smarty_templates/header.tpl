@@ -98,38 +98,3 @@
 
         </div>
 <!-- /sidebar-nav -->
-
-<br>
-<!-- left-side-bar-space -->
- <div class="container">
-        <div class="row">
-            <!-- sidebar-nav -->
-            <div class="col-lg-3">
-                {if in_array($current_user.user_role, ['guest','half']) eq FALSE}
-                <!-- Logged in bar-->
-                <div class="list-group">
-                    {capture name="t_user_link"}user/{$current_user.user_hash}{/capture}
-                    {url type="anchor" url=$smarty.capture.t_user_link text=$current_user.user_name|escape:"html":"UTF-8" attr="class='list-group-item' title='Your Profile'"}
-
-                    {if $current_user['user_role'] eq 'Vendor'}
-                        {url type="anchor" url="listings" text="My Listings" attr="class='list-group-item' title='My Listings'"}
-                        {url type="anchor" url="orders" text="Orders" attr="class='list-group-item' title='Orders'"}
-                    {elseif $current_user['user_role'] eq 'Admin'}
-                        {url type="anchor" url="admin/orders" text="Orders" attr="class='list-group-item' title='Orders'"}
-                        {url type="anchor" url="admin/disputes" text="Disputes" attr="class='list-group-item' title='Disputes'"}
-                    {elseif $current_user['user_role'] eq 'Buyer'}
-                        {url type="anchor" url="purchases" text="My Purchases" attr="class='list-group-item' title='Your Purchases'"}
-                    {/if}
-                </div>
-				{/if}
-
-				{if $category_data.block eq FALSE}<div class="card bg-light card-body mb-3 sidebar-nav">
-					<ul class="nav navbar-nav list-inline">
-						<h6>Categories:</h6>
-						{$category_data.cats}
-					</ul>
-				</div>
-				{/if}
-
-        </div>
-<!-- /sidebar-nav -->
