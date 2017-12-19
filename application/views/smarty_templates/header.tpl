@@ -15,24 +15,6 @@
 	{$header.header_meta}
 </head>
 <body>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="{$header.site_description|escape:'html':'UTF-8'}" />
-    <title>{$header.title|escape:'html':'UTF-8'} | {$header.site_title|escape:'html':'UTF-8'}</title>
-    <link rel="stylesheet" type="text/css"  href="{url type="base_url" url=""}assets/css/bootstrap.css">
-	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
-    <!-- JavaScript -->
-    <script src="{url type="base_url" url=""}assets/js/jquery-3.2.1.min.js"></script>
-	<script src="{url type="base_url" url=""}assets/js/fontawesome-all.min.js"></script>
-    <script src="{url type="base_url" url=""}assets/js/bootstrap.js"></script>
-	{$header.header_meta}
-</head>
-<body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
