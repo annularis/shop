@@ -78,7 +78,7 @@
                                     <td>{$fee.low|escape:"html":"UTF-8"}</td>
                                     <td>{$fee.high|escape:"html":"UTF-8"}</td>
                                     <td>{$fee.rate|escape:"html":"UTF-8"}</td>
-                                    <td><input type="submit" class="form-control btn btn-default" name="delete_rate[{$fee.id}]" value="Delete"  /></td>
+                                    <td><input type="submit" class="form-control btn btn-danger" name="delete_rate[{$fee.id}]" value="Delete"  /></td>
                                 </tr>
                                 </form>
                             {/foreach}
