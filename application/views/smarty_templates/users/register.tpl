@@ -180,7 +180,7 @@
                         <div class="col-5">
                             <p align="center">
                                 <input type='submit' name='register_user' class="btn btn-primary" value="Register" />
-                                {url type="anchor" url="login" text="Cancel?" attr='title="Cancel" class="btn"'}
+                                {url type="anchor" url="login" text="Cancel?" attr='title="Cancel" class="btn btn-danger"'}
                             </p>
                         </div>
                     </div>
