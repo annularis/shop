@@ -27,7 +27,8 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class='col-3'><input type='submit' name='set_maintenance_mode' value='Update' class="btn btn-primary" /></div>
+                                    <div class='col-3'><input type='submit' name='set_maintenance_mode' value='Update' class="btn btn-primary" />
+                                    {url type="anchor" url="admin" text="Cancel" attr='class="btn btn-danger"'}</div>
                                 </div>
                                 <div class="col-12 col-lg-11 mx-auto">{form method="form_error" field="maintenance_mode"}</div>
                             </div>
