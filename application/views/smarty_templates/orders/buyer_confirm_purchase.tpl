@@ -113,7 +113,7 @@ order is dispatched.</p>
                             <div class="col-md-5 col-xl-5 col-lg-5">
                                 <p align="center">
                                     <input type="submit" class="btn btn-primary" value='Place Order' {if isset($order.vendor.pgp) == TRUE}onclick='messageEncrypt()'{/if} />
-                                    {url type="anchor" url='purchases' text="Cancel" attr='class="btn btn-default"'}
+                                    {url type="anchor" url='purchases' text="Cancel" attr='class="btn btn-danger"'}
                                 </p>
                             </div>
                         </div>
