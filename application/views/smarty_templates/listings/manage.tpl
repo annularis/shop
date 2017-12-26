@@ -38,7 +38,7 @@
                 <div class="col-5">
                     <p align="center">
                         {url type="anchor" url="listings/add" text="Add a listing" attr='class="btn btn-primary"'}
-                        {url type="anchor" url="" text="Cancel" attr='title="Cancel" class="btn btn-default"'}
+                        {url type="anchor" url="" text="Cancel" attr='title="Cancel" class="btn btn-danger"'}
                     </p>
                 </div>
             </div>
