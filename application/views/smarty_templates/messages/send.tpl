@@ -58,7 +58,7 @@
                         <div class="col-md-7 col-xl-7 col-lg-7">
                             <p align="center">
                                 <input type='submit' class="btn btn-primary" value="Send" onclick='messageEncrypt()' />
-                                {url type="anchor" url="inbox" text="Cancel" attr='class="btn btn-default"'}
+                                {url type="anchor" url="inbox" text="Cancel" attr='class="btn btn-danger"'}
                             </p>
                         </div>
                     </div>

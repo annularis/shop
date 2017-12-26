@@ -1,3 +1,4 @@
+            <div class="col-lg-9">  
                 <h2>Two Factor Authentication</h2>
 
                 <div class="card bg-light card-body mb-3">

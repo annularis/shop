@@ -73,7 +73,7 @@
                         <div class="col-md-5 col-xl-5 col-lg-5">
                             <p align="center">
                                 <input type='submit' class="btn btn-primary" name='vendor_accept_order' value='Accept Order' onclick='messageEncrypt()' />
-                                {url type="anchor" url="orders" text="Cancel" attr='title="Cancel" class="btn btn-default"'}
+                                {url type="anchor" url="orders" text="Cancel" attr='title="Cancel" class="btn btn-danger"'}
                             </p>
                         </div>
                     </div>

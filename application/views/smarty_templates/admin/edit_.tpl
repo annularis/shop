@@ -121,7 +121,7 @@
                             <div class="col-5">
                                 <p align="center">
                                     <input type='submit' value='Update' class='btn btn-primary' />
-                                    {url type="anchor" url="admin" text="Cancel" attr='class="btn btn-default"'}
+                                    {url type="anchor" url="admin" text="Cancel" attr='class="btn btn-danger"'}
                                 </p>
                             </div>
                         </div>

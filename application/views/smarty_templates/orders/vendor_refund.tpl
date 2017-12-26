@@ -61,7 +61,7 @@
                                 <div class="col-sm-5 col-lg-5 col-md-5">
                                     <p align="center">
                                         <input type='submit' class="btn btn-primary" name='issue_refund' value='Issue Refund' />
-                                        {url type="anchor" url="orders" text="Cancel" attr='title="Cancel" class="btn btn-default"'}
+                                        {url type="anchor" url="orders" text="Cancel" attr='title="Cancel" class="btn btn-danger"'}
                                     </p>
                                 </div>
                             </div>

@@ -59,7 +59,7 @@
                             <div class="col-sm-5 col-lg-5 col-md-5">
                                 <p align="center">
                                     <input type='submit' class="btn btn-primary" value='Submit' />
-                                    {url type="anchor" url=$cancel_page text="Cancel" attr='class="btn btn-default"'}
+                                    {url type="anchor" url=$cancel_page text="Cancel" attr='class="btn btn-danger"'}
                                 </p>
                             </div>
                         </div>

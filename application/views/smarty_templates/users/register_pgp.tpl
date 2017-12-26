@@ -1,4 +1,4 @@
-            <div class="col-md-9">
+            <div class="col-lg-9">
                 <h2>Upload Public Key</h2>
 
                 {assign var="defaultMessage" value="For security reasons, you must upload your PGP public key to continue:"}
@@ -19,7 +19,7 @@
                             <div class="col-sm-5 col-lg-5 col-md-5">
                                 <p align="center">
                                     <button type='submit' class="btn btn-primary">Proceed</button>
-                                    {url type="anchor" url="logout" text="Cancel" attr='title="Cancel" class="btn btn-default"'}
+                                    {url type="anchor" url="logout" text="Cancel" attr='title="Cancel" class="btn btn-danger"'}
                                 </p>
                             </div>
                         </div>

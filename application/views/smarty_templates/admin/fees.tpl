@@ -53,7 +53,7 @@
                         <div class="col-5">
                             <p align="center">
                                 <input type="submit" name="update_config" value="Update" class="btn btn-primary" />
-                                {url type="anchor" url="admin/items" text="Cancel" attr='title="Cancel" class="btn btn-default"'}
+                                {url type="anchor" url="admin/items" text="Cancel" attr='title="Cancel" class="btn btn-danger"'}
                             </p>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-            <div class="col-md-9" id="admin_maintenance">
+            <div class="col-lg-9" id="admin_maintenance">
 
                 <h2>Maintenance Settings</h2>
 
@@ -15,9 +15,9 @@
                         <div class="panel-body">
 
                             <div class="form-group">
-                                <div class="col-xs-12">
-                                    <div class='col-xs-1'></div>
-                                    <div class='col-xs-8'>
+                                <div class="col-12">
+                                    <div class='col-1'></div>
+                                    <div class='col-8'>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i>Action:</i></span>
                                             <select name='maintenance_mode' class="form-control" autocomplete='off'>
@@ -27,9 +27,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class='col-xs-3'><input type='submit' name='set_maintenance_mode' value='Update' class="btn btn-primary" /></div>
+                                    <div class='col-3'><input type='submit' name='set_maintenance_mode' value='Update' class="btn btn-primary" />
+                                    {url type="anchor" url="admin" text="Cancel" attr='class="btn btn-danger"'}</div>
                                 </div>
-                                <div class="col-xs-12 col-md-11 col-md-offset-1">{form method="form_error" field="maintenance_mode"}</div>
+                                <div class="col-12 col-lg-11 mx-auto">{form method="form_error" field="maintenance_mode"}</div>
                             </div>
 
                         </div>

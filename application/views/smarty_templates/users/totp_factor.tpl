@@ -1,4 +1,4 @@
-            <div class="col-md-9">
+            <div class="col-lg-9">
                 <div class="row-fluid">
                     <h2>Two Factor Authentication</h2>
 
@@ -22,7 +22,7 @@
                                     <div class="col-xs-5">
                                         <p align="center">
                                             <input type="submit" class="btn btn-primary" name="submit_totp_token" value="Continue" />
-                                            {url type="anchor" url="logout" text="Cancel" attr='class="btn btn-default"'}
+                                            {url type="anchor" url="logout" text="Cancel" attr='class="btn btn-danger"'}
                                         </p>
                                     </div>
                                 </div>

@@ -70,7 +70,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-lg-2"><input type='submit' name='delete_category' value='Delete' class='btn btn-primary btn-block' /></div>
+                            <div class="col-lg-2"><input type='submit' name='delete_category' value='Delete' class='btn btn-danger btn-block' /></div>
                         </div>
                         <div class="col-8 mx-auto">{form method="form_error" field="delete_id"}</div>
                     </div>

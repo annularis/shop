@@ -40,7 +40,7 @@
                         <div class="col-5">
                             <p align="center">
                                 <input type="submit" name="add_image" value="Upload" class="btn btn-primary" />
-                                {url type="anchor" url="listings" text="Cancel" attr='class="btn btn-default"'}
+                                {url type="anchor" url="listings" text="Cancel" attr='class="btn btn-danger"'}
                             </p>
                         </div>
                     </div>

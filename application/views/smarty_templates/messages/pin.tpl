@@ -20,7 +20,7 @@
                         <div class="col-md-5 col-xl-5 col-lg-5">
                             <p align="center">
                                 <button type='submit' class="btn btn-primary">Submit</button>
-                                {url type="anchor" url="home" text="Cancel" attr='class="btn btn-default"'}
+                                {url type="anchor" url="home" text="Cancel" attr='class="btn btn-danger"'}
                             </p>
                         </div>
                     </div>
