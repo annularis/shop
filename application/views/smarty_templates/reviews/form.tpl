@@ -301,7 +301,7 @@
                         <div class="col-sm-5 col-lg-5 col-xl-5">
                             <p align="center">
                                 <input type='submit' name='buyer_submit_review' value='Submit Review' class='btn btn-primary'/>
-                                {url type="anchor" url=$cancel_page text="Cancel" attr='class="btn btn-default"'}
+                                {url type="anchor" url=$cancel_page text="Cancel" attr='class="btn btn-danger"'}
                             </p>
                         </div>
                     </div>
@@ -416,7 +416,7 @@
                         <div class="col-sm-5 col-lg-5 col-xl-5">
                             <p align="center">
                                 <input type='submit' name='vendor_submit_review' value='Submit Review' class='btn btn-primary'/>
-                                {url type="anchor" url=$cancel_page text="Cancel" attr='class="btn btn-default"'}
+                                {url type="anchor" url=$cancel_page text="Cancel" attr='class="btn btn-danger"'}
                             </p>
                         </div>
                     </div>
