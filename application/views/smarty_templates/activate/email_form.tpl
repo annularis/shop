@@ -32,7 +32,7 @@
                             <div class="col-sm-5 col-lg-5 col-md-5">
                                 <p align="center">
                                     <input type="submit" name="submit_email_activation" class="btn btn-primary" value="Activate" />
-                                    {url type="anchor" url="" text="Cancel" attr='title="Cancel" class="btn btn-default"'}
+                                    {url type="anchor" url="" text="Cancel" attr='title="Cancel" class="btn btn-danger"'}
                                 </p>
                             </div>
                         </div>
