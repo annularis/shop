@@ -50,7 +50,7 @@
                                 <div class="col-12">
                                     <p align="center">
                                         <input type='submit' name='update_shipping_cost' value='Update' class='btn btn-primary' />
-                                        {url type="anchor" url="listings" text="Cancel" attr='title="Cancel" class="btn btn-default"'}
+                                        {url type="anchor" url="listings" text="Cancel" attr='title="Cancel" class="btn btn-danger"'}
                                     </p>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@
                             <div class="col-6">
                                 <p align="center">
                                     <input type='submit' name='add_shipping_cost' value='Add' class='btn btn-primary' />
-                                    {url type="anchor" url=$smarty.capture.t_form_cancel text="Cancel" attr='class="btn btn-default"'}
+                                    {url type="anchor" url=$smarty.capture.t_form_cancel text="Cancel" attr='class="btn btn-danger"'}
                                 </p>
                             </div>
                         </div>
