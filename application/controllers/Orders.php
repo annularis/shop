@@ -8,10 +8,10 @@ use BitWasp\BitcoinLib\RawTransaction;
  *
  * This class handles the buyer and vendor side of the order process.
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Controllers
- * @category    Orders
- * @author        BitWasp
+ * @category      Orders
+ * @author        Annularis Team
  *
  */
 class Orders extends MY_Controller

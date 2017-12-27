@@ -3,10 +3,10 @@
                 {assign var="defaultMessage" value=""}
                 {returnMessage defaultMessage="$defaultMessage" returnMessage="$returnMessage" class="$returnMessage_class"}
 
-                <div class='alert alert-danger'>So long as this message remains in the code, the project is NOT production ready, and should only be used with the Bitcoin Testnet. Let ye be warned.</div>
+                <div class='alert alert-danger'>So long as this message remains in the code, the project is NOT production ready, and should only be used with the Monero Testnet. Let ye be warned.</div>
 
-                <p>Set up your own Bitcoin marketplace, independent of other payment processing services.</p>
-                <p>Completely avoid the barrier of entry to the Bitcoin Market, and take part in the Bitcoin revolution!</p>
+                <p>Set up your own Monero marketplace, independent of other payment processing services.</p>
+                <p>Completely avoid the barrier of entry to the Monero Market, and take part in the Monero revolution!</p>
                 <p>Highly customizable, allowing you to tailor the site's configuration for your users requirements.</p>
                 <p>The project is open source, and well-reviewed, so rest assured people are working hard to keep your software secure.</p>
                 <p align='center'><a class="btn btn-success btn-medium" href="https://www.github.com/Annularis/shop">Check out our source code on GitHub!</a> </p>
@@ -28,7 +28,7 @@
 
                         <div class='col-lg-4'>
                             <h3>Be your own Bank</h3>
-                            <p>Bitcoin eliminate's the need for 3rd party payment processors, so no more per-transaction charges to use an online currency.</p>
+                            <p>Monero eliminate's the need for 3rd party payment processors, so no more per-transaction charges to use an online currency.</p>
                         </div>
                     </div>
 
@@ -40,7 +40,7 @@
 
                         <div class='col-lg-4'>
                             <h3>Deal in your local currency</h3>
-                            <p>Annularis gathers exchange rates for Bitcoin, against USD, GBP, and EUR from some of the leading Price Index API's. Currently comes with built-in support for CoinDesk and BitcoinAverage.com. With this feature, you can set prices in your local currency, and charge users based on the current value of Bitcoin.</p>
+                            <p>Annularis gathers exchange rates for Monero, against USD, GBP, and EUR from some of the leading Price Index API's. Currently comes with built-in support for CoinDesk and many others. With this feature, you can set prices in your local currency, and charge users based on the current value of Monero.</p>
                         </div>
 
                         <div class='col-lg-4'>

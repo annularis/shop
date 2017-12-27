@@ -49,7 +49,7 @@
 -->
                 {form method="open" action="bip32" attr=['class'=>'form-horizontal', 'name' => 'authorizeForm']}
                     <legend>Using an external wallet</legend>
-                    <p align="justify">Using an external wallet is only recommended for advanced users, because most wallets don't support BIP32 yet. You can create BIP32 master keys on websites like {url type="anchor" url="http://bip32.org/" text="BIP32.org" attr='title="BIP32.org"'}, and importing the necessary private keys into Bitcoin Core to add a signature.</p>
+                    <p align="justify">Using an external wallet is only recommended for advanced users, because most wallets don't support BIP32 yet. You can create BIP32 master keys on websites like {url type="anchor" url="http://bip32.org/" text="BIP32.org" attr='title="BIP32.org"'}, and importing the necessary private keys into Monero Core to add a signature.</p>
                     <p align="justify">The BIP32 website can be downloaded and run securely on an offline computer if you wish!</p>
 
                     <div class="form-group">

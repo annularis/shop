@@ -9,10 +9,10 @@ use BitWasp\BitcoinLib\BIP32;
  *
  * This class handles the database queries relating to orders.
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Models
- * @category    Bitcoin
- * @author        BitWasp
+ * @category      Bitcoin
+ * @author        Annularis Team
  *
  */
 class Bitcoin_model extends CI_Model

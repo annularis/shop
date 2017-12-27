@@ -62,7 +62,7 @@
 
                 {if $user.user_role !== 'Admin'}
                 <div class="row">
-                    <div class="col-md-4"><strong>Bitcoin Public Keys</strong></div>
+                    <div class="col-md-4"><strong>Monero Public Keys</strong></div>
                     <div class="col-md-8">
                         {if $bip32 == FALSE}Not set up - {url type="anchor" url="bip32" text="do so now!" attr=""}
                         {else}Provider: {$bip32.provider} - {url type="anchor" url="bip32" text="Settings" attr=""}

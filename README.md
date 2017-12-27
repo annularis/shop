@@ -7,7 +7,7 @@ Facebook page: https://www.facebook.com/BitWasp/
 ```
 
 
-Annularis is an open source PHP project which allows anyone to set up a secure bitcoin marketplace independent of other centralized services.
+Annularis is an open source PHP project which allows anyone to set up a secure monero marketplace independent of other centralized services.
 
 It features multi-signature transactions, meaning no live wallet to steal. Users can also recover their funds from the site if it goes offline.
 

@@ -3,16 +3,16 @@
 /**
  * Alerts Model
  *
- * Alert messages are stored by Bitwasp to prevent the marketplace from
+ * Alert messages are stored by Annularis to prevent the marketplace from
  * reacting to something that the admin has already responded to. Ie,
- * if a github/bitcoin alert occurs, the message is stored, so that if the
+ * if a github/monero alert occurs, the message is stored, so that if the
  * admin fixes the issue, the script won't trigger a maintenance_mode/log
  * if it hears about it again.
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Models
- * @category    Alerts
- * @author        BitWasp
+ * @category      Alerts
+ * @author        Annularis Team
  *
  */
 class Alerts_model extends CI_Model
