@@ -58,3 +58,4 @@
                                 </center>
                             </div>
                 {/foreach}
+            </div>
