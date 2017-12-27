@@ -105,7 +105,7 @@
                         <label class="control-label col-3" for="upper_limit">Upper Limit</label>
                         <div class="col-7">
                             <div class="input-group">
-                                <span class="input-group-addon"><i>XMR</i></span>
+                                <span class="input-group-addon"><i>{$coin.symbol}</i></span>
                                 <input type="text" class="form-control" name="upper_limit" id="upper_limit" value='' />
                             </div>
                         </div>
