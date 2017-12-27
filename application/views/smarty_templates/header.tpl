@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="{url type="base_url" url=""}assets/css/fontawesome-all.css">
     	<!-- JavaScript -->
     	<script src="{url type="base_url" url=""}assets/js/jquery-3.2.1.min.js"></script>
+	<script src="{url type="base_url" url=""}assets/js/popper.js"></script>
 	<script src="{url type="base_url" url=""}assets/js/fontawesome-all.min.js"></script>
     	<script src="{url type="base_url" url=""}assets/js/bootstrap.js"></script>
 	{$header.header_meta}
