@@ -188,7 +188,7 @@ CREATE TABLE IF NOT EXISTS `bw_currencies` (
 --
 
 INSERT INTO `bw_currencies` (`id`, `name`, `symbol`, `code`, `crypto_magic_byte`) VALUES
-(0, 'Bitcoin', 'BTC', 'BTC', '00'),
+(0, 'Monero', 'BTC', 'BTC', '00'),
 (1, 'United States Dollar', '&#36;', 'USD', ''),
 (2, 'British Pound Sterling', '&pound;', 'GBP', ''),
 (3, 'Euro', '&euro;', 'EUR', '');

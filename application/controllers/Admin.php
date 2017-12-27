@@ -286,7 +286,7 @@ class Admin extends MY_Controller
         $this->load->model('transaction_cache_model');
 
         $data['page'] = 'admin/bitcoin';
-        $data['title'] = $this->nav['monero']['heading'];
+        $data['title'] = $this->nav['bitcoin']['heading'];
         $data['nav'] = $this->generate_nav();
         $data['config'] = $this->bw_config->load_admin('bitcoin');
         $data['bitcoin_index'] = $this->bw_config->price_index;
