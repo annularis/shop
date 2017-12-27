@@ -1,5 +1,5 @@
 
-                <p align="justify">Each time a new order is created, a new bitcoin address will show up here, as well as the identifier for this address. Note that funds are never sent to these addresses, but their public keys are used to make the  address.</p>
+                <p align="justify">Each time a new order is created, a new monero address will show up here, as well as the identifier for this address. Note that funds are never sent to these addresses, but their public keys are used to make the  address.</p>
 
                 <div class="panel panel-default">
                     <div class="panel-heading">Created Addresses: {count($usage)}</div>

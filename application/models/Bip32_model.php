@@ -5,10 +5,10 @@
  *
  * Model to contain database queries for dealing with users BIP32 keys
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Models
- * @category    Fees
- * @author        BitWasp
+ * @category      Fees
+ * @author        Annularis Team
  *
  */
 class Bip32_model extends CI_Model

@@ -7,7 +7,7 @@
 
                 <p>You can use this panel to put the website into maintenance mode. Guests will not be able to view the site, and non-administrative users will be logged out. Once re-enabled, your previous settings will be restored.</p>
 
-                <p>If maintenance mode has been triggered by the bitcoin daemon, or due to an alert reported on github, a message will be disabled informing you of the reason and giving advice.</p>
+                <p>If maintenance mode has been triggered by the monero daemon, or due to an alert reported on github, a message will be disabled informing you of the reason and giving advice.</p>
 
                 {form method="open" action="admin/maintenance" attr='class="form-horizontal"'}
                     <div class="panel panel-{if $config.maintenance_mode == TRUE}danger{else}success{/if}">

@@ -5,10 +5,10 @@
  *
  * Model to contain database queries for dealing with vendor listings.
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Models
- * @category    Items
- * @author        BitWasp
+ * @category      Items
+ * @author        Annularis Team
  *
  */
 class Items_model extends CI_Model
@@ -202,7 +202,7 @@ class Items_model extends CI_Model
 
                 $row['description_s'] = format_short_description($row['description'], $this->l_short_description);
 
-                // Calculate Bitcoin price
+                // Calculate Monero price
                 $rate = $this->bw_config->exchange_rates[strtolower($row['currency_code'])];
                 $row['price_b'] = number_format(($row['price'] / $rate), 8);
 

@@ -6,10 +6,10 @@
  * This job is used to update exchange rates. Called by the autorun library.
  * It is run periodically (default is 10 minutes) to update the exchange reates on record.
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Autorun
- * @category    Price Index
- * @author        BitWasp
+ * @category      Price Index
+ * @author        Annularis Team
  */
 class Price_Index
 {
@@ -20,8 +20,8 @@ class Price_Index
      * This stores predefined information about the job, such as the name,
      * description, and the frequency at which it should be run.
      */
-    public $config = array('name' => 'Bitcoin Price Index',
-        'description' => 'An autorun job to update the Bitcoin exchange rates.',
+    public $config = array('name' => 'Monero Price Index',
+        'description' => 'An autorun job to update the Monero exchange rates.',
         'index' => 'price_index',
         'interval' => '0',
         'interval_type' => 'minutes');
@@ -30,7 +30,7 @@ class Price_Index
     /**
      * Constructor
      *
-     * Load's the CodeIgniter framework and the Bitcoin library.
+     * Load's the CodeIgniter framework and the Monero library.
      */
     public function __construct()
     {

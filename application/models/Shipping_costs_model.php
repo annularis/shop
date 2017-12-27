@@ -5,10 +5,10 @@
  *
  * Model to contain database queries for dealing with shipping costs.
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Models
- * @category    Items
- * @author        BitWasp
+ * @category      Items
+ * @author        Annularis Team
  *
  */
 class Shipping_costs_model extends CI_Model
@@ -34,7 +34,7 @@ class Shipping_costs_model extends CI_Model
      */
     public function costs_to_location($item_list, $location)
     {
-        // Work out the cost in bitcoin.
+        // Work out the cost in monero.
         $cost = 0.00000000;
         foreach ($item_list as $item) {
             $find_cost = $this->find_location_cost($item['id'], $location);
@@ -75,7 +75,7 @@ class Shipping_costs_model extends CI_Model
      * For Item
      *
      * Loads the raw array of shipping costs for a specified item. Then
-     * it processes this, to convert the values to the BTC for universal use.
+     * it processes this, to convert the values to the XMR for universal use.
      * Returns an array if successful, or FALSE if no entries exist.
      *
      * @param    int $item_id
@@ -122,7 +122,7 @@ class Shipping_costs_model extends CI_Model
      * $all to TRUE.
      *
      * This is used to display the shipping configuration format, where
-     * converting to bitcoins is not desired if the item has a different
+     * converting to moneros is not desired if the item has a different
      * currency.
      * This information returned by this functioncanbe parsed by the for_item()
      * function.

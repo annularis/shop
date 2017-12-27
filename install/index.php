@@ -147,7 +147,7 @@ foreach($check as $key => $outcome) {
                 <li><b>You must update your database now</b> by running `php <?php echo $installdir; ?>/index.php db` </li>
 				<li>You can bookmark this page until you are finished. When you are done delete the /install directory.</li><br />
 
-				<li>Edit your bitcoin.conf and crontab entry and remove the # symbols.</li><br />
+				<li>Edit your monero.conf and crontab entry and remove the # symbols.</li><br />
 
 				<li>Configure tidy URLs?<br />
 				Create a .htaccess file, and ensure your server has AllowOverride set to All.</li><br />
@@ -172,8 +172,8 @@ foreach($check as $key => $outcome) {
 		<?php 
 			// Starting installation process?
 		} else if(!isset($_GET['start'])) { ?>
-			Check that your bitcoin.conf looks similar to the following. Note down whatever rpcuser, rpcpassword, rpcport you have. <br /><br />
-			Only remove the # symbols once you have finished the install procedure, and bitcoind is fully up-to-date.
+			Check that your monero.conf looks similar to the following. Note down whatever rpcuser, rpcpassword, rpcport you have. <br /><br />
+			Only remove the # symbols once you have finished the install procedure, and monerod is fully up-to-date.
 		
 <pre>rpcuser=bitcoinrpc
 rpcpassword=change_me
@@ -221,7 +221,7 @@ rpcconnect=127.0.0.1</pre><br />
 				
 				// First create the database, then create tables, then write config file
 				if ($bitcoin == NULL || $bitcoin->getinfo() == NULL) {
-					$message = "Unable to make connection to the bitcoin daemon. Is it running? Are your settings correct?";
+					$message = "Unable to make connection to the monero daemon. Is it running? Are your settings correct?";
 					 
 				} else if($database->create_database($data) == false) {
 					$message = $core->show_message('error',"The database could not be created, please verify your settings.");
@@ -239,7 +239,7 @@ rpcconnect=127.0.0.1</pre><br />
 					$message = $core->show_message('error',"Unable to write config.");
 					
 				} else if ($core->write_bitcoin_config($data) == false) {
-					$message = $core->show_message('error',"The bitcoin configuration file could not be written, please chmod application/config/bitcoin.php file to 777");
+					$message = $core->show_message('error',"The monero configuration file could not be written, please chmod application/config/bitcoin.php file to 777");
 				}
 				// If no errors, redirect to registration page
 				if(!isset($message)) {
@@ -273,7 +273,7 @@ rpcconnect=127.0.0.1</pre><br />
         </fieldset>
         <br /><br />
         <fieldset>
-          <legend>Bitcoin settings</legend><br />
+          <legend>Monero settings</legend><br />
           <label for="hostname">IP Address</label><br />
           <input type="text" id="hostname" value="127.0.0.1" class="input_text" name="btc_ip" /><br /><br />
           <label for="hostname">Port</label><br />
@@ -286,7 +286,7 @@ rpcconnect=127.0.0.1</pre><br />
           
         </fieldset>
 		<fieldset>
-          <legend>Bitwasp Configuration</legend><br />
+          <legend>Annularis Configuration</legend><br />
           <label for="admin">Administrative Password:</label><br />
           This password is for the 'admin' account, the default account with administrative powers - make it a good one. This account is required.
           <input type="password" id="hostname" class="input_text" name="admin_password" /><br /><br />

@@ -8,10 +8,10 @@ use BitWasp\BitcoinLib\RawTransaction;
  *
  * This class handles the database queries relating to orders.
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Models
- * @category    Order
- * @author        BitWasp
+ * @category      Order
+ * @author        Annularis Team
  *
  */
 class Order_model extends CI_Model
@@ -170,7 +170,7 @@ class Order_model extends CI_Model
                 // Work out what price to display for the current user.
                 $order_price = ($this->current_user->user_role == 'Vendor') ? ($order['price'] + $order['shipping_costs'] - $order['extra_fees']) : ($order['price'] + $order['shipping_costs'] + $order['fees']);
 
-                // Convert price to bitcoin.
+                // Convert price to monero.
                 $order_price = ($currency['id'] !== '0') ? $order_price / $this->bw_config->currencies[$order['currency']]['rate'] : number_format($order_price, 8);
 
                 // Load the users local currency.
@@ -411,7 +411,7 @@ class Order_model extends CI_Model
 
                     $msg = ($info['initiating_user'] == 'buyer')
                         ? 'This order has been automatically accepted, visit the orders page to see the payment address!'
-                        : 'You have accepted this order! Visit the orders page to see the bitcoin address!';
+                        : 'You have accepted this order! Visit the orders page to see the monero address!';
                     $this->current_user->set_return_message($msg, 'success');
                     return TRUE;
                 } else {

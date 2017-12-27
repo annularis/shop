@@ -135,7 +135,7 @@ CREATE TABLE IF NOT EXISTS `bw_config` (
 INSERT INTO `bw_config` (`parameter`, `value`) VALUES
 ('registration_allowed', '1'),
 ('openssl_keysize', '2048'),
-('site_description', 'open source bitcoin marketplace'),
+('site_description', 'open source monero marketplace'),
 ('site_title', 'Annularis'),
 ('login_timeout', '30'),
 ('vendor_registration_allowed', '1'),
@@ -188,7 +188,7 @@ CREATE TABLE IF NOT EXISTS `bw_currencies` (
 --
 
 INSERT INTO `bw_currencies` (`id`, `name`, `symbol`, `code`, `crypto_magic_byte`) VALUES
-(0, 'Bitcoin', 'BTC', 'BTC', '00'),
+(0, 'Monero', 'XMR', 'XMR', '00'),
 (1, 'United States Dollar', '&#36;', 'USD', ''),
 (2, 'British Pound Sterling', '&pound;', 'GBP', ''),
 (3, 'Euro', '&euro;', 'EUR', '');
@@ -259,7 +259,7 @@ CREATE TABLE IF NOT EXISTS `bw_exchange_rates` (
   `usd` decimal(10,4) NOT NULL,
   `eur` decimal(10,4) NOT NULL,
   `gbp` decimal(10,4) NOT NULL,
-  `btc` int(11) NOT NULL DEFAULT '1',
+  `xmr` int(11) NOT NULL DEFAULT '1',
   `price_index` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
@@ -268,10 +268,10 @@ CREATE TABLE IF NOT EXISTS `bw_exchange_rates` (
 -- Dumping data for table `bw_exchange_rates`
 --
 
-INSERT INTO `bw_exchange_rates` (`id`, `time`, `usd`, `eur`, `gbp`, `btc`, `price_index`) VALUES
-(1, '1396517400', 421.6251, 306.3123, 253.2567, 1, 'CoinDesk'),
-(2, '1396519320', 422.1184, 306.6707, 253.5530, 1, 'CoinDesk'),
-(3, '1396520220', 437.1317, 317.5407, 263.2079, 1, 'CoinDesk');
+INSERT INTO `bw_exchange_rates` (`id`, `time`, `usd`, `eur`, `gbp`, `xmr`, `price_index`) VALUES
+(1, '1514397600', 351.6561, 299.6964, 266.5841, 1, 'CoinDesk'),
+(2, '1514397620', 351.6571, 299.6974, 266.5851, 1, 'CoinDesk'),
+(3, '1514397640', 351.6581, 299.6984, 266.5861, 1, 'CoinDesk');
 
 -- --------------------------------------------------------
 

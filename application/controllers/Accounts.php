@@ -4,10 +4,10 @@
  *
  * Provides accounts functionality, and users profiles/settings
  * @category   Accounts
- * @package    BitWasp
- * @licence    Unlicence
+ * @package    Annularis
+ * @licence    MIT
  * @subpackage Controllers
- * @author     Thomas Kerin <thomas@bitwasp.co>
+ * @author     Thomas Kerin, Annularis Team
  */
 
 defined('BASEPATH') OR exit('No direct script access allowed');
@@ -21,7 +21,7 @@ use BitWasp\BitcoinLib\BitcoinLib;
  * @package    BitWasp
  * @licence    Unlicence
  * @subpackage Controllers
- * @author     Thomas Kerin <thomas@bitwasp.co>
+ * @author     Thomas Kerin, Annularis Team
  */
 class Accounts extends MY_Controller
 {

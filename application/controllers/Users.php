@@ -5,10 +5,10 @@
  *
  * This class handles the buyer and vendor side of the order process.
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Controllers
- * @category    Users
- * @author        BitWasp
+ * @category      Users
+ * @author        Annularis Team
  *
  */
 class Users extends MY_Controller

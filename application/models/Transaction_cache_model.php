@@ -8,10 +8,10 @@ use BitWasp\BitcoinLib\RawTransaction;
  *
  * This class handles the queries for handling cached transaction id's.
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Models
- * @category    Transaction Cache
- * @author        BitWasp
+ * @category      Transaction Cache
+ * @author        Annularis Team
  *
  */
 class Transaction_cache_model extends CI_Model

@@ -5,10 +5,10 @@
  *
  * This class handles displaying large images for users to view.
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Controllers
- * @category    Image
- * @author        BitWasp
+ * @category      Image
+ * @author        Annularis Team
  *
  */
 class Image extends CI_Controller
@@ -18,7 +18,7 @@ class Image extends CI_Controller
      * Constructor
      *
      * @access    public
-     * @see        Models/Images_Model
+     * @see       Models/Images_Model
      */
     public function __construct()
     {
@@ -30,9 +30,9 @@ class Image extends CI_Controller
      * Load the large version of an image.
      * URI: /image/$image_hash
      * @param    string $image_hash
-     * @access    public
-     * @see        Models/Bitcoin_Model
-     * @see        Libraries/Bw_Bitcoin
+     * @access   public
+     * @see      Models/Bitcoin_Model
+     * @see      Libraries/Bw_Bitcoin
      */
     public function index($image_hash)
     {
