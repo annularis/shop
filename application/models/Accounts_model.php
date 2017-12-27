@@ -7,10 +7,10 @@ use BitWasp\BitcoinLib\BitcoinLib;
  *
  * This class handles the database queries relating to orders.
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Models
- * @category    Accounts
- * @author        BitWasp
+ * @category      Accounts
+ * @author        Annularis Team
  *
  */
 class Accounts_model extends CI_Model

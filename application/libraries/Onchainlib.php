@@ -4,10 +4,10 @@
  * Onchain Library
  *
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Libraries
- * @category    Onchain
- * @author        BitWasp
+ * @category      Onchain
+ * @author        Annularis Team
  */
 class OnchainLib
 {

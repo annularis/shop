@@ -5,10 +5,10 @@
  *
  * This class handles the database queries relating to users.
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Models
- * @category    Users
- * @author        BitWasp
+ * @category      Users
+ * @author        Annularis Team
  *
  */
 class Users_model extends CI_Model
@@ -288,7 +288,7 @@ class Users_model extends CI_Model
      *
      * This function is used to record a figure that the user must pay
      * in order to register on the website. $info['user_hash'], $info['amount']
-     * and $info['bitcoin_address'] must be supplied.
+     * and $info['monero_address'] must be supplied.
      *
      * @param    array $info
      * @return    boolean
@@ -320,7 +320,7 @@ class Users_model extends CI_Model
     /**
      * Set Payment Address
      *
-     * If the bitcoin daemon is offline, when they register, we'll need
+     * If the monero daemon is offline, when they register, we'll need
      * to add a proper address.
      *
      * @param    string $user_hash

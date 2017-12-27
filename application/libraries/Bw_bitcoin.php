@@ -10,10 +10,10 @@
  * Also contains a function to update exchange rates from the selected
  * provider.
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Libraries
- * @category    Bitcoin
- * @author        BitWasp
+ * @category      Bitcoin
+ * @author        Annularis Team
  */
 class Bw_bitcoin
 {
@@ -26,7 +26,7 @@ class Bw_bitcoin
     /**
      * Config
      *
-     * This variable contains the bitcoin credentials for the JSON rpc
+     * This variable contains the monero credentials for the JSON rpc
      * interface.
      */
     public $config;
@@ -35,15 +35,15 @@ class Bw_bitcoin
      * Testnet
      *
      * Flag to tell the site if we are currently working in the testnet or
-     * the main bitcoin chain.
+     * the main monero chain.
      */
     public $testnet;
 
     /**
      * Constructor
      *
-     * Load the bitcoin configuration using CodeIgniters config library.
-     * Load the jsonRPCclient library with the config, and the bitcoin
+     * Load the monero configuration using CodeIgniters config library.
+     * Load the jsonRPCclient library with the config, and the monero
      * model
      */
     public function __construct()
@@ -88,7 +88,7 @@ class Bw_bitcoin
     /**
      * Get Block
      *
-     * Function to query bitcoind, to get information about a block ($block_hash)
+     * Function to query monerod, to get information about a block ($block_hash)
      * Returns an array containing the account name if successful, or
      * an array describing the error on failure.
      *
@@ -103,7 +103,7 @@ class Bw_bitcoin
     /**
      * Get Block Hash
      *
-     * Function to query bitcoind, to get the block hash for a particular
+     * Function to query monerod, to get the block hash for a particular
      * height.
      * Returns a string containing the block hash if successful, or an
      * array describing the error on failure.
@@ -119,7 +119,7 @@ class Bw_bitcoin
     /**
      * Get Info
      *
-     * Function to query bitcoind for general information, like version,
+     * Function to query monerod for general information, like version,
      * block height, balance, difficulty,
      *
      * @param        string
@@ -133,7 +133,7 @@ class Bw_bitcoin
     /**
      * Get Raw Transaction
      *
-     * Ask bitcoind to return the raw transaction, identified by $transaction_id
+     * Ask monerod to return the raw transaction, identified by $transaction_id
      *
      * @param    string $transaction_id
      * @return    string
@@ -148,7 +148,7 @@ class Bw_bitcoin
      *
      * This function works with the output of the bw_transaction->generate()
      * function. This is an array with the indexes 'inputs', and 'outputs'.
-     * These are sent to bitcoind to be built into a transaction. Returns
+     * These are sent to monerod to be built into a transaction. Returns
      * the raw transaction hex, or an error array.
      *
      * @param    array $transaction
@@ -206,7 +206,7 @@ class Bw_bitcoin
      * Send Raw Transaction
      *
      * This function allows you to submit a raw transaction to be broadcast,
-     * or just to import it to the bitcoin node. Returns a string containing
+     * or just to import it to the monero node. Returns a string containing
      * the transaction_id, or else an error array.
      *
      * @param    string $transaction_hex
@@ -221,7 +221,7 @@ class Bw_bitcoin
      * Add Multisig Address
      *
      * This function is used to import a multisignature address into
-     * the bitcoin wallet. This is required by users when signing an
+     * the monero wallet. This is required by users when signing an
      * unsigned/partially-signed transaction.
      * $m determines how many keys out of the total are needed to redeem funds.
      * $public_keys is an array containing the public keys. Order is important.
@@ -236,7 +236,7 @@ class Bw_bitcoin
      * Add Multisig Address
      *
      * This function is used to import a multisignature address into
-     * the bitcoin wallet. This is required by users when signing an
+     * the monero wallet. This is required by users when signing an
      * unsigned/partially-signed transaction.
      * $m determines how many keys out of the total are needed to redeem funds.
      * $public_keys is an array containing the public keys. Order is important.
@@ -272,7 +272,7 @@ class Bw_bitcoin
     /**
      * Import Private Key
      *
-     * Function to ask bitcoind to import the wallet import format private
+     * Function to ask monerod to import the wallet import format private
      * key $wif, in WIF format. $account defaults to the main account,
      * and $rescan left at the default will trigger a reindex of the
      * blockchain to search for transactions. This should be set to FALSE
@@ -318,7 +318,7 @@ class Bw_bitcoin
     /**
      * Rate Notify
      *
-     * Function to query the selected bitcoin price index provider
+     * Function to query the selected monero price index provider
      * for the latest exchange rates between USD/GBP/EUR.
      *
      * @return        boolean
@@ -334,7 +334,7 @@ class Bw_bitcoin
         $rates = $this->get_exchange_rates();
 
         if ($rates == FALSE) {
-            $this->CI->logs_model->add('Price Index', 'Unable to fetch exchange rates', 'An attempt to update the Bitcoin Exchange rates failed. Please review your ./application/config/bitcoin_index.php file for any errors, or that the proxy is correctly configured', 'Error');
+            $this->CI->logs_model->add('Price Index', 'Unable to fetch exchange rates', 'An attempt to update the Monero Exchange rates failed. Please review your ./application/config/bitcoin_index.php file for any errors, or that the proxy is correctly configured', 'Error');
             return TRUE;
         }
 
@@ -361,8 +361,8 @@ class Bw_bitcoin
     /**
      * Check Alert
      *
-     * Query bitcoin daemon for an alert. Returns an array detailing the
-     * message and that it came from the bitcoin daemon. Otherwise it
+     * Query monero daemon for an alert. Returns an array detailing the
+     * message and that it came from the monero daemon. Otherwise it
      * returns FALSE.
      *
      * @return    array/FALSE
@@ -370,7 +370,7 @@ class Bw_bitcoin
     public function check_alert()
     {
 
-        // Return false if the bitcoin daemon is offline.
+        // Return false if the monero daemon is offline.
         $info = $this->getinfo();
         if (!is_array($info))
             return FALSE;

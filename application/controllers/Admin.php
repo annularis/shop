@@ -35,7 +35,7 @@ class Admin extends MY_Controller
         $this->nav = array('' => array('panel' => '',
             'title' => 'General',
             'heading' => 'Admin Panel'),
-            'bitcoin' => array('panel' => '/bitcoin',
+            'monero' => array('panel' => '/bitcoin',
                 'title' => $this->bw_config->currencies[0]['name'],
                 'heading' => $this->bw_config->currencies[0]['name'] . ' Panel'),
             'items' => array('panel' => '/items',
@@ -267,12 +267,12 @@ class Admin extends MY_Controller
     }
 
     /**
-     * Load the Bitcoin Information Panel.
+     * Load the Monero Information Panel.
      * URI: /admin/bitcoin
      *
-     * This panel displays information about the accounts in the bitcoin
+     * This panel displays information about the accounts in the monero
      * wallet, the number of transactions processed to date, the source
-     * of the bitcoin exchange rates, and the latest block.
+     * of the monero exchange rates, and the latest block.
      * Has Admin Nav Bar.
      *
      * @see        Libraries/Bw_Bitcoin
@@ -286,7 +286,7 @@ class Admin extends MY_Controller
         $this->load->model('transaction_cache_model');
 
         $data['page'] = 'admin/bitcoin';
-        $data['title'] = $this->nav['bitcoin']['heading'];
+        $data['title'] = $this->nav['monero']['heading'];
         $data['nav'] = $this->generate_nav();
         $data['config'] = $this->bw_config->load_admin('bitcoin');
         $data['bitcoin_index'] = $this->bw_config->price_index;
@@ -297,7 +297,7 @@ class Admin extends MY_Controller
     }
 
     /**
-     * Edit the Bitcoin Settings.
+     * Edit the Monero Settings.
      * URI: /admin/edit/bitcoin
      *
      * If the user submitted the Price Index form, we check for updates.
@@ -309,7 +309,7 @@ class Admin extends MY_Controller
      *
      * If the user submitted the form to transfer coins, check that the
      * sending account has sufficient balance. If so, transfer coins, and
-     * redirect to Bitcoin Information Page. If not, display an error.
+     * redirect to Monero Information Page. If not, display an error.
      * Has Admin Nav Bar.
      *
      * @see        Libraries/Bw_Bitcoin
@@ -1110,8 +1110,8 @@ class Admin extends MY_Controller
      * When this happens, the sites configuration is backed up in an
      * entry in the bw_config table, and replaces them with safer defaults.
      * Maintenance mode prevents anyone but an admin from logging in, and
-     * will disable any bitcoin related functionality.
-     * This can be triggered by bitcoind alerts, or issues reported via
+     * will disable any monero related functionality.
+     * This can be triggered by monero alerts, or issues reported via
      * github.
      */
     public function maintenance()

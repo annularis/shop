@@ -7,10 +7,10 @@ use BitWasp\BitcoinLib\RawTransaction;
  *
  * This controller is used for internal callbacks and requests, such
  * as the bitcoin daemon and cronjob's.
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Controllers
- * @category    Callback
- * @author        BitWasp
+ * @category      Callback
+ * @author        Annularis Team
  *
  */
 class Callback extends CI_Controller

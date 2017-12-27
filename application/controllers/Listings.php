@@ -5,10 +5,10 @@
  *
  * This class handles management of a vendors listings.
  *
- * @package        BitWasp
+ * @package       Annularis
  * @subpackage    Controllers
- * @category    Listings
- * @author        BitWasp
+ * @category      Listings
+ * @author        Annularis Team
  *
  */
 class Listings extends MY_Controller
