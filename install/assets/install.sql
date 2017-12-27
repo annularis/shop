@@ -135,7 +135,7 @@ CREATE TABLE IF NOT EXISTS `bw_config` (
 INSERT INTO `bw_config` (`parameter`, `value`) VALUES
 ('registration_allowed', '1'),
 ('openssl_keysize', '2048'),
-('site_description', 'open source bitcoin marketplace'),
+('site_description', 'open source monero marketplace'),
 ('site_title', 'Annularis'),
 ('login_timeout', '30'),
 ('vendor_registration_allowed', '1'),

@@ -35,7 +35,7 @@ class Admin extends MY_Controller
         $this->nav = array('' => array('panel' => '',
             'title' => 'General',
             'heading' => 'Admin Panel'),
-            'monero' => array('panel' => '/bitcoin',
+            'bitcoin' => array('panel' => '/bitcoin',
                 'title' => $this->bw_config->currencies[0]['name'],
                 'heading' => $this->bw_config->currencies[0]['name'] . ' Panel'),
             'items' => array('panel' => '/items',
