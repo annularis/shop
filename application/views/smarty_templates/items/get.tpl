@@ -20,7 +20,7 @@
                 {if $item.main_image.hash !== 'default'}
                     {capture name="t_img_uri"}image/{$item.main_image.hash}{/capture}
                     {capture name="t_img"}{url type="site" url=$smarty.capture.t_img_uri}{/capture}
-                    {capture name="t_item_img"}<img class="img-responsive" src='{$smarty.capture.t_img}' height='300' title='{$item.name|escape:"html":"UTF-8"}'>{/capture}
+                    {capture name="t_item_img"}<img class="img-fluid" src='{$smarty.capture.t_img}' height='300' title='{$item.name|escape:"html":"UTF-8"}'>{/capture}
                     {capture name="t_item_url"}item/{$item.hash}{/capture}
                     {url type="anchor" url=$smarty.capture.t_item_url text=$smarty.capture.t_item_img attr='title="{$item.name|escape:"html":"UTF-8"}"'}
                 {/if}
