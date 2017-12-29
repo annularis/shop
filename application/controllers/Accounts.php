@@ -338,7 +338,7 @@ class Accounts extends MY_Controller
             OR $this->current_user->user_role == 'Admin');
 
         if($data['user']['email_address'] !== '')
-            $this->form_validation->set_rules('email_updates', 'email updates', 'required|check_bool_enabled');
+            $this->form_validation->set_rules('email_updates', 'email updates', 'check_bool_enabled');
 
         // Different form validation rules depending on if the user has a PGP key uploaded.
         $form_rules = (isset($data['user']['pgp']) == TRUE) ? 'account_edit' : 'account_edit_no_pgp';
@@ -353,7 +353,8 @@ class Accounts extends MY_Controller
             $changes['local_currency'] = ($data['user']['currency'] == $this->input->post('local_currency')) ? NULL : $this->input->post('local_currency');
 
             if($data['user']['email_address'] !== '') {
-                $changes['email_updates'] = ($data['user']['email_updates'] == $this->input->post('email_updates')) ? NULL : $this->input->post('email_updates');
+                /* Annularis is making something here :/ */
+                $changes['email_updates'] = ($data['user']['email_updates'] == $this->input->post('email_updates')) ? "" : $this->input->post('email_updates');
             }
 
             // Only consider these if the user has a PGP key uploaded.
