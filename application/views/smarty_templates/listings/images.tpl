@@ -57,5 +57,7 @@
                                 {url type="anchor" url=$smarty.capture.t_delete_image_url text="<i class='icon-trash icon-white'></i>Delete" attr='class="btn btn-danger"'}
                                 </center>
                             </div>
+                        </div>
+                    </div>
                 {/foreach}
-            </div>
+           </div>

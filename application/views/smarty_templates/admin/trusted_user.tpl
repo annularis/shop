@@ -47,7 +47,7 @@
                         <div class="col-5">
                             <p align="center">
                                 <input type="submit" name='trusted_user_update' value="Update" class="btn btn-primary" />
-                                {url type="anchor" url="admin/items" text="Cancel" attr='class="btn btn-default"'}
+                                {url type="anchor" url="admin/items" text="Cancel" attr='class="btn btn-danger"'}
                             </p>
                         </div>
                     </div>
