@@ -1,8 +1,3 @@
-body {
-  padding-top: 50px;
-  margin: 25px;
-}
-
 .slide-image {
   width: 100%;
 }
@@ -16,7 +11,7 @@ body {
 }
 
 .caption {
-  height: 80px;
+  height: 100px;
   overflow: hidden;
 }
 
@@ -102,7 +97,6 @@ h2 {
 .table-curved tr:last-child td:last-child {
     border-radius: 0 0 6px 0;
 }
-
 .bs-wizard {margin-top: 40px;}
 
 /*Form Wizard*/
@@ -123,5 +117,5 @@ h2 {
 .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {opacity: 0;}
 .bs-wizard > .bs-wizard-step:first-child  > .progress {left: 50%; width: 50%;}
 .bs-wizard > .bs-wizard-step:last-child  > .progress {width: 50%;}
-.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-evfonents: none; }
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
 /*END Form Wizard*/
