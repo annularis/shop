@@ -7,6 +7,7 @@
         <meta name="description" content="{$header.site_description|escape:'html':'UTF-8'}" />
         <title>{$header.title|escape:'html':'UTF-8'} | {$header.site_title|escape:'html':'UTF-8'}</title>
         <link rel="stylesheet" type="text/css"  href="{url type="base_url" url=""}assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css"  href="{url type="base_url" url=""}assets/css/style.css">
         <link rel="stylesheet" href="{url type="base_url" url=""}assets/css/fontawesome-all.css">
         <!-- JavaScript -->
         <script src="{url type="base_url" url=""}assets/js/jquery-3.2.1.min.js"></script>
