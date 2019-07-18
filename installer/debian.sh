@@ -24,9 +24,9 @@ a2enmod rewrite
 if [ ! -f /usr/bin/bitcoind ]; then
         echo "Installing bitcoin.."
         cd /tmp
-        wget https://bitcoin.org/bin/bitcoin-core-0.15.1/bitcoin-0.15.1-x86_64-linux-gnu.tar.gz # or 32bit
-        aunpack bitcoin-0.15.1-x86_64-linux-gnu.tar.gz
-        cd bitcoin-0.15.1
+        wget  https://bitcoin.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-i686-pc-linux-gnu.tar.gz # or 32bit
+        aunpack bitcoin-0.18.0-i686-pc-linux-gnu.tar.gz
+        cd bitcoin-0.18.0
         cp bin/* /usr/bin/
 fi
 
